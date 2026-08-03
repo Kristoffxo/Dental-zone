@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dental Zone | Dr. Mukesh Basantani — Super Speciality Dental Hospital, Prayagraj</title>
+<meta name="description" content="Dental Zone, Prayagraj. Dr. Mukesh Basantani, BDS — Dental Surgeon & Implantologist with 23 years of experience. Root canals, implants, braces and more.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Manrope',sans-serif;}
+html{scroll-behavior:smooth;}
+body{background:#f5f8fd;overflow-x:hidden;color:#111827;}
+section{padding:120px 8%;position:relative;}
+.container{max-width:1450px;margin:auto;}
+a{text-decoration:none;color:inherit;}
+button{cursor:pointer;border:none;transition:.35s;}
+button:hover{transform:translateY(-5px);}
+
+.heroGlow{position:absolute;top:-250px;right:-220px;width:700px;height:700px;background:#58b5ff;opacity:.16;filter:blur(180px);border-radius:50%;pointer-events:none;}
+.glass{background:rgba(255,255,255,.65);backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,.5);box-shadow:0 30px 80px rgba(0,0,0,.08);border-radius:30px;}
+.gradient{background:linear-gradient(90deg,#0f6fff,#59b5ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+
+nav{position:fixed;left:0;top:0;width:100%;padding:24px 7%;z-index:999;}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 30px;}
+.logo{font-size:32px;font-weight:800;}
+.logo span{color:#1676ff;}
+.links{display:flex;gap:36px;font-weight:600;}
+.links a{transition:.3s;}
+.links a:hover{color:#1676ff;}
+.cta{background:#1676ff;color:white;padding:14px 28px;border-radius:999px;font-weight:700;box-shadow:0 15px 40px rgba(22,118,255,.28);}
+
+.hero{min-height:100vh;display:flex;align-items:center;}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center;}
+.badge{display:inline-flex;padding:12px 20px;background:white;border-radius:999px;font-weight:700;box-shadow:0 10px 25px rgba(0,0,0,.08);margin-bottom:28px;font-size:15px;}
+.hero h1{font-size:76px;line-height:1.02;font-weight:800;letter-spacing:-3px;margin-bottom:24px;}
+.hero p{font-size:21px;line-height:1.8;color:#667085;max-width:620px;margin-bottom:40px;}
+.buttons{display:flex;gap:18px;flex-wrap:wrap;}
+.primary{background:#1676ff;color:white;padding:18px 36px;border-radius:999px;font-weight:700;box-shadow:0 20px 50px rgba(22,118,255,.3);}
+.secondary{background:white;padding:18px 36px;border-radius:999px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.06);}
+
+.tooth-wrap{position:relative;display:flex;justify-content:center;align-items:center;min-height:560px;}
+.ring{position:absolute;width:560px;height:560px;border:2px dashed rgba(22,118,255,.25);border-radius:50%;animation:spin 30s linear infinite;}
+.ring2{position:absolute;width:430px;height:430px;border:2px dashed rgba(22,118,255,.16);border-radius:50%;animation:spin 22s linear infinite reverse;}
+.doc-photo{width:330px;height:330px;border-radius:50%;object-fit:cover;z-index:2;box-shadow:0 45px 90px rgba(22,118,255,.28);border:8px solid white;animation:float 4s ease-in-out infinite;}
+.card{position:absolute;background:white;padding:20px 24px;border-radius:22px;box-shadow:0 20px 40px rgba(0,0,0,.08);font-weight:700;z-index:3;font-size:14px;}
+.c1{top:30px;left:-10px;}
+.c2{top:50px;right:-10px;}
+.c3{bottom:60px;left:-15px;}
+.c4{bottom:35px;right:-10px;}
+.card b{display:block;font-size:26px;color:#1676ff;}
+@keyframes spin{100%{transform:rotate(360deg);}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+
+.section-title{text-align:center;max-width:850px;margin:auto;margin-bottom:80px;}
+.section-title span{color:#1676ff;font-weight:800;letter-spacing:3px;font-size:14px;}
+.section-title h2{font-size:56px;margin:20px 0;line-height:1.1;font-weight:800;}
+.section-title p{font-size:20px;line-height:1.8;color:#667085;}
+
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;}
+.service{background:white;padding:45px;border-radius:30px;box-shadow:0 20px 60px rgba(0,0,0,.06);transition:.4s;position:relative;overflow:hidden;}
+.service:before{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:#1676ff;transform:scaleX(0);transition:.4s;transform-origin:left;}
+.service:hover{transform:translateY(-14px);box-shadow:0 30px 80px rgba(22,118,255,.18);}
+.service:hover:before{transform:scaleX(1);}
+.service-icon{width:74px;height:74px;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:34px;background:linear-gradient(135deg,#1676ff,#66c2ff);margin-bottom:30px;}
+.service h3{font-size:27px;margin-bottom:18px;}
+.service p{line-height:1.9;color:#667085;}
+
+.why{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center;background:white;padding:70px;border-radius:40px;box-shadow:0 30px 80px rgba(0,0,0,.06);}
+.mini-title{color:#1676ff;font-weight:800;letter-spacing:3px;font-size:14px;}
+.why h2{font-size:54px;margin:24px 0;line-height:1.1;}
+.why p{font-size:19px;line-height:1.9;color:#667085;margin-bottom:24px;}
+.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:18px;font-weight:700;margin-top:30px;}
+.award-strip{margin-top:34px;padding:22px 26px;background:#f8fbff;border-left:5px solid #1676ff;border-radius:16px;line-height:1.7;}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:25px;}
+.stats div{background:#f8fbff;padding:38px;border-radius:25px;text-align:center;}
+.stats h3{font-size:46px;color:#1676ff;margin-bottom:10px;}
+.stats p{color:#667085;}
+
+/* HYGIENE FADE-IN SECTION */
+.hygiene{background:linear-gradient(135deg,#0f172a,#123c72);color:white;border-radius:40px;padding:100px 70px;text-align:center;overflow:hidden;position:relative;}
+.hygiene:before{content:"";position:absolute;width:600px;height:600px;background:#58b5ff;opacity:.18;filter:blur(160px);border-radius:50%;top:-260px;left:-160px;pointer-events:none;}
+.hygiene .h-line{font-size:44px;font-weight:800;line-height:1.25;max-width:1000px;margin:auto;letter-spacing:-1px;}
+.hygiene .h-line em{font-style:normal;background:linear-gradient(90deg,#59b5ff,#a5d8ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hygiene .h-sub{font-size:19px;line-height:1.9;color:#c3d3e8;max-width:760px;margin:34px auto 0;}
+.hygiene-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:60px;text-align:left;}
+.h-fact{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:34px;border-radius:24px;}
+.h-fact b{display:block;font-size:22px;margin-bottom:12px;color:#7cc4ff;}
+.h-fact p{color:#c3d3e8;line-height:1.85;font-size:16px;}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:330px;gap:28px;}
+.gallery-item{position:relative;overflow:hidden;border-radius:30px;box-shadow:0 25px 60px rgba(0,0,0,.08);}
+.gallery-item.large{grid-row:span 2;}
+.gallery-item.wide{grid-column:span 2;}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.7s;}
+.gallery-item:hover img{transform:scale(1.1);}
+.gallery-overlay{position:absolute;left:0;bottom:0;width:100%;padding:30px;color:white;background:linear-gradient(transparent,rgba(0,0,0,.75));}
+
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:35px;max-width:1000px;margin:auto;}
+.team-card{background:white;padding:45px;border-radius:30px;box-shadow:0 20px 60px rgba(0,0,0,.06);transition:.35s;}
+.team-card:hover{transform:translateY(-12px);}
+.team-card h3{font-size:27px;margin-bottom:6px;}
+.team-role{color:#1676ff;font-weight:700;margin-bottom:20px;display:block;}
+.team-card p{line-height:1.9;color:#667085;margin-bottom:14px;}
+
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:70px;}
+.timeline-card{background:white;padding:45px;border-radius:30px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.06);transition:.35s;}
+.timeline-card:hover{transform:translateY(-12px);}
+.number{width:72px;height:72px;margin:auto;margin-bottom:25px;border-radius:50%;background:#1676ff;color:white;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;}
+.timeline-card h3{font-size:26px;margin-bottom:18px;}
+.timeline-card p{line-height:1.8;color:#667085;}
+
+.premium-stats{background:#ffffff;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:70px;}
+.stat-box{background:white;padding:45px;text-align:center;border-radius:30px;box-shadow:0 20px 60px rgba(0,0,0,.08);transition:.35s;}
+.stat-box:hover{transform:translateY(-12px);}
+.stat-box h1{font-size:58px;color:#1676ff;margin-bottom:15px;}
+.stat-box p{color:#667085;}
+
+.testimonial-slider{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
+.testimonial{background:white;padding:45px;border-radius:30px;box-shadow:0 20px 60px rgba(0,0,0,.08);font-size:17px;line-height:1.9;color:#667085;}
+.testimonial .stars{color:#f0b429;font-size:16px;letter-spacing:2px;}
+.testimonial p{margin:18px 0;}
+.testimonial h4{color:#1676ff;font-size:16px;}
+.testimonial small{color:#98a2b3;font-weight:600;}
+
+.booking-card{display:grid;grid-template-columns:1fr 1fr;gap:70px;background:white;padding:70px;border-radius:40px;box-shadow:0 30px 80px rgba(0,0,0,.08);}
+.booking-left h2{font-size:52px;margin:25px 0;line-height:1.1;}
+.booking-left p{font-size:19px;line-height:1.9;color:#667085;}
+.booking-perks{margin-top:34px;display:grid;gap:14px;font-weight:700;}
+.booking-form{display:flex;flex-direction:column;gap:18px;}
+.booking-form input,.booking-form textarea,.booking-form select{padding:18px;font-size:16px;border-radius:18px;border:1px solid #dde5ef;outline:none;transition:.3s;font-family:'Manrope',sans-serif;}
+.booking-form input:focus,.booking-form textarea:focus,.booking-form select:focus{border-color:#1676ff;box-shadow:0 0 0 4px rgba(22,118,255,.1);}
+.booking-form textarea{height:120px;resize:none;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+#formStatus{text-align:center;font-weight:700;min-height:24px;font-size:15px;}
+.success{color:#12a150;}
+.error{color:#e5484d;}
+
+.faq{max-width:900px;margin:auto;margin-top:70px;}
+.faq-item{background:white;margin-bottom:20px;border-radius:24px;box-shadow:0 15px 40px rgba(0,0,0,.06);overflow:hidden;}
+.faq-question{width:100%;background:white;padding:28px 30px;display:flex;justify-content:space-between;align-items:center;font-size:20px;font-weight:700;text-align:left;gap:20px;}
+.faq-question:hover{transform:none;color:#1676ff;}
+.faq-answer{display:none;padding:0 30px 30px;color:#667085;line-height:1.8;}
+
+footer{background:#0f172a;color:white;padding:100px 8% 40px;margin-top:120px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;margin-bottom:60px;}
+.footer-grid h2{font-size:30px;margin-bottom:18px;}
+.footer-grid h3{margin-bottom:20px;}
+.footer-grid ul{list-style:none;padding:0;}
+.footer-grid li{margin-bottom:14px;}
+.footer-grid a{color:#d6dbe4;}
+.footer-grid a:hover{color:#59b5ff;}
+.footer-grid p{color:#c8d0da;line-height:1.8;}
+.copyright{text-align:center;border-top:1px solid rgba(255,255,255,.12);padding-top:30px;color:#9ca3af;margin-top:40px;}
+
+@media(max-width:1000px){
+  section{padding:80px 6%;}
+  .hero-grid{grid-template-columns:1fr;text-align:center;}
+  .links{display:none;}
+  .hero h1{font-size:46px;letter-spacing:-1.5px;}
+  .hero p{font-size:18px;}
+  .buttons{justify-content:center;}
+  .tooth-wrap{min-height:400px;}
+  .ring{width:360px;height:360px;}
+  .ring2{width:280px;height:280px;}
+  .doc-photo{width:220px;height:220px;}
+  .card{padding:14px 16px;font-size:12px;}
+  .card b{font-size:19px;}
+  .c1,.c3{left:-5px;}
+  .c2,.c4{right:-5px;}
+  .section-title h2{font-size:36px;}
+  .services-grid{grid-template-columns:1fr;}
+  .why{grid-template-columns:1fr;padding:40px;}
+  .why h2{font-size:36px;}
+  .stats{grid-template-columns:1fr 1fr;}
+  .hygiene{padding:60px 30px;}
+  .hygiene .h-line{font-size:28px;}
+  .hygiene-facts{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:1fr;grid-auto-rows:280px;}
+  .gallery-item.large,.gallery-item.wide{grid-row:auto;grid-column:auto;}
+  .team-grid{grid-template-columns:1fr;}
+  .timeline{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .testimonial-slider{grid-template-columns:1fr;}
+  .booking-card{grid-template-columns:1fr;padding:40px;}
+  .booking-left h2{font-size:36px;}
+  .form-row{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="heroGlow"></div>
+
+<nav>
+  <div class="glass nav">
+    <div class="logo">Dental<span>Zone</span></div>
+    <div class="links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#team">Our Team</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#booking">Book</a>
+    </div>
+    <button class="cta" onclick="document.getElementById('booking').scrollIntoView()">Book Appointment</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">★★★★★ Medical Registration Verified · 97% Satisfaction</div>
+      <h1>Super Speciality Dentistry, <span class="gradient">Right Here in Prayagraj.</span></h1>
+      <p>
+        Led by Dr. Mukesh Basantani — 23 years of experience, over 50,000 root canals,
+        implants and extractions performed. Advanced treatment, delivered with the kind of
+        patience that turns nervous first-timers into lifelong patients.
+      </p>
+      <div class="buttons">
+        <button class="primary" onclick="document.getElementById('booking').scrollIntoView()">Book Appointment</button>
+        <button class="secondary" onclick="document.getElementById('services').scrollIntoView()">Our Services</button>
+      </div>
+    </div>
+
+    <div class="tooth-wrap">
+      <div class="ring"></div>
+      <div class="ring2"></div>
+      <img src="images/images.jpeg" class="doc-photo" alt="Dr. Mukesh Basantani">
+      <div class="card c1"><b>23</b>Years</div>
+      <div class="card c2"><b>50K+</b>Procedures</div>
+      <div class="card c3"><b>1,000+</b>Ortho Cases</div>
+      <div class="card c4"><b>97%</b>Satisfaction</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-title">
+      <span>OUR SERVICES</span>
+      <h2>Complete Dental Care<br>Under One Roof</h2>
+      <p>From a routine cleaning to a full implant — Dental Zone handles it without sending you elsewhere.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service">
+        <div class="service-icon">🪥</div>
+        <h3>Root Canal Treatment</h3>
+        <p>Painless, precision RCT using advanced rotary technology — the treatment Dr. Basantani is best known for across Prayagraj.</p>
+      </div>
+      <div class="service">
+        <div class="service-icon">🦷</div>
+        <h3>Dental Implants</h3>
+        <p>Permanent tooth replacement placed by a specialist implantologist with 19 years of focused experience.</p>
+      </div>
+      <div class="service">
+        <div class="service-icon">😁</div>
+        <h3>Braces & Aligners</h3>
+        <p>Over 1,000 fixed orthodontic cases completed — for children, teenagers and adults who thought it was too late.</p>
+      </div>
+      <div class="service">
+        <div class="service-icon">✨</div>
+        <h3>Teeth Whitening</h3>
+        <p>Professional in-clinic whitening for a noticeably brighter smile, with visible results in a single sitting.</p>
+      </div>
+      <div class="service">
+        <div class="service-icon">🧒</div>
+        <h3>Children's Dentistry</h3>
+        <p>Gentle, unhurried care that makes a child's first dental visit calm rather than frightening.</p>
+      </div>
+      <div class="service">
+        <div class="service-icon">🦴</div>
+        <h3>Crowns & Bridges</h3>
+        <p>Restore broken or missing teeth with natural-looking restorations built to last for years.</p>
+      </div>
+      <div class="service">
+        <div class="service-icon">🩹</div>
+        <h3>Extractions & Dentures</h3>
+        <p>Wisdom teeth, surgical extractions, and full or partial dentures — handled with minimal discomfort.</p>
+      </div>
+      <div class="service">
+        <div class="service-icon">🪒</div>
+        <h3>Scaling & Polishing</h3>
+        <p>Professional cleaning that removes plaque and stains, and stops small problems becoming expensive ones.</p>
+      </div>
+      <div class="service">
+        <div class="service-icon">🚨</div>
+        <h3>Dental Emergencies</h3>
+        <p>Severe pain, swelling or a broken tooth treated as priority — we do our best to see you the same day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / WHY -->
+<section id="about">
+  <div class="container">
+    <div class="why">
+      <div>
+        <span class="mini-title">THE DOCTOR</span>
+        <h2>Dr. Mukesh Basantani, BDS</h2>
+        <p>
+          Dental Surgeon &amp; Implantologist. A graduate of Manipal Academy of Higher Education (2003),
+          he went on to complete advanced training in orthodontics, implants and surgical extractions
+          at both national and international level.
+        </p>
+        <p>
+          He spent 12 years practising at a leading dental hospital in Uttar Pradesh — sharpening his
+          hands on cases most young dentists never see — before founding Dental Zone on 23rd November
+          as a super speciality dental hospital built on one belief: that great dentistry should still feel personal.
+        </p>
+        <p>
+          What patients mention most isn't the case count. It's that he explains an X-ray before he touches
+          a drill, talks a nervous first-timer through their fear instead of rushing past it, and stays honest
+          about a diagnosis even when overselling would be easier.
+        </p>
+
+        <div class="feature-list">
+          <div>✓ 19 Years as a Specialist</div>
+          <div>✓ Verified Medical Registration</div>
+          <div>✓ Advanced Implantology Training</div>
+          <div>✓ Painless Procedure Focus</div>
+        </div>
+
+        <div class="award-strip">
+          🏅 <b>Pride of Allahabad Award</b> — felicitated by the Honourable Governor of Uttar Pradesh,
+          Shri Keshari Nath Tripathi, for his contribution to dentistry in the region.
+        </div>
+      </div>
+
+      <div class="stats">
+        <div><h3>23</h3><p>Years Experience</p></div>
+        <div><h3>50K+</h3><p>RCTs &amp; Implants</p></div>
+        <div><h3>1,000+</h3><p>Ortho Cases</p></div>
+        <div><h3>97%</h3><p>Satisfaction</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DENTAL HYGIENE FADE-IN SECTION -->
+<section id="hygiene">
+  <div class="container">
+    <div class="hygiene">
+      <h2 class="h-line reveal-line">
+        Your mouth tells the truth about your health<br>
+        <em>long before the rest of your body does.</em>
+      </h2>
+
+      <p class="h-sub reveal-line">
+        Most of the serious cases we treat began as something small and ignorable — a little sensitivity,
+        a bit of bleeding while brushing, a tooth that only hurt sometimes. Dental problems are quiet until
+        they are expensive. Six months of good habits and one honest checkup is almost always cheaper,
+        faster and far less painful than what comes after waiting.
+      </p>
+
+      <div class="hygiene-facts">
+        <div class="h-fact reveal-fact">
+          <b>Twice a day, two minutes</b>
+          <p>Brushing properly for two full minutes, morning and night, removes the plaque film that hardens into tartar within 48 hours. Most people brush for under 45 seconds.</p>
+        </div>
+        <div class="h-fact reveal-fact">
+          <b>Gums don't bleed for no reason</b>
+          <p>Bleeding while brushing isn't normal and isn't caused by brushing too hard. It's usually the earliest visible sign of gum disease — and the easiest stage to reverse completely.</p>
+        </div>
+        <div class="h-fact reveal-fact">
+          <b>A checkup every six months</b>
+          <p>Decay and gum disease are painless in their early stages. A six-month checkup catches them while they still need a filling and a cleaning, not a root canal or an extraction.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-title">
+      <span>INSIDE DENTAL ZONE</span>
+      <h2>A Clinic Built To Feel<br>Calm, Not Clinical</h2>
+      <p>Modern equipment, strict sterilisation, and a space designed so that walking in doesn't raise your heart rate.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item large">
+        <img src="images/images-2.jpeg" alt="Dental Zone clinic">
+        <div class="gallery-overlay"><h3>The Clinic</h3></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/images-3.jpeg" alt="Treatment area">
+        <div class="gallery-overlay"><h3>Treatment Room</h3></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/images-4.jpeg" alt="Dental Zone equipment">
+        <div class="gallery-overlay"><h3>Equipment</h3></div>
+      </div>
+      <div class="gallery-item wide">
+        <img src="images/images-5.jpeg" alt="Dental Zone reception">
+        <div class="gallery-overlay"><h3>Reception &amp; Waiting Area</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="container">
+    <div class="section-title">
+      <span>OUR TEAM</span>
+      <h2>The Hands That Assist<br>Every Visit</h2>
+      <p>Dr. Basantani doesn't work alone — here's who else you'll likely meet at Dental Zone.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <h3>Dr. Ashwarya Pande</h3>
+        <span class="team-role">Assistant General Dentist</span>
+        <p>
+          Dr. Pande completed her Bachelor of Dental Surgery at Uttaranchal Dental and Medical Research
+          Institute, Dehradun, and joined Dental Zone in April 2024. Her training covered oral diagnosis,
+          scaling, restorations, root canal support, extractions and minor oral surgery.
+        </p>
+        <p>
+          At the clinic she's known for her attentiveness with anxious patients and her focus on preventive
+          care — often the one walking patients through the hygiene routine that keeps them from needing
+          bigger procedures later.
+        </p>
+      </div>
+
+      <div class="team-card">
+        <h3>Dr. Prathistha Kushwaha</h3>
+        <span class="team-role">Assistant Dentist</span>
+        <p>
+          Dr. Kushwaha earned her Bachelor of Dental Science from Saraswati Dental College and Hospital,
+          Lucknow, and brings experience from Maruti Clinic, Lucknow along with a three-month observership
+          under Dr. Rahul Soni. She has handled a wide range of restorations, extractions, root canal
+          treatments and denture work.
+        </p>
+        <p>
+          Outside the clinic she's a keen photographer and cyclist — a detail patients sometimes bond with
+          her over while easing into the chair.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="section-title">
+      <span>HOW IT WORKS</span>
+      <h2>What Your First<br>Visit Looks Like</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-card">
+        <div class="number">1</div>
+        <h3>Book</h3>
+        <p>Fill the form below with your preferred date and time. Takes under a minute.</p>
+      </div>
+      <div class="timeline-card">
+        <div class="number">2</div>
+        <h3>We Call</h3>
+        <p>Our team rings you back to confirm your slot and answer anything you're unsure about.</p>
+      </div>
+      <div class="timeline-card">
+        <div class="number">3</div>
+        <h3>Examination</h3>
+        <p>A full examination and, where needed, digital X-rays — explained to you before anything begins.</p>
+      </div>
+      <div class="timeline-card">
+        <div class="number">4</div>
+        <h3>Treatment</h3>
+        <p>An honest plan, a clear cost, and treatment carried out at a pace you're comfortable with.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="premium-stats">
+  <div class="container">
+    <div class="section-title">
+      <span>TRUSTED EXCELLENCE</span>
+      <h2>Numbers That Speak<br>For Themselves</h2>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-box"><h1><span class="counter" data-target="50000">0</span>+</h1><p>RCTs, Implants &amp; Extractions</p></div>
+      <div class="stat-box"><h1><span class="counter" data-target="23">0</span></h1><p>Years of Experience</p></div>
+      <div class="stat-box"><h1><span class="counter" data-target="1000">0</span>+</h1><p>Orthodontic Cases</p></div>
+      <div class="stat-box"><h1><span class="counter" data-target="97">0</span>%</h1><p>Patient Satisfaction</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-title">
+      <span>PATIENT STORIES</span>
+      <h2>What Patients<br>Actually Say</h2>
+      <p>Real experiences from people who walked in nervous and walked out relieved.</p>
+    </div>
+
+    <div class="testimonial-slider">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"I'd never been to a dentist before and was terrified of my wisdom tooth extraction. Dr. Basantani didn't rush — he explained everything until my fear turned into trust. It was painless, exactly as he said it would be."</p>
+        <h4>Ritika Kushwaha</h4>
+        <small>Wisdom Tooth Extraction</small>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"I've been visiting his clinic for over 10 years. He's skilled, patient, and always honest about treatment — the staff is just as professional and friendly."</p>
+        <h4>Shivani</h4>
+        <small>Long-term Patient</small>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"Good and humble doctor with years of experience behind him. I'd highly recommend him to anyone in Prayagraj looking for a dentist who actually listens."</p>
+        <h4>S.S. Shukla</h4>
+        <small>Long-term Patient</small>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"Excellent in his work and his explanations. The clinic felt clean with a calm, happy vibe, the staff was friendly, and there was no waiting time at all."</p>
+        <h4>Verified Patient</h4>
+        <small>General Checkup</small>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"First visit, for a root canal, and I really liked his approach. He explained everything clearly before starting, and the staff were cooperative throughout."</p>
+        <h4>Verified Patient</h4>
+        <small>Root Canal Treatment</small>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"I've known Dr. Basantani a long time and was fully satisfied even twenty years ago. When I saw he'd set up his own clinic, I came straight here. Clean, warm, and excellent care."</p>
+        <h4>Verified Patient</h4>
+        <small>General Dental Care</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="container">
+    <div class="booking-card">
+      <div class="booking-left">
+        <span class="mini-title">BOOK YOUR VISIT</span>
+        <h2>Schedule Your Consultation Today</h2>
+        <p>
+          Fill this in and our team will call you back to confirm your slot. No payment,
+          no account, no waiting on hold.
+        </p>
+        <div class="booking-perks">
+          <div>✓ Takes under a minute</div>
+          <div>✓ Confirmation call from our team</div>
+          <div>✓ Mon–Sat, 10:00 AM – 8:00 PM</div>
+          <div>✓ Emergencies prioritised same-day</div>
+        </div>
+      </div>
+
+      <form class="booking-form" id="bookingForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required pattern="[0-9]{10}" maxlength="10">
+        <select id="treatment" required>
+          <option value="" disabled selected>Select Treatment</option>
+          <option>Root Canal Treatment</option>
+          <option>Dental Implant</option>
+          <option>Braces / Aligners</option>
+          <option>Teeth Whitening</option>
+          <option>Tooth Extraction</option>
+          <option>Scaling &amp; Polishing</option>
+          <option>Crowns &amp; Bridges</option>
+          <option>Children's Dentistry</option>
+          <option>General Checkup</option>
+          <option>Dental Emergency</option>
+          <option>Other</option>
+        </select>
+        <div class="form-row">
+          <input type="date" id="date" required>
+          <select id="time" required>
+            <option value="" disabled selected>Preferred Time</option>
+            <option>10:00 AM</option>
+            <option>11:00 AM</option>
+            <option>12:00 PM</option>
+            <option>4:00 PM</option>
+            <option>5:00 PM</option>
+            <option>6:00 PM</option>
+            <option>7:00 PM</option>
+          </select>
+        </div>
+        <textarea id="notes" placeholder="Tell us about your concern (optional)"></textarea>
+        <button type="submit" class="primary" id="submitBtn">Book Appointment</button>
+        <div id="formStatus"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-title">
+      <span>FAQ</span>
+      <h2>Before You Book</h2>
+      <p>The questions patients ask us most often.</p>
+    </div>
+
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-question">Is root canal treatment painful?<span>+</span></button>
+        <div class="faq-answer"><p>No. With modern anaesthesia and rotary equipment, most patients describe it as no worse than getting a filling. If you're anxious, tell us before we begin — we'll take it at your pace.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How much do dental implants cost?<span>+</span></button>
+        <div class="faq-answer"><p>Cost depends on the tooth position, bone condition and implant type, so an honest quote needs an examination first. Book a consultation and you'll get a clear figure with no obligation to proceed.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you treat children?<span>+</span></button>
+        <div class="faq-answer"><p>Yes. We see paediatric patients with a gentler, unhurried approach — the goal for a first visit is that your child leaves unafraid of coming back.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you handle dental emergencies?<span>+</span></button>
+        <div class="faq-answer"><p>Yes. Severe pain, facial swelling, a knocked-out or broken tooth are treated as priority cases and we do our best to see you the same day. Call the clinic directly rather than booking online for these.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How often should I get a checkup?<span>+</span></button>
+        <div class="faq-answer"><p>Every six months for most people. Decay and gum disease are painless early on, and a six-month visit catches them while they still need a cleaning or a filling rather than a root canal.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Am I too old for braces?<span>+</span></button>
+        <div class="faq-answer"><p>Almost certainly not. A significant share of the 1,000+ orthodontic cases completed here have been adults who assumed they'd missed their chance. Modern aligners also make adult treatment far less visible than it used to be.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h2>Dental<span class="gradient">Zone</span></h2>
+      <p>
+        A super speciality dental hospital in Prayagraj, founded and led by
+        Dr. Mukesh Basantani, BDS — Dental Surgeon &amp; Implantologist.
+      </p>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Dr. Basantani</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#reviews">Patient Stories</a></li>
+        <li><a href="#booking">Book Appointment</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>+91 XXXXX XXXXX</p>
+      <p>Lukerganj, Prayagraj, Uttar Pradesh</p>
+      <p>Mon–Sat · 10:00 AM – 8:00 PM</p>
+    </div>
+  </div>
+  <div class="copyright">© 2026 Dental Zone · Dr. Mukesh Basantani. All Rights Reserved.</div>
+</footer>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+/* ---------- SCROLL ANIMATIONS ---------- */
+gsap.from(".service",{opacity:0,y:80,duration:1,stagger:.12,scrollTrigger:{trigger:"#services",start:"top 75%"}});
+gsap.from(".why",{opacity:0,y:70,duration:1,scrollTrigger:{trigger:"#about",start:"top 75%"}});
+gsap.from(".gallery-item",{opacity:0,y:70,duration:1,stagger:.15,scrollTrigger:{trigger:"#gallery",start:"top 75%"}});
+gsap.from(".team-card",{opacity:0,y:70,duration:1,stagger:.2,scrollTrigger:{trigger:"#team",start:"top 75%"}});
+gsap.from(".timeline-card",{opacity:0,y:80,duration:1,stagger:.18,scrollTrigger:{trigger:".timeline",start:"top 75%"}});
+gsap.from(".testimonial",{opacity:0,y:60,duration:1,stagger:.15,scrollTrigger:{trigger:"#reviews",start:"top 75%"}});
+gsap.from(".booking-card",{opacity:0,y:70,duration:1,scrollTrigger:{trigger:"#booking",start:"top 78%"}});
+gsap.from(".faq-item",{opacity:0,y:50,duration:.9,stagger:.12,scrollTrigger:{trigger:"#faq",start:"top 78%"}});
+
+/* Hygiene section — slower, more deliberate fade */
+gsap.from(".reveal-line",{opacity:0,y:40,duration:1.4,stagger:.35,ease:"power2.out",scrollTrigger:{trigger:"#hygiene",start:"top 70%"}});
+gsap.from(".reveal-fact",{opacity:0,y:50,duration:1.1,stagger:.22,ease:"power2.out",scrollTrigger:{trigger:".hygiene-facts",start:"top 85%"}});
+
+/* ---------- COUNTERS ---------- */
+document.querySelectorAll(".counter").forEach(counter=>{
+  const target = +counter.dataset.target;
+  gsap.to(counter,{
+    innerText:target,
+    duration:2,
+    snap:{innerText:1},
+    scrollTrigger:{trigger:counter,start:"top 85%"},
+    onUpdate:function(){
+      counter.innerText = Math.floor(counter.innerText).toLocaleString();
+    }
+  });
+});
+
+/* ---------- FAQ ACCORDION ---------- */
+document.querySelectorAll(".faq-question").forEach(btn=>{
+  btn.onclick=()=>{
+    const answer = btn.nextElementSibling;
+    const open = answer.style.display === "block";
+    document.querySelectorAll(".faq-answer").forEach(a=>a.style.display="none");
+    document.querySelectorAll(".faq-question span").forEach(s=>s.textContent="+");
+    if(!open){
+      answer.style.display="block";
+      btn.querySelector("span").textContent="−";
+    }
+  };
+});
+
+/* ---------- BOOKING FORM → GOOGLE SHEET ---------- */
+const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbzmZLd4rWVlJFpXtADoDaKBlAuy7KxhlfII4Jk2NM4gZZ-XGk2B4_lExZnZY4Jm8PmnpA/exec";
+
+const form = document.getElementById('bookingForm');
+const statusEl = document.getElementById('formStatus');
+const btn = document.getElementById('submitBtn');
+
+document.getElementById('date').min = new Date().toISOString().split('T')[0];
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  btn.disabled = true;
+  btn.textContent = "Booking...";
+  statusEl.textContent = "";
+  statusEl.className = "";
+
+  const data = {
+    name: document.getElementById('name').value,
+    phone: document.getElementById('phone').value,
+    treatment: document.getElementById('treatment').value,
+    date: document.getElementById('date').value,
+    time: document.getElementById('time').value,
+    notes: document.getElementById('notes').value,
+    submittedAt: new Date().toLocaleString()
+  };
+
+  try {
+    await fetch(SHEET_ENDPOINT, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(data)
+    });
+    statusEl.textContent = "✓ Appointment requested — we'll call you shortly to confirm.";
+    statusEl.className = "success";
+    form.reset();
+  } catch (err) {
+    statusEl.textContent = "Something went wrong. Please call the clinic directly to book.";
+    statusEl.className = "error";
+  }
+
+  btn.disabled = false;
+  btn.textContent = "Book Appointment";
+});
+</script>
+
+</body>
+</html>
