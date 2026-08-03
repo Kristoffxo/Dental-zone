@@ -4,668 +4,903 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dental Zone | Dr. Mukesh Basantani — Super Speciality Dental Hospital, Prayagraj</title>
-<meta name="description" content="Dental Zone, Prayagraj. Dr. Mukesh Basantani, BDS — Dental Surgeon & Implantologist with 23 years of experience. Root canals, implants, braces and more.">
+<meta name="description" content="Dental Zone, Prayagraj. Dr. Mukesh Basantani, BDS — Dental Surgeon &amp; Implantologist with 23 years of experience. Root canals, implants, braces, crowns and emergency dental care.">
+<meta name="theme-color" content="#0b1220">
+
+<meta property="og:title" content="Dental Zone | Dr. Mukesh Basantani, Prayagraj">
+<meta property="og:description" content="23 years. 50,000+ root canals, implants and extractions. Super speciality dentistry in Lukerganj, Prayagraj.">
+<meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Manrope',sans-serif;}
-html{scroll-behavior:smooth;}
-body{background:#f5f8fd;overflow-x:hidden;color:#111827;}
-section{padding:120px 8%;position:relative;}
-.container{max-width:1450px;margin:auto;}
+:root{
+  --bg:#f6f8fc;
+  --ink:#0b1220;
+  --muted:#5f6b81;
+  --line:#e4eaf3;
+  --blue:#1660ff;
+  --blue-soft:#5fb0ff;
+  --gold:#c8912a;
+  --dark:#070c18;
+  --white:#fff;
+  --ease:cubic-bezier(.16,.84,.44,1);
+  --shadow-sm:0 8px 24px rgba(11,18,32,.06);
+  --shadow-md:0 22px 60px rgba(11,18,32,.09);
+  --shadow-lg:0 40px 100px rgba(11,18,32,.14);
+  --r:26px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  font-family:'Manrope',system-ui,-apple-system,sans-serif;
+  background:var(--bg);color:var(--ink);overflow-x:hidden;
+  font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;
+}
 a{text-decoration:none;color:inherit;}
-button{cursor:pointer;border:none;transition:.35s;}
-button:hover{transform:translateY(-5px);}
+img{display:block;max-width:100%;}
+ul{list-style:none;}
+button{font-family:inherit;border:none;background:none;cursor:pointer;color:inherit;}
+::selection{background:var(--blue);color:#fff;}
 
-.heroGlow{position:absolute;top:-250px;right:-220px;width:700px;height:700px;background:#58b5ff;opacity:.16;filter:blur(180px);border-radius:50%;pointer-events:none;}
-.glass{background:rgba(255,255,255,.65);backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,.5);box-shadow:0 30px 80px rgba(0,0,0,.08);border-radius:30px;}
-.gradient{background:linear-gradient(90deg,#0f6fff,#59b5ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.container{max-width:1280px;margin:0 auto;padding:0 32px;}
+section{padding:130px 0;position:relative;}
 
-nav{position:fixed;left:0;top:0;width:100%;padding:24px 7%;z-index:999;}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 30px;}
-.logo{font-size:32px;font-weight:800;}
-.logo span{color:#1676ff;}
-.links{display:flex;gap:36px;font-weight:600;}
-.links a{transition:.3s;}
-.links a:hover{color:#1676ff;}
-.cta{background:#1676ff;color:white;padding:14px 28px;border-radius:999px;font-weight:700;box-shadow:0 15px 40px rgba(22,118,255,.28);}
+/* ============ TYPE ============ */
+.display{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.5px;line-height:1.04;}
+.display em{font-style:italic;color:var(--blue);}
+h1.display{font-size:clamp(42px,6.2vw,88px);}
+h2.display{font-size:clamp(34px,4.6vw,62px);}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:800;
+  letter-spacing:2.6px;text-transform:uppercase;color:var(--blue);margin-bottom:22px;
+}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--blue);opacity:.5;}
+.lead{font-size:19px;color:var(--muted);line-height:1.85;}
+.section-head{max-width:760px;margin:0 auto 78px;text-align:center;}
+.section-head .eyebrow{justify-content:center;}
+.section-head p{margin-top:22px;font-size:19px;color:var(--muted);line-height:1.85;}
 
-.hero{min-height:100vh;display:flex;align-items:center;}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center;}
-.badge{display:inline-flex;padding:12px 20px;background:white;border-radius:999px;font-weight:700;box-shadow:0 10px 25px rgba(0,0,0,.08);margin-bottom:28px;font-size:15px;}
-.hero h1{font-size:76px;line-height:1.02;font-weight:800;letter-spacing:-3px;margin-bottom:24px;}
-.hero p{font-size:21px;line-height:1.8;color:#667085;max-width:620px;margin-bottom:40px;}
-.buttons{display:flex;gap:18px;flex-wrap:wrap;}
-.primary{background:#1676ff;color:white;padding:18px 36px;border-radius:999px;font-weight:700;box-shadow:0 20px 50px rgba(22,118,255,.3);}
-.secondary{background:white;padding:18px 36px;border-radius:999px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.06);}
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:17px 34px;border-radius:999px;font-weight:700;font-size:16px;
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease),background .35s,color .35s;
+  position:relative;overflow:hidden;white-space:nowrap;
+}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 18px 44px rgba(22,96,255,.32);}
+.btn-primary:hover{box-shadow:0 26px 60px rgba(22,96,255,.42);}
+.btn-ghost{background:var(--white);color:var(--ink);box-shadow:var(--shadow-sm);}
+.btn-ghost:hover{box-shadow:var(--shadow-md);}
+.btn-outline{border:1.5px solid rgba(255,255,255,.28);color:#fff;}
+.btn-outline:hover{background:rgba(255,255,255,.1);}
+.btn .arrow{transition:transform .4s var(--ease);}
+.btn:hover .arrow{transform:translateX(5px);}
 
-.tooth-wrap{position:relative;display:flex;justify-content:center;align-items:center;min-height:560px;}
-.ring{position:absolute;width:560px;height:560px;border:2px dashed rgba(22,118,255,.25);border-radius:50%;animation:spin 30s linear infinite;}
-.ring2{position:absolute;width:430px;height:430px;border:2px dashed rgba(22,118,255,.16);border-radius:50%;animation:spin 22s linear infinite reverse;}
-.doc-photo{width:330px;height:330px;border-radius:50%;object-fit:cover;z-index:2;box-shadow:0 45px 90px rgba(22,118,255,.28);border:8px solid white;animation:float 4s ease-in-out infinite;}
-.card{position:absolute;background:white;padding:20px 24px;border-radius:22px;box-shadow:0 20px 40px rgba(0,0,0,.08);font-weight:700;z-index:3;font-size:14px;}
-.c1{top:30px;left:-10px;}
-.c2{top:50px;right:-10px;}
-.c3{bottom:60px;left:-15px;}
-.c4{bottom:35px;right:-10px;}
-.card b{display:block;font-size:26px;color:#1676ff;}
-@keyframes spin{100%{transform:rotate(360deg);}}
-@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+/* ============ PRELOADER ============ */
+#preloader{
+  position:fixed;inset:0;z-index:99999;background:var(--dark);
+  display:flex;align-items:center;justify-content:center;flex-direction:column;gap:26px;
+}
+.pre-mark{font-family:'Instrument Serif',serif;font-size:46px;color:#fff;letter-spacing:-1px;}
+.pre-mark span{color:var(--blue-soft);}
+.pre-bar{width:180px;height:2px;background:rgba(255,255,255,.14);border-radius:2px;overflow:hidden;}
+.pre-bar i{display:block;height:100%;width:0;background:var(--blue-soft);}
 
-.section-title{text-align:center;max-width:850px;margin:auto;margin-bottom:80px;}
-.section-title span{color:#1676ff;font-weight:800;letter-spacing:3px;font-size:14px;}
-.section-title h2{font-size:56px;margin:20px 0;line-height:1.1;font-weight:800;}
-.section-title p{font-size:20px;line-height:1.8;color:#667085;}
+/* ============ SCROLL PROGRESS ============ */
+#progress{
+  position:fixed;top:0;left:0;height:3px;width:100%;z-index:9999;
+  background:linear-gradient(90deg,var(--blue),var(--blue-soft));
+  transform:scaleX(0);transform-origin:0 50%;
+}
 
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;}
-.service{background:white;padding:45px;border-radius:30px;box-shadow:0 20px 60px rgba(0,0,0,.06);transition:.4s;position:relative;overflow:hidden;}
-.service:before{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:#1676ff;transform:scaleX(0);transition:.4s;transform-origin:left;}
-.service:hover{transform:translateY(-14px);box-shadow:0 30px 80px rgba(22,118,255,.18);}
-.service:hover:before{transform:scaleX(1);}
-.service-icon{width:74px;height:74px;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:34px;background:linear-gradient(135deg,#1676ff,#66c2ff);margin-bottom:30px;}
-.service h3{font-size:27px;margin-bottom:18px;}
-.service p{line-height:1.9;color:#667085;}
+/* ============ CURSOR ============ */
+#cursor,#cursorDot{position:fixed;top:0;left:0;pointer-events:none;z-index:9998;border-radius:50%;}
+#cursor{width:38px;height:38px;border:1.5px solid rgba(22,96,255,.55);margin:-19px 0 0 -19px;transition:width .3s,height .3s,margin .3s,background .3s,border-color .3s;}
+#cursorDot{width:5px;height:5px;background:var(--blue);margin:-2.5px 0 0 -2.5px;}
+body.cursor-lg #cursor{width:74px;height:74px;margin:-37px 0 0 -37px;background:rgba(22,96,255,.12);border-color:transparent;}
+@media(hover:none),(max-width:1024px){#cursor,#cursorDot{display:none;}}
 
-.why{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center;background:white;padding:70px;border-radius:40px;box-shadow:0 30px 80px rgba(0,0,0,.06);}
-.mini-title{color:#1676ff;font-weight:800;letter-spacing:3px;font-size:14px;}
-.why h2{font-size:54px;margin:24px 0;line-height:1.1;}
-.why p{font-size:19px;line-height:1.9;color:#667085;margin-bottom:24px;}
-.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:18px;font-weight:700;margin-top:30px;}
-.award-strip{margin-top:34px;padding:22px 26px;background:#f8fbff;border-left:5px solid #1676ff;border-radius:16px;line-height:1.7;}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:25px;}
-.stats div{background:#f8fbff;padding:38px;border-radius:25px;text-align:center;}
-.stats h3{font-size:46px;color:#1676ff;margin-bottom:10px;}
-.stats p{color:#667085;}
+/* ============ TOP BAR + NAV ============ */
+.topbar{
+  background:var(--dark);color:#c9d4e6;font-size:13.5px;letter-spacing:.2px;
+  padding:9px 0;text-align:center;position:relative;z-index:900;
+}
+.topbar a{color:#fff;font-weight:700;border-bottom:1px solid rgba(255,255,255,.35);}
+.topbar .sep{opacity:.4;margin:0 12px;}
 
-/* HYGIENE FADE-IN SECTION */
-.hygiene{background:linear-gradient(135deg,#0f172a,#123c72);color:white;border-radius:40px;padding:100px 70px;text-align:center;overflow:hidden;position:relative;}
-.hygiene:before{content:"";position:absolute;width:600px;height:600px;background:#58b5ff;opacity:.18;filter:blur(160px);border-radius:50%;top:-260px;left:-160px;pointer-events:none;}
-.hygiene .h-line{font-size:44px;font-weight:800;line-height:1.25;max-width:1000px;margin:auto;letter-spacing:-1px;}
-.hygiene .h-line em{font-style:normal;background:linear-gradient(90deg,#59b5ff,#a5d8ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.hygiene .h-sub{font-size:19px;line-height:1.9;color:#c3d3e8;max-width:760px;margin:34px auto 0;}
-.hygiene-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:60px;text-align:left;}
-.h-fact{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:34px;border-radius:24px;}
-.h-fact b{display:block;font-size:22px;margin-bottom:12px;color:#7cc4ff;}
-.h-fact p{color:#c3d3e8;line-height:1.85;font-size:16px;}
+/* sits just below the topbar, then snaps to the top edge once that scrolls away.
+   --tbh is measured from the real topbar in JS so a wrapped bar can't hide behind it. */
+nav{position:fixed;left:0;right:0;top:var(--tbh,40px);z-index:950;padding:18px 32px;transition:padding .5s var(--ease),top .5s var(--ease),transform .5s var(--ease);}
+nav.docked{padding:10px 32px;top:0;}
+nav.hidden{transform:translateY(-140%);}
+.nav-inner{
+  max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;
+  gap:24px;padding:14px 16px 14px 26px;border-radius:999px;
+  background:rgba(255,255,255,.72);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
+  border:1px solid rgba(255,255,255,.7);box-shadow:0 14px 44px rgba(11,18,32,.08);
+  transition:box-shadow .5s var(--ease),background .5s var(--ease);
+}
+nav.docked .nav-inner{background:rgba(255,255,255,.92);box-shadow:0 18px 50px rgba(11,18,32,.12);}
+.logo{font-family:'Instrument Serif',serif;font-size:27px;letter-spacing:-.4px;}
+.logo span{color:var(--blue);}
+.links{display:flex;gap:34px;font-size:15px;font-weight:600;}
+.links a{position:relative;padding:4px 0;color:#3d4a60;transition:color .3s;}
+.links a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--blue);transition:width .4s var(--ease);}
+.links a:hover{color:var(--ink);}
+.links a:hover::after{width:100%;}
+.nav-cta{padding:13px 26px;font-size:15px;}
+.burger{display:none;width:44px;height:44px;border-radius:50%;background:var(--ink);align-items:center;justify-content:center;flex-direction:column;gap:5px;}
+.burger i{display:block;width:17px;height:1.8px;background:#fff;transition:transform .4s var(--ease),opacity .3s;}
+body.menu-open .burger i:nth-child(1){transform:translateY(6.8px) rotate(45deg);}
+body.menu-open .burger i:nth-child(2){opacity:0;}
+body.menu-open .burger i:nth-child(3){transform:translateY(-6.8px) rotate(-45deg);}
 
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:330px;gap:28px;}
-.gallery-item{position:relative;overflow:hidden;border-radius:30px;box-shadow:0 25px 60px rgba(0,0,0,.08);}
-.gallery-item.large{grid-row:span 2;}
-.gallery-item.wide{grid-column:span 2;}
-.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.7s;}
-.gallery-item:hover img{transform:scale(1.1);}
-.gallery-overlay{position:absolute;left:0;bottom:0;width:100%;padding:30px;color:white;background:linear-gradient(transparent,rgba(0,0,0,.75));}
+.drawer{
+  position:fixed;inset:0;z-index:940;background:var(--dark);color:#fff;
+  display:flex;flex-direction:column;justify-content:center;gap:6px;padding:0 34px;
+  clip-path:circle(0% at calc(100% - 54px) 54px);transition:clip-path .75s var(--ease);
+}
+body.menu-open .drawer{clip-path:circle(150% at calc(100% - 54px) 54px);}
+.drawer a{font-family:'Instrument Serif',serif;font-size:38px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.1);}
+.drawer .drawer-foot{margin-top:34px;font-size:15px;color:#9fb0ca;font-family:'Manrope',sans-serif;border:0;}
 
-.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:35px;max-width:1000px;margin:auto;}
-.team-card{background:white;padding:45px;border-radius:30px;box-shadow:0 20px 60px rgba(0,0,0,.06);transition:.35s;}
-.team-card:hover{transform:translateY(-12px);}
-.team-card h3{font-size:27px;margin-bottom:6px;}
-.team-role{color:#1676ff;font-weight:700;margin-bottom:20px;display:block;}
-.team-card p{line-height:1.9;color:#667085;margin-bottom:14px;}
+/* ============ HERO ============ */
+/* position:relative is load-bearing — it makes .hero the containing block for the
+   decorative glows so overflow:hidden actually clips them (it's a <header>, so the
+   `section{position:relative}` rule below doesn't reach it). */
+.hero{min-height:100vh;display:flex;align-items:center;padding:170px 0 90px;overflow:hidden;position:relative;}
+.glow{position:absolute;border-radius:50%;filter:blur(150px);pointer-events:none;z-index:0;}
+.glow-a{width:640px;height:640px;background:#6cb6ff;opacity:.34;top:-230px;right:-160px;}
+.glow-b{width:460px;height:460px;background:#b9d4ff;opacity:.45;bottom:-200px;left:-170px;}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center;position:relative;z-index:2;}
+.pill{
+  display:inline-flex;align-items:center;gap:11px;background:var(--white);
+  padding:11px 20px;border-radius:999px;font-size:14px;font-weight:700;
+  box-shadow:var(--shadow-sm);margin-bottom:30px;
+}
+.pill .stars{color:var(--gold);letter-spacing:1px;}
+.pill .dot{width:5px;height:5px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.18);}
+.hero p.lead{max-width:560px;margin:26px 0 40px;}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+.hero-meta{display:flex;gap:40px;margin-top:52px;padding-top:34px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.hero-meta b{display:block;font-family:'Instrument Serif',serif;font-size:34px;line-height:1;margin-bottom:6px;}
+.hero-meta span{font-size:13.5px;color:var(--muted);font-weight:600;}
 
-.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:70px;}
-.timeline-card{background:white;padding:45px;border-radius:30px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.06);transition:.35s;}
-.timeline-card:hover{transform:translateY(-12px);}
-.number{width:72px;height:72px;margin:auto;margin-bottom:25px;border-radius:50%;background:#1676ff;color:white;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;}
-.timeline-card h3{font-size:26px;margin-bottom:18px;}
-.timeline-card p{line-height:1.8;color:#667085;}
+/* orbit */
+.orbit{position:relative;width:100%;max-width:520px;margin:0 auto;aspect-ratio:1;display:grid;place-items:center;}
+.ring{position:absolute;border-radius:50%;}
+.ring-1{inset:0;border:1.5px dashed rgba(22,96,255,.26);animation:spin 46s linear infinite;}
+.ring-2{inset:52px;border:1.5px solid rgba(22,96,255,.13);animation:spin 32s linear infinite reverse;}
+.ring-3{inset:100px;border:1px dashed rgba(200,145,42,.3);animation:spin 24s linear infinite;}
+.ring-dot{position:absolute;top:-5px;left:calc(50% - 5px);width:10px;height:10px;border-radius:50%;background:var(--blue);box-shadow:0 0 18px rgba(22,96,255,.9);}
+.ring-3 .ring-dot{background:var(--gold);box-shadow:0 0 14px rgba(200,145,42,.8);}
+@keyframes spin{to{transform:rotate(360deg);}}
+.doc-photo{
+  width:64%;aspect-ratio:1;border-radius:50%;object-fit:cover;z-index:3;
+  border:9px solid #fff;box-shadow:0 44px 90px rgba(22,96,255,.3);
+}
+.float-card{
+  position:absolute;z-index:4;background:rgba(255,255,255,.9);backdrop-filter:blur(14px);
+  padding:15px 20px;border-radius:20px;box-shadow:var(--shadow-md);
+  border:1px solid rgba(255,255,255,.9);font-size:12.5px;font-weight:700;color:var(--muted);
+  letter-spacing:.2px;text-align:left;min-width:118px;
+}
+.float-card b{display:block;font-family:'Instrument Serif',serif;font-weight:400;font-size:29px;color:var(--ink);line-height:1.1;margin-bottom:2px;}
+.float-card.gold b{color:var(--gold);}
+.fc1{top:4%;left:-4%;}
+.fc2{top:16%;right:-8%;}
+.fc3{bottom:16%;left:-8%;}
+.fc4{bottom:2%;right:-2%;}
 
-.premium-stats{background:#ffffff;}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:70px;}
-.stat-box{background:white;padding:45px;text-align:center;border-radius:30px;box-shadow:0 20px 60px rgba(0,0,0,.08);transition:.35s;}
-.stat-box:hover{transform:translateY(-12px);}
-.stat-box h1{font-size:58px;color:#1676ff;margin-bottom:15px;}
-.stat-box p{color:#667085;}
+.scroll-hint{
+  position:absolute;left:50%;bottom:34px;transform:translateX(-50%);z-index:5;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  font-size:11.5px;letter-spacing:2.4px;text-transform:uppercase;color:var(--muted);font-weight:700;
+}
+.scroll-hint i{display:block;width:1.5px;height:46px;background:linear-gradient(var(--blue),transparent);}
 
-.testimonial-slider{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
-.testimonial{background:white;padding:45px;border-radius:30px;box-shadow:0 20px 60px rgba(0,0,0,.08);font-size:17px;line-height:1.9;color:#667085;}
-.testimonial .stars{color:#f0b429;font-size:16px;letter-spacing:2px;}
-.testimonial p{margin:18px 0;}
-.testimonial h4{color:#1676ff;font-size:16px;}
-.testimonial small{color:#98a2b3;font-weight:600;}
+/* ============ MARQUEE ============ */
+.marquee{background:var(--dark);padding:22px 0;overflow:hidden;white-space:nowrap;}
+.marquee-track{display:inline-flex;animation:slide 34s linear infinite;}
+.marquee:hover .marquee-track{animation-play-state:paused;}
+.marquee-track span{
+  font-family:'Instrument Serif',serif;font-size:27px;color:#eaf1ff;
+  padding:0 30px;display:inline-flex;align-items:center;gap:30px;
+}
+.marquee-track span::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue-soft);}
+@keyframes slide{to{transform:translateX(-50%);}}
 
-.booking-card{display:grid;grid-template-columns:1fr 1fr;gap:70px;background:white;padding:70px;border-radius:40px;box-shadow:0 30px 80px rgba(0,0,0,.08);}
-.booking-left h2{font-size:52px;margin:25px 0;line-height:1.1;}
-.booking-left p{font-size:19px;line-height:1.9;color:#667085;}
-.booking-perks{margin-top:34px;display:grid;gap:14px;font-weight:700;}
-.booking-form{display:flex;flex-direction:column;gap:18px;}
-.booking-form input,.booking-form textarea,.booking-form select{padding:18px;font-size:16px;border-radius:18px;border:1px solid #dde5ef;outline:none;transition:.3s;font-family:'Manrope',sans-serif;}
-.booking-form input:focus,.booking-form textarea:focus,.booking-form select:focus{border-color:#1676ff;box-shadow:0 0 0 4px rgba(22,118,255,.1);}
-.booking-form textarea{height:120px;resize:none;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-#formStatus{text-align:center;font-weight:700;min-height:24px;font-size:15px;}
+/* ============ SERVICES ============ */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.service{
+  background:var(--white);padding:44px 38px;border-radius:var(--r);
+  box-shadow:var(--shadow-sm);position:relative;overflow:hidden;
+  transition:transform .55s var(--ease),box-shadow .55s var(--ease);
+  border:1px solid rgba(228,234,243,.9);
+}
+.service::before{
+  content:"";position:absolute;inset:0;border-radius:var(--r);
+  background:linear-gradient(150deg,rgba(22,96,255,.07),transparent 55%);
+  opacity:0;transition:opacity .55s var(--ease);
+}
+.service:hover{transform:translateY(-12px);box-shadow:var(--shadow-lg);}
+.service:hover::before{opacity:1;}
+.service>*{position:relative;z-index:2;}
+.svc-icon{
+  width:60px;height:60px;border-radius:18px;display:grid;place-items:center;font-size:27px;
+  background:linear-gradient(140deg,#e8f1ff,#f6faff);border:1px solid #dbe8ff;margin-bottom:26px;
+  transition:transform .55s var(--ease);
+}
+.service:hover .svc-icon{transform:translateY(-4px) rotate(-6deg) scale(1.06);}
+.service h3{font-size:22px;font-weight:700;margin-bottom:12px;letter-spacing:-.3px;}
+.service p{color:var(--muted);font-size:16px;line-height:1.8;}
+.svc-no{position:absolute;top:28px;right:32px;font-family:'Instrument Serif',serif;font-size:17px;color:#c3cfe2;z-index:2;}
+
+/* ============ ABOUT ============ */
+.about-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:74px;align-items:start;}
+.about-sticky{position:sticky;top:120px;}
+.about-photo{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/5;}
+.about-photo img{width:100%;height:100%;object-fit:cover;}
+.award-card{
+  margin-top:22px;background:var(--white);border-radius:22px;padding:26px 28px;
+  box-shadow:var(--shadow-sm);border-left:4px solid var(--gold);font-size:15.5px;line-height:1.75;color:var(--muted);
+}
+.award-card b{color:var(--ink);display:block;margin-bottom:5px;font-size:16.5px;}
+.about-body p{color:var(--muted);font-size:17.5px;line-height:1.9;margin-bottom:20px;}
+.creds{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:34px;}
+.cred{
+  display:flex;gap:13px;align-items:flex-start;background:var(--white);padding:20px 22px;
+  border-radius:18px;box-shadow:var(--shadow-sm);font-size:15.5px;font-weight:600;line-height:1.6;
+  transition:transform .45s var(--ease);
+}
+.cred:hover{transform:translateY(-4px);}
+.cred .tick{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:12px;margin-top:2px;}
+
+/* ============ STATS ============ */
+.stats-band{background:var(--white);}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-md);}
+.stat{background:var(--white);padding:56px 30px;text-align:center;transition:background .5s var(--ease);}
+.stat:hover{background:#fbfcff;}
+.stat b{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(44px,5vw,66px);color:var(--blue);display:block;line-height:1;}
+.stat p{margin-top:14px;color:var(--muted);font-size:15px;font-weight:600;}
+
+/* ============ HYGIENE (dark) ============ */
+.hygiene-sec{background:var(--bg);}
+.hygiene{
+  background:linear-gradient(150deg,#070c18,#12294f);color:#fff;border-radius:40px;
+  padding:110px 70px;text-align:center;position:relative;overflow:hidden;
+}
+.hygiene::before{content:"";position:absolute;width:700px;height:700px;background:#3d8bff;opacity:.22;filter:blur(170px);border-radius:50%;top:-300px;left:-180px;}
+.hygiene>*{position:relative;z-index:2;}
+.hygiene h2{font-size:clamp(30px,3.9vw,54px);max-width:960px;margin:0 auto;}
+.hygiene h2 em{color:#8cc4ff;}
+.hygiene .h-sub{max-width:740px;margin:34px auto 0;color:#b6c7e0;font-size:18.5px;line-height:1.9;}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:66px;text-align:left;}
+.fact{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:36px;transition:background .5s var(--ease),transform .5s var(--ease);}
+.fact:hover{background:rgba(255,255,255,.1);transform:translateY(-6px);}
+.fact b{display:block;font-size:20px;margin-bottom:14px;color:#8cc4ff;font-weight:700;}
+.fact p{color:#b6c7e0;font-size:16px;line-height:1.85;}
+
+/* ============ GALLERY ============ */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:20px;}
+.g-item{position:relative;overflow:hidden;border-radius:var(--r);box-shadow:var(--shadow-md);cursor:pointer;}
+.g-item.tall{grid-row:span 2;}
+.g-item.wide{grid-column:span 2;}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease);}
+.g-item:hover img{transform:scale(1.08);}
+.g-cap{
+  position:absolute;inset:auto 0 0 0;padding:28px;color:#fff;font-weight:700;font-size:17px;
+  background:linear-gradient(transparent,rgba(4,9,20,.82));
+  transform:translateY(8px);opacity:.92;transition:transform .5s var(--ease),opacity .5s;
+}
+.g-item:hover .g-cap{transform:translateY(0);opacity:1;}
+
+#lightbox{position:fixed;inset:0;z-index:9990;background:rgba(5,9,18,.94);display:none;align-items:center;justify-content:center;padding:34px;}
+#lightbox.on{display:flex;}
+#lightbox img{max-width:min(1000px,92vw);max-height:86vh;border-radius:20px;box-shadow:0 40px 120px rgba(0,0,0,.6);}
+#lightbox .close{position:absolute;top:26px;right:30px;color:#fff;font-size:32px;line-height:1;}
+
+/* ============ TEAM ============ */
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:1020px;margin:0 auto;}
+.team-card{background:var(--white);border-radius:var(--r);padding:44px;box-shadow:var(--shadow-sm);transition:transform .55s var(--ease),box-shadow .55s var(--ease);}
+.team-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg);}
+.team-initial{
+  width:62px;height:62px;border-radius:50%;display:grid;place-items:center;margin-bottom:24px;
+  background:linear-gradient(140deg,var(--blue),var(--blue-soft));color:#fff;
+  font-family:'Instrument Serif',serif;font-size:26px;
+}
+.team-card h3{font-size:23px;font-weight:700;margin-bottom:4px;letter-spacing:-.3px;}
+.team-role{color:var(--blue);font-weight:700;font-size:14px;letter-spacing:.4px;display:block;margin-bottom:20px;}
+.team-card p{color:var(--muted);font-size:16px;line-height:1.85;margin-bottom:14px;}
+
+/* ============ PROCESS ============ */
+.process{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:26px;}
+.proc-line{position:absolute;top:36px;left:9%;right:9%;height:2px;background:var(--line);z-index:0;}
+.proc-line i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--blue-soft));transform:scaleX(0);transform-origin:0 50%;}
+.step{text-align:center;position:relative;z-index:2;}
+.step-no{
+  width:72px;height:72px;margin:0 auto 26px;border-radius:50%;display:grid;place-items:center;
+  background:var(--white);border:2px solid var(--line);color:var(--blue);
+  font-family:'Instrument Serif',serif;font-size:27px;box-shadow:var(--shadow-sm);
+  transition:transform .5s var(--ease),border-color .5s,background .5s,color .5s;
+}
+.step:hover .step-no{transform:translateY(-6px) scale(1.06);background:var(--blue);border-color:var(--blue);color:#fff;}
+.step h3{font-size:20px;font-weight:700;margin-bottom:10px;}
+.step p{color:var(--muted);font-size:15.5px;line-height:1.8;padding:0 8px;}
+
+/* ============ TESTIMONIALS ============ */
+.reviews-sec{background:var(--white);overflow:hidden;}
+.rev-row{display:flex;gap:24px;width:max-content;margin-bottom:24px;}
+.rev-row.a{animation:slide 62s linear infinite;}
+.rev-row.b{animation:slide 74s linear infinite reverse;}
+.reviews-sec:hover .rev-row{animation-play-state:paused;}
+.review{
+  width:400px;flex-shrink:0;background:var(--bg);border:1px solid var(--line);
+  border-radius:24px;padding:34px;transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+}
+.review:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);}
+.review .stars{color:var(--gold);letter-spacing:2px;font-size:14px;}
+.review p{margin:16px 0 22px;color:#42506a;font-size:16px;line-height:1.85;}
+.rev-who{display:flex;align-items:center;gap:13px;}
+.rev-av{width:42px;height:42px;border-radius:50%;background:linear-gradient(140deg,var(--blue),var(--blue-soft));color:#fff;display:grid;place-items:center;font-weight:700;font-size:16px;flex-shrink:0;}
+.rev-who b{display:block;font-size:15px;}
+.rev-who span{font-size:13px;color:var(--muted);}
+.fade-edge{position:absolute;top:0;bottom:0;width:140px;z-index:5;pointer-events:none;}
+.fade-edge.l{left:0;background:linear-gradient(90deg,var(--white),transparent);}
+.fade-edge.r{right:0;background:linear-gradient(270deg,var(--white),transparent);}
+
+/* ============ BOOKING ============ */
+.booking{display:grid;grid-template-columns:1fr 1.05fr;gap:0;border-radius:36px;overflow:hidden;box-shadow:var(--shadow-lg);}
+.book-left{background:linear-gradient(155deg,#070c18,#132c56);color:#fff;padding:64px 56px;position:relative;overflow:hidden;}
+.book-left::before{content:"";position:absolute;width:460px;height:460px;background:#3d8bff;opacity:.25;filter:blur(140px);border-radius:50%;bottom:-200px;right:-140px;}
+.book-left>*{position:relative;z-index:2;}
+.book-left .eyebrow{color:#8cc4ff;}
+.book-left .eyebrow::before{background:#8cc4ff;}
+.book-left h2{font-size:clamp(30px,3.4vw,46px);margin-bottom:22px;}
+.book-left>p{color:#b6c7e0;font-size:17px;line-height:1.85;}
+.perks{margin-top:36px;display:grid;gap:15px;}
+.perk{display:flex;gap:12px;align-items:center;font-size:15.5px;color:#dce7f7;font-weight:600;}
+.perk .tick{width:22px;height:22px;border-radius:50%;background:rgba(140,196,255,.18);color:#8cc4ff;display:grid;place-items:center;font-size:12px;flex-shrink:0;}
+.book-contact{margin-top:44px;padding-top:28px;border-top:1px solid rgba(255,255,255,.14);font-size:15px;color:#9fb0ca;line-height:1.9;}
+.book-contact a{color:#fff;font-weight:700;}
+
+.book-right{background:var(--white);padding:64px 56px;}
+.book-form{display:grid;gap:16px;}
+.field{position:relative;}
+.field label{position:absolute;top:16px;left:20px;font-size:15px;color:#93a0b5;pointer-events:none;transition:all .3s var(--ease);font-weight:600;}
+.field input:focus~label,.field input:not(:placeholder-shown)~label{top:7px;font-size:11px;letter-spacing:.6px;color:var(--blue);text-transform:uppercase;}
+.book-form input,.book-form select,.book-form textarea{
+  width:100%;padding:22px 20px 10px;font-size:16px;font-family:inherit;color:var(--ink);
+  border:1.5px solid var(--line);border-radius:16px;background:#fbfcfe;outline:none;
+  transition:border-color .3s,box-shadow .3s,background .3s;
+}
+.book-form select,.book-form textarea{padding:17px 20px;}
+.book-form input:focus,.book-form select:focus,.book-form textarea:focus{border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px rgba(22,96,255,.1);}
+.book-form textarea{height:112px;resize:none;}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.submit{
+  margin-top:6px;padding:19px;border-radius:16px;background:var(--blue);color:#fff;
+  font-weight:700;font-size:17px;transition:transform .4s var(--ease),box-shadow .4s var(--ease),opacity .3s;
+  box-shadow:0 16px 40px rgba(22,96,255,.3);
+}
+.submit:hover:not(:disabled){transform:translateY(-3px);box-shadow:0 24px 56px rgba(22,96,255,.4);}
+.submit:disabled{opacity:.6;cursor:not-allowed;}
+#formStatus{min-height:24px;text-align:center;font-weight:700;font-size:15px;}
 .success{color:#12a150;}
 .error{color:#e5484d;}
+.form-note{font-size:13px;color:#93a0b5;text-align:center;line-height:1.6;}
 
-.faq{max-width:900px;margin:auto;margin-top:70px;}
-.faq-item{background:white;margin-bottom:20px;border-radius:24px;box-shadow:0 15px 40px rgba(0,0,0,.06);overflow:hidden;}
-.faq-question{width:100%;background:white;padding:28px 30px;display:flex;justify-content:space-between;align-items:center;font-size:20px;font-weight:700;text-align:left;gap:20px;}
-.faq-question:hover{transform:none;color:#1676ff;}
-.faq-answer{display:none;padding:0 30px 30px;color:#667085;line-height:1.8;}
+/* ============ FAQ ============ */
+.faq{max-width:880px;margin:0 auto;display:grid;gap:14px;}
+.faq-item{background:var(--white);border-radius:22px;box-shadow:var(--shadow-sm);overflow:hidden;border:1px solid rgba(228,234,243,.8);}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:22px;padding:28px 32px;font-size:18.5px;font-weight:700;text-align:left;transition:color .3s;}
+.faq-q:hover{color:var(--blue);}
+.faq-q .sign{flex-shrink:0;width:32px;height:32px;border-radius:50%;background:#eef4ff;color:var(--blue);display:grid;place-items:center;font-size:19px;transition:transform .45s var(--ease),background .3s;}
+.faq-item.open .faq-q .sign{transform:rotate(135deg);background:var(--blue);color:#fff;}
+.faq-a{height:0;overflow:hidden;transition:height .5s var(--ease);}
+.faq-a p{padding:0 32px 30px;color:var(--muted);font-size:16.5px;line-height:1.85;}
 
-footer{background:#0f172a;color:white;padding:100px 8% 40px;margin-top:120px;}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;margin-bottom:60px;}
-.footer-grid h2{font-size:30px;margin-bottom:18px;}
-.footer-grid h3{margin-bottom:20px;}
-.footer-grid ul{list-style:none;padding:0;}
-.footer-grid li{margin-bottom:14px;}
-.footer-grid a{color:#d6dbe4;}
-.footer-grid a:hover{color:#59b5ff;}
-.footer-grid p{color:#c8d0da;line-height:1.8;}
-.copyright{text-align:center;border-top:1px solid rgba(255,255,255,.12);padding-top:30px;color:#9ca3af;margin-top:40px;}
+/* ============ VISIT ============ */
+.visit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.visit-card{background:var(--white);border-radius:var(--r);padding:44px 38px;text-align:center;box-shadow:var(--shadow-sm);transition:transform .5s var(--ease),box-shadow .5s var(--ease);}
+.visit-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);}
+.visit-card .ic{width:58px;height:58px;margin:0 auto 22px;border-radius:18px;background:linear-gradient(140deg,#e8f1ff,#f6faff);border:1px solid #dbe8ff;display:grid;place-items:center;font-size:25px;}
+.visit-card h4{font-size:19px;font-weight:700;margin-bottom:9px;}
+.visit-card p{color:var(--muted);font-size:16px;line-height:1.8;}
 
-@media(max-width:1000px){
-  section{padding:80px 6%;}
-  .hero-grid{grid-template-columns:1fr;text-align:center;}
+/* ============ FOOTER ============ */
+footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;padding-bottom:56px;}
+.foot-grid h2{font-family:'Instrument Serif',serif;font-size:33px;margin-bottom:18px;}
+.foot-grid h2 span{color:var(--blue-soft);}
+.foot-grid>div>p{color:#9fb0ca;font-size:16px;line-height:1.9;max-width:400px;}
+.foot-grid h3{font-size:14px;letter-spacing:2px;text-transform:uppercase;color:#7d8ea8;margin-bottom:22px;font-weight:800;}
+.foot-grid li{margin-bottom:13px;}
+.foot-grid a,.foot-grid li{color:#c9d4e6;font-size:16px;transition:color .3s;}
+.foot-grid a:hover{color:var(--blue-soft);}
+.copyright{border-top:1px solid rgba(255,255,255,.1);padding-top:30px;text-align:center;color:#7d8ea8;font-size:14px;}
+
+/* ============ FLOATING ACTIONS ============ */
+.fabs{position:fixed;right:24px;bottom:24px;z-index:930;display:grid;gap:12px;}
+.fab{
+  width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-size:22px;
+  box-shadow:var(--shadow-md);transition:transform .45s var(--ease);
+}
+.fab:hover{transform:translateY(-4px) scale(1.06);}
+.fab.call{background:var(--blue);color:#fff;}
+.fab.top{background:var(--white);color:var(--ink);opacity:0;pointer-events:none;transition:opacity .4s,transform .45s var(--ease);}
+.fab.top.show{opacity:1;pointer-events:auto;}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1080px){
+  section{padding:92px 0;}
+  .container{padding:0 24px;}
   .links{display:none;}
-  .hero h1{font-size:46px;letter-spacing:-1.5px;}
-  .hero p{font-size:18px;}
-  .buttons{justify-content:center;}
-  .tooth-wrap{min-height:400px;}
-  .ring{width:360px;height:360px;}
-  .ring2{width:280px;height:280px;}
-  .doc-photo{width:220px;height:220px;}
-  .card{padding:14px 16px;font-size:12px;}
-  .card b{font-size:19px;}
-  .c1,.c3{left:-5px;}
-  .c2,.c4{right:-5px;}
-  .section-title h2{font-size:36px;}
-  .services-grid{grid-template-columns:1fr;}
-  .why{grid-template-columns:1fr;padding:40px;}
-  .why h2{font-size:36px;}
-  .stats{grid-template-columns:1fr 1fr;}
-  .hygiene{padding:60px 30px;}
-  .hygiene .h-line{font-size:28px;}
-  .hygiene-facts{grid-template-columns:1fr;}
-  .gallery-grid{grid-template-columns:1fr;grid-auto-rows:280px;}
-  .gallery-item.large,.gallery-item.wide{grid-row:auto;grid-column:auto;}
-  .team-grid{grid-template-columns:1fr;}
-  .timeline{grid-template-columns:1fr;}
+  .nav-cta{display:none;}
+  .burger{display:flex;}
+  .hero{padding:140px 0 70px;min-height:auto;}
+  .hero-grid{grid-template-columns:1fr;gap:56px;text-align:center;}
+  .hero p.lead{margin-left:auto;margin-right:auto;}
+  .hero-actions,.hero-meta{justify-content:center;}
+  .orbit{max-width:340px;}
+  .float-card{padding:11px 14px;min-width:92px;font-size:10.5px;}
+  .float-card b{font-size:21px;}
+  .fc1,.fc3{left:-6%;}
+  .fc2,.fc4{right:-6%;}
+  .scroll-hint{display:none;}
+  .services-grid{grid-template-columns:1fr 1fr;}
+  .about-wrap{grid-template-columns:1fr;gap:44px;}
+  .about-sticky{position:static;}
   .stats-grid{grid-template-columns:1fr 1fr;}
-  .testimonial-slider{grid-template-columns:1fr;}
-  .booking-card{grid-template-columns:1fr;padding:40px;}
-  .booking-left h2{font-size:36px;}
-  .form-row{grid-template-columns:1fr;}
-  .footer-grid{grid-template-columns:1fr;}
+  .hygiene{padding:64px 32px;border-radius:30px;}
+  .facts{grid-template-columns:1fr;}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:200px;}
+  .team-grid{grid-template-columns:1fr;}
+  .process{grid-template-columns:1fr 1fr;gap:44px 26px;}
+  .proc-line{display:none;}
+  .booking{grid-template-columns:1fr;border-radius:28px;}
+  .book-left,.book-right{padding:48px 32px;}
+  .visit-grid{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr;gap:40px;}
+}
+@media(max-width:640px){
+  body{font-size:16px;}
+  section{padding:76px 0;}
+  .section-head{margin-bottom:52px;}
+  .services-grid{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:1fr;}
+  .gallery{grid-template-columns:1fr;}
+  .g-item.tall,.g-item.wide{grid-row:auto;grid-column:auto;}
+  .process{grid-template-columns:1fr;}
+  .creds{grid-template-columns:1fr;}
+  .row2{grid-template-columns:1fr;}
+  .review{width:290px;}
+  .hero-meta{gap:26px;}
+  .drawer a{font-size:30px;}
+  /* keep the topbar to a single line on phones — the hours and address are
+     repeated in the drawer, the booking panel and the footer */
+  .topbar{font-size:13px;}
+  .topbar .sep,.topbar .tb-hours,.topbar .tb-loc{display:none;}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="heroGlow"></div>
+<!-- ============ PRELOADER ============ -->
+<div id="preloader">
+  <div class="pre-mark">Dental<span>Zone</span></div>
+  <div class="pre-bar"><i></i></div>
+</div>
 
-<nav>
-  <div class="glass nav">
-    <div class="logo">Dental<span>Zone</span></div>
+<div id="progress"></div>
+<div id="cursor"></div>
+<div id="cursorDot"></div>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar" id="topbar">
+  📞 Book by phone: <a href="tel:+919999999999">+91 99999 99999</a>
+  <span class="sep">·</span><span class="tb-hours">Mon–Sat · 10:00 AM – 8:00 PM</span>
+  <span class="sep">·</span><span class="tb-loc">Lukerganj, Prayagraj</span>
+</div>
+
+<!-- ============ NAV ============ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">Dental<span>Zone</span></a>
     <div class="links">
       <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#team">Our Team</a>
+      <a href="#about">The Doctor</a>
+      <a href="#clinic">Clinic</a>
+      <a href="#team">Team</a>
       <a href="#reviews">Reviews</a>
-      <a href="#booking">Book</a>
+      <a href="#faq">FAQ</a>
     </div>
-    <button class="cta" onclick="document.getElementById('booking').scrollIntoView()">Book Appointment</button>
+    <a href="#booking" class="btn btn-primary nav-cta magnetic">Book Appointment</a>
+    <button class="burger" id="burger" aria-label="Menu"><i></i><i></i><i></i></button>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
+<div class="drawer" id="drawer">
+  <a href="#services">Services</a>
+  <a href="#about">The Doctor</a>
+  <a href="#clinic">Clinic</a>
+  <a href="#team">Team</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#booking">Book Appointment</a>
+  <div class="drawer-foot">
+    Lukerganj, Prayagraj · Mon–Sat 10 AM – 8 PM<br>
+    <a href="tel:+919999999999" style="color:#fff;font-weight:700;">+91 99999 99999</a>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
   <div class="container hero-grid">
-    <div>
-      <div class="badge">★★★★★ Medical Registration Verified · 97% Satisfaction</div>
-      <h1>Super Speciality Dentistry, <span class="gradient">Right Here in Prayagraj.</span></h1>
-      <p>
-        Led by Dr. Mukesh Basantani — 23 years of experience, over 50,000 root canals,
-        implants and extractions performed. Advanced treatment, delivered with the kind of
-        patience that turns nervous first-timers into lifelong patients.
+    <div class="hero-copy">
+      <div class="pill" data-hero>
+        <span class="dot"></span><span class="stars">★★★★★</span> Medical Registration Verified · 97% Satisfaction
+      </div>
+      <h1 class="display" data-split>Super speciality dentistry, <em>right here in Prayagraj.</em></h1>
+      <p class="lead" data-hero>
+        Led by Dr. Mukesh Basantani — 23 years of practice, over 50,000 root canals, implants
+        and extractions performed. Advanced treatment delivered with the kind of patience that
+        turns nervous first-timers into lifelong patients.
       </p>
-      <div class="buttons">
-        <button class="primary" onclick="document.getElementById('booking').scrollIntoView()">Book Appointment</button>
-        <button class="secondary" onclick="document.getElementById('services').scrollIntoView()">Our Services</button>
+      <div class="hero-actions" data-hero>
+        <a href="#booking" class="btn btn-primary magnetic">Book Appointment <span class="arrow">→</span></a>
+        <a href="#services" class="btn btn-ghost magnetic">Explore Services</a>
+      </div>
+      <div class="hero-meta" data-hero>
+        <div><b><span class="count" data-target="23">0</span></b><span>Years of practice</span></div>
+        <div><b><span class="count" data-target="50000">0</span>+</b><span>Procedures performed</span></div>
+        <div><b><span class="count" data-target="1000">0</span>+</b><span>Orthodontic cases</span></div>
       </div>
     </div>
 
-    <div class="tooth-wrap">
-      <div class="ring"></div>
-      <div class="ring2"></div>
-      <img src="images/images.jpeg" class="doc-photo" alt="Dr. Mukesh Basantani">
-      <div class="card c1"><b>23</b>Years</div>
-      <div class="card c2"><b>50K+</b>Procedures</div>
-      <div class="card c3"><b>1,000+</b>Ortho Cases</div>
-      <div class="card c4"><b>97%</b>Satisfaction</div>
+    <div class="orbit" id="orbit">
+      <div class="ring ring-1"><span class="ring-dot"></span></div>
+      <div class="ring ring-2"></div>
+      <div class="ring ring-3"><span class="ring-dot"></span></div>
+      <img src="images/images.jpeg" class="doc-photo" alt="Dr. Mukesh Basantani, Dental Surgeon and Implantologist">
+      <div class="float-card fc1" data-depth="24"><b>23</b>Years experience</div>
+      <div class="float-card fc2" data-depth="-18"><b>50K+</b>Procedures</div>
+      <div class="float-card fc3" data-depth="20"><b>19</b>Yrs implantology</div>
+      <div class="float-card fc4 gold" data-depth="-26"><b>97%</b>Satisfaction</div>
     </div>
   </div>
-</section>
+  <div class="scroll-hint"><span>Scroll</span><i></i></div>
+</header>
 
-<!-- SERVICES -->
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Root Canals</span><span>Dental Implants</span><span>Braces &amp; Aligners</span><span>Teeth Whitening</span><span>Crowns &amp; Bridges</span><span>Children's Dentistry</span><span>Emergency Care</span>
+    <span>Root Canals</span><span>Dental Implants</span><span>Braces &amp; Aligners</span><span>Teeth Whitening</span><span>Crowns &amp; Bridges</span><span>Children's Dentistry</span><span>Emergency Care</span>
+  </div>
+</div>
+
+<!-- ============ SERVICES ============ -->
 <section id="services">
   <div class="container">
-    <div class="section-title">
-      <span>OUR SERVICES</span>
-      <h2>Complete Dental Care<br>Under One Roof</h2>
+    <div class="section-head">
+      <span class="eyebrow">Our Services</span>
+      <h2 class="display">Complete dental care <em>under one roof</em></h2>
       <p>From a routine cleaning to a full implant — Dental Zone handles it without sending you elsewhere.</p>
     </div>
 
     <div class="services-grid">
-      <div class="service">
-        <div class="service-icon">🪥</div>
-        <h3>Root Canal Treatment</h3>
-        <p>Painless, precision RCT using advanced rotary technology — the treatment Dr. Basantani is best known for across Prayagraj.</p>
-      </div>
-      <div class="service">
-        <div class="service-icon">🦷</div>
-        <h3>Dental Implants</h3>
-        <p>Permanent tooth replacement placed by a specialist implantologist with 19 years of focused experience.</p>
-      </div>
-      <div class="service">
-        <div class="service-icon">😁</div>
-        <h3>Braces & Aligners</h3>
-        <p>Over 1,000 fixed orthodontic cases completed — for children, teenagers and adults who thought it was too late.</p>
-      </div>
-      <div class="service">
-        <div class="service-icon">✨</div>
-        <h3>Teeth Whitening</h3>
-        <p>Professional in-clinic whitening for a noticeably brighter smile, with visible results in a single sitting.</p>
-      </div>
-      <div class="service">
-        <div class="service-icon">🧒</div>
-        <h3>Children's Dentistry</h3>
-        <p>Gentle, unhurried care that makes a child's first dental visit calm rather than frightening.</p>
-      </div>
-      <div class="service">
-        <div class="service-icon">🦴</div>
-        <h3>Crowns & Bridges</h3>
-        <p>Restore broken or missing teeth with natural-looking restorations built to last for years.</p>
-      </div>
-      <div class="service">
-        <div class="service-icon">🩹</div>
-        <h3>Extractions & Dentures</h3>
-        <p>Wisdom teeth, surgical extractions, and full or partial dentures — handled with minimal discomfort.</p>
-      </div>
-      <div class="service">
-        <div class="service-icon">🪒</div>
-        <h3>Scaling & Polishing</h3>
-        <p>Professional cleaning that removes plaque and stains, and stops small problems becoming expensive ones.</p>
-      </div>
-      <div class="service">
-        <div class="service-icon">🚨</div>
-        <h3>Dental Emergencies</h3>
-        <p>Severe pain, swelling or a broken tooth treated as priority — we do our best to see you the same day.</p>
-      </div>
+      <div class="service reveal"><span class="svc-no">01</span><div class="svc-icon">🪥</div><h3>Root Canal Treatment</h3><p>Painless, precision RCT using advanced rotary technology — the treatment Dr. Basantani is best known for across Prayagraj.</p></div>
+      <div class="service reveal"><span class="svc-no">02</span><div class="svc-icon">🦷</div><h3>Dental Implants</h3><p>Permanent tooth replacement placed by a specialist implantologist with 19 years of focused experience.</p></div>
+      <div class="service reveal"><span class="svc-no">03</span><div class="svc-icon">😁</div><h3>Braces &amp; Aligners</h3><p>Over 1,000 fixed orthodontic cases completed — for children, teenagers and adults who assumed it was too late.</p></div>
+      <div class="service reveal"><span class="svc-no">04</span><div class="svc-icon">✨</div><h3>Teeth Whitening</h3><p>Professional in-clinic whitening for a noticeably brighter smile, with visible results in a single sitting.</p></div>
+      <div class="service reveal"><span class="svc-no">05</span><div class="svc-icon">🧒</div><h3>Children's Dentistry</h3><p>Gentle, unhurried care that makes a child's first dental visit calm rather than frightening.</p></div>
+      <div class="service reveal"><span class="svc-no">06</span><div class="svc-icon">🦴</div><h3>Crowns &amp; Bridges</h3><p>Restore broken or missing teeth with natural-looking restorations built to last for years.</p></div>
+      <div class="service reveal"><span class="svc-no">07</span><div class="svc-icon">🩹</div><h3>Extractions &amp; Dentures</h3><p>Wisdom teeth, surgical extractions, and full or partial dentures — handled with minimal discomfort.</p></div>
+      <div class="service reveal"><span class="svc-no">08</span><div class="svc-icon">🪒</div><h3>Scaling &amp; Polishing</h3><p>Professional cleaning that removes plaque and stains, and stops small problems becoming expensive ones.</p></div>
+      <div class="service reveal"><span class="svc-no">09</span><div class="svc-icon">🚨</div><h3>Dental Emergencies</h3><p>Severe pain, swelling or a broken tooth treated as priority — we do our best to see you the same day.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT / WHY -->
+<!-- ============ ABOUT ============ -->
 <section id="about">
-  <div class="container">
-    <div class="why">
-      <div>
-        <span class="mini-title">THE DOCTOR</span>
-        <h2>Dr. Mukesh Basantani, BDS</h2>
-        <p>
-          Dental Surgeon &amp; Implantologist. A graduate of Manipal Academy of Higher Education (2003),
-          he went on to complete advanced training in orthodontics, implants and surgical extractions
-          at both national and international level.
-        </p>
-        <p>
-          He spent 12 years practising at a leading dental hospital in Uttar Pradesh — sharpening his
-          hands on cases most young dentists never see — before founding Dental Zone on 23rd November
-          as a super speciality dental hospital built on one belief: that great dentistry should still feel personal.
-        </p>
-        <p>
-          What patients mention most isn't the case count. It's that he explains an X-ray before he touches
-          a drill, talks a nervous first-timer through their fear instead of rushing past it, and stays honest
-          about a diagnosis even when overselling would be easier.
-        </p>
-
-        <div class="feature-list">
-          <div>✓ 19 Years as a Specialist</div>
-          <div>✓ Verified Medical Registration</div>
-          <div>✓ Advanced Implantology Training</div>
-          <div>✓ Painless Procedure Focus</div>
-        </div>
-
-        <div class="award-strip">
-          🏅 <b>Pride of Allahabad Award</b> — felicitated by the Honourable Governor of Uttar Pradesh,
-          Shri Keshari Nath Tripathi, for his contribution to dentistry in the region.
-        </div>
+  <div class="container about-wrap">
+    <div class="about-sticky">
+      <div class="about-photo reveal"><img src="images/images-2.jpeg" alt="Dr. Mukesh Basantani at Dental Zone"></div>
+      <div class="award-card reveal">
+        <b>🏅 Pride of Allahabad Award</b>
+        Felicitated by the Honourable Governor of Uttar Pradesh, Shri Keshari Nath Tripathi,
+        for his contribution to dentistry in the region.
       </div>
+    </div>
 
-      <div class="stats">
-        <div><h3>23</h3><p>Years Experience</p></div>
-        <div><h3>50K+</h3><p>RCTs &amp; Implants</p></div>
-        <div><h3>1,000+</h3><p>Ortho Cases</p></div>
-        <div><h3>97%</h3><p>Satisfaction</p></div>
+    <div class="about-body">
+      <span class="eyebrow reveal">The Doctor</span>
+      <h2 class="display reveal" style="margin-bottom:28px;">Dr. Mukesh Basantani, <em>BDS</em></h2>
+      <p class="reveal">Dental Surgeon &amp; Implantologist. A graduate of Manipal Academy of Higher Education (2003), he went on to complete advanced training in orthodontics, implants and surgical extractions at both national and international level.</p>
+      <p class="reveal">He spent 12 years practising at a leading dental hospital in Uttar Pradesh — sharpening his hands on cases most young dentists never see — before founding Dental Zone on 23rd November as a super speciality dental hospital built on one belief: that great dentistry should still feel personal.</p>
+      <p class="reveal">What patients mention most isn't the case count. It's that he explains an X-ray before he touches a drill, talks a nervous first-timer through their fear instead of rushing past it, and stays honest about a diagnosis even when overselling would be easier.</p>
+      <p class="reveal">Over the years his focus has narrowed to three areas he's especially known for across Prayagraj: complex root canal therapy, dental implants for patients who've lost teeth to age or injury, and full-mouth orthodontic correction — often for adults who assumed braces were behind them.</p>
+
+      <div class="creds">
+        <div class="cred reveal"><span class="tick">✓</span>19 years as a specialist implantologist</div>
+        <div class="cred reveal"><span class="tick">✓</span>1,000+ fixed orthodontic treatments</div>
+        <div class="cred reveal"><span class="tick">✓</span>Verified medical registration</div>
+        <div class="cred reveal"><span class="tick">✓</span>Advanced national &amp; international training</div>
+        <div class="cred reveal"><span class="tick">✓</span>97% satisfaction across 450+ tracked patients</div>
+        <div class="cred reveal"><span class="tick">✓</span>Founder &amp; lead surgeon at Dental Zone</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DENTAL HYGIENE FADE-IN SECTION -->
-<section id="hygiene">
+<!-- ============ STATS ============ -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-grid reveal">
+      <div class="stat"><b><span class="count" data-target="50000">0</span>+</b><p>RCTs, implants &amp; extractions</p></div>
+      <div class="stat"><b><span class="count" data-target="23">0</span></b><p>Years of experience</p></div>
+      <div class="stat"><b><span class="count" data-target="1000">0</span>+</b><p>Orthodontic cases</p></div>
+      <div class="stat"><b><span class="count" data-target="97">0</span>%</b><p>Patient satisfaction</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HYGIENE ============ -->
+<section class="hygiene-sec" id="hygiene">
   <div class="container">
     <div class="hygiene">
-      <h2 class="h-line reveal-line">
-        Your mouth tells the truth about your health<br>
-        <em>long before the rest of your body does.</em>
-      </h2>
-
-      <p class="h-sub reveal-line">
+      <h2 class="display" data-split-dark>Your mouth tells the truth about your health <em>long before the rest of your body does.</em></h2>
+      <p class="h-sub reveal">
         Most of the serious cases we treat began as something small and ignorable — a little sensitivity,
-        a bit of bleeding while brushing, a tooth that only hurt sometimes. Dental problems are quiet until
-        they are expensive. Six months of good habits and one honest checkup is almost always cheaper,
-        faster and far less painful than what comes after waiting.
+        a bit of bleeding while brushing, a tooth that only hurt sometimes. Dental problems stay quiet
+        until they are expensive. Six months of good habits and one honest checkup is almost always
+        cheaper, faster and far less painful than what comes after waiting.
       </p>
-
-      <div class="hygiene-facts">
-        <div class="h-fact reveal-fact">
-          <b>Twice a day, two minutes</b>
-          <p>Brushing properly for two full minutes, morning and night, removes the plaque film that hardens into tartar within 48 hours. Most people brush for under 45 seconds.</p>
-        </div>
-        <div class="h-fact reveal-fact">
-          <b>Gums don't bleed for no reason</b>
-          <p>Bleeding while brushing isn't normal and isn't caused by brushing too hard. It's usually the earliest visible sign of gum disease — and the easiest stage to reverse completely.</p>
-        </div>
-        <div class="h-fact reveal-fact">
-          <b>A checkup every six months</b>
-          <p>Decay and gum disease are painless in their early stages. A six-month checkup catches them while they still need a filling and a cleaning, not a root canal or an extraction.</p>
-        </div>
+      <div class="facts">
+        <div class="fact reveal"><b>Twice a day, two minutes</b><p>Brushing properly for two full minutes, morning and night, removes the plaque film that hardens into tartar within 48 hours. Most people brush for under 45 seconds.</p></div>
+        <div class="fact reveal"><b>Gums don't bleed for no reason</b><p>Bleeding while brushing isn't normal, and isn't caused by brushing too hard. It's usually the earliest visible sign of gum disease — and the easiest stage to reverse completely.</p></div>
+        <div class="fact reveal"><b>A checkup every six months</b><p>Decay and gum disease are painless in their early stages. A six-month checkup catches them while they still need a filling and a cleaning, not a root canal or an extraction.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery">
+<!-- ============ GALLERY ============ -->
+<section id="clinic">
   <div class="container">
-    <div class="section-title">
-      <span>INSIDE DENTAL ZONE</span>
-      <h2>A Clinic Built To Feel<br>Calm, Not Clinical</h2>
+    <div class="section-head">
+      <span class="eyebrow">Inside Dental Zone</span>
+      <h2 class="display">A clinic built to feel <em>calm, not clinical</em></h2>
       <p>Modern equipment, strict sterilisation, and a space designed so that walking in doesn't raise your heart rate.</p>
     </div>
-
-    <div class="gallery-grid">
-      <div class="gallery-item large">
-        <img src="images/images-2.jpeg" alt="Dental Zone clinic">
-        <div class="gallery-overlay"><h3>The Clinic</h3></div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/images-3.jpeg" alt="Treatment area">
-        <div class="gallery-overlay"><h3>Treatment Room</h3></div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/images-4.jpeg" alt="Dental Zone equipment">
-        <div class="gallery-overlay"><h3>Equipment</h3></div>
-      </div>
-      <div class="gallery-item wide">
-        <img src="images/images-5.jpeg" alt="Dental Zone reception">
-        <div class="gallery-overlay"><h3>Reception &amp; Waiting Area</h3></div>
-      </div>
+    <div class="gallery">
+      <div class="g-item tall wide reveal"><img src="images/images-2.jpeg" alt="Dental Zone clinic interior"><div class="g-cap">The Clinic</div></div>
+      <div class="g-item reveal"><img src="images/images-3.jpeg" alt="Treatment room"><div class="g-cap">Treatment Room</div></div>
+      <div class="g-item reveal"><img src="images/images-4.jpeg" alt="Dental equipment"><div class="g-cap">Equipment</div></div>
+      <div class="g-item wide reveal"><img src="images/images-5.jpeg" alt="Reception and waiting area"><div class="g-cap">Reception &amp; Waiting Area</div></div>
     </div>
   </div>
 </section>
 
-<!-- TEAM -->
+<div id="lightbox"><span class="close">✕</span><img src="" alt=""></div>
+
+<!-- ============ TEAM ============ -->
 <section id="team">
   <div class="container">
-    <div class="section-title">
-      <span>OUR TEAM</span>
-      <h2>The Hands That Assist<br>Every Visit</h2>
+    <div class="section-head">
+      <span class="eyebrow">Our Team</span>
+      <h2 class="display">The hands that assist <em>every visit</em></h2>
       <p>Dr. Basantani doesn't work alone — here's who else you'll likely meet at Dental Zone.</p>
     </div>
-
     <div class="team-grid">
-      <div class="team-card">
+      <div class="team-card reveal">
+        <div class="team-initial">A</div>
         <h3>Dr. Ashwarya Pande</h3>
         <span class="team-role">Assistant General Dentist</span>
-        <p>
-          Dr. Pande completed her Bachelor of Dental Surgery at Uttaranchal Dental and Medical Research
-          Institute, Dehradun, and joined Dental Zone in April 2024. Her training covered oral diagnosis,
-          scaling, restorations, root canal support, extractions and minor oral surgery.
-        </p>
-        <p>
-          At the clinic she's known for her attentiveness with anxious patients and her focus on preventive
-          care — often the one walking patients through the hygiene routine that keeps them from needing
-          bigger procedures later.
-        </p>
+        <p>Dr. Pande completed her Bachelor of Dental Surgery at Uttaranchal Dental and Medical Research Institute, Dehradun, and joined Dental Zone in April 2024. Her training covered oral diagnosis, scaling, restorations, root canal support, extractions and minor oral surgery.</p>
+        <p>At the clinic she's known for her attentiveness with anxious patients and her focus on preventive care — often the one walking patients through the hygiene routine that keeps them from needing bigger procedures later.</p>
       </div>
-
-      <div class="team-card">
+      <div class="team-card reveal">
+        <div class="team-initial">P</div>
         <h3>Dr. Prathistha Kushwaha</h3>
         <span class="team-role">Assistant Dentist</span>
-        <p>
-          Dr. Kushwaha earned her Bachelor of Dental Science from Saraswati Dental College and Hospital,
-          Lucknow, and brings experience from Maruti Clinic, Lucknow along with a three-month observership
-          under Dr. Rahul Soni. She has handled a wide range of restorations, extractions, root canal
-          treatments and denture work.
-        </p>
-        <p>
-          Outside the clinic she's a keen photographer and cyclist — a detail patients sometimes bond with
-          her over while easing into the chair.
-        </p>
+        <p>Dr. Kushwaha earned her Bachelor of Dental Science from Saraswati Dental College and Hospital, Lucknow, and brings experience from Maruti Clinic, Lucknow along with a three-month observership under Dr. Rahul Soni. She has handled a wide range of restorations, extractions, root canal treatments and denture work.</p>
+        <p>Outside the clinic she's a keen photographer and cyclist — a detail patients sometimes bond with her over while easing into the chair.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
+<!-- ============ PROCESS ============ -->
 <section id="process">
   <div class="container">
-    <div class="section-title">
-      <span>HOW IT WORKS</span>
-      <h2>What Your First<br>Visit Looks Like</h2>
+    <div class="section-head">
+      <span class="eyebrow">How It Works</span>
+      <h2 class="display">What your first <em>visit looks like</em></h2>
     </div>
-
-    <div class="timeline">
-      <div class="timeline-card">
-        <div class="number">1</div>
-        <h3>Book</h3>
-        <p>Fill the form below with your preferred date and time. Takes under a minute.</p>
-      </div>
-      <div class="timeline-card">
-        <div class="number">2</div>
-        <h3>We Call</h3>
-        <p>Our team rings you back to confirm your slot and answer anything you're unsure about.</p>
-      </div>
-      <div class="timeline-card">
-        <div class="number">3</div>
-        <h3>Examination</h3>
-        <p>A full examination and, where needed, digital X-rays — explained to you before anything begins.</p>
-      </div>
-      <div class="timeline-card">
-        <div class="number">4</div>
-        <h3>Treatment</h3>
-        <p>An honest plan, a clear cost, and treatment carried out at a pace you're comfortable with.</p>
-      </div>
+    <div class="process">
+      <div class="proc-line"><i id="procFill"></i></div>
+      <div class="step reveal"><div class="step-no">1</div><h3>Book</h3><p>Fill the form below with your preferred date and time. Takes under a minute.</p></div>
+      <div class="step reveal"><div class="step-no">2</div><h3>We Call</h3><p>Our team rings you back to confirm your slot and answer anything you're unsure about.</p></div>
+      <div class="step reveal"><div class="step-no">3</div><h3>Examination</h3><p>A full examination and, where needed, digital X-rays — explained to you before anything begins.</p></div>
+      <div class="step reveal"><div class="step-no">4</div><h3>Treatment</h3><p>An honest plan, a clear cost, and treatment carried out at a pace you're comfortable with.</p></div>
     </div>
   </div>
 </section>
 
-<!-- STATS -->
-<section class="premium-stats">
+<!-- ============ REVIEWS ============ -->
+<section class="reviews-sec" id="reviews">
   <div class="container">
-    <div class="section-title">
-      <span>TRUSTED EXCELLENCE</span>
-      <h2>Numbers That Speak<br>For Themselves</h2>
-    </div>
-
-    <div class="stats-grid">
-      <div class="stat-box"><h1><span class="counter" data-target="50000">0</span>+</h1><p>RCTs, Implants &amp; Extractions</p></div>
-      <div class="stat-box"><h1><span class="counter" data-target="23">0</span></h1><p>Years of Experience</p></div>
-      <div class="stat-box"><h1><span class="counter" data-target="1000">0</span>+</h1><p>Orthodontic Cases</p></div>
-      <div class="stat-box"><h1><span class="counter" data-target="97">0</span>%</h1><p>Patient Satisfaction</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="reviews">
-  <div class="container">
-    <div class="section-title">
-      <span>PATIENT STORIES</span>
-      <h2>What Patients<br>Actually Say</h2>
+    <div class="section-head">
+      <span class="eyebrow">Patient Stories</span>
+      <h2 class="display">What patients <em>actually say</em></h2>
       <p>Real experiences from people who walked in nervous and walked out relieved.</p>
     </div>
+  </div>
 
-    <div class="testimonial-slider">
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>"I'd never been to a dentist before and was terrified of my wisdom tooth extraction. Dr. Basantani didn't rush — he explained everything until my fear turned into trust. It was painless, exactly as he said it would be."</p>
-        <h4>Ritika Kushwaha</h4>
-        <small>Wisdom Tooth Extraction</small>
-      </div>
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>"I've been visiting his clinic for over 10 years. He's skilled, patient, and always honest about treatment — the staff is just as professional and friendly."</p>
-        <h4>Shivani</h4>
-        <small>Long-term Patient</small>
-      </div>
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>"Good and humble doctor with years of experience behind him. I'd highly recommend him to anyone in Prayagraj looking for a dentist who actually listens."</p>
-        <h4>S.S. Shukla</h4>
-        <small>Long-term Patient</small>
-      </div>
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>"Excellent in his work and his explanations. The clinic felt clean with a calm, happy vibe, the staff was friendly, and there was no waiting time at all."</p>
-        <h4>Verified Patient</h4>
-        <small>General Checkup</small>
-      </div>
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>"First visit, for a root canal, and I really liked his approach. He explained everything clearly before starting, and the staff were cooperative throughout."</p>
-        <h4>Verified Patient</h4>
-        <small>Root Canal Treatment</small>
-      </div>
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p>"I've known Dr. Basantani a long time and was fully satisfied even twenty years ago. When I saw he'd set up his own clinic, I came straight here. Clean, warm, and excellent care."</p>
-        <h4>Verified Patient</h4>
-        <small>General Dental Care</small>
-      </div>
-    </div>
+  <div class="fade-edge l"></div>
+  <div class="fade-edge r"></div>
+
+  <div class="rev-row a">
+    <div class="review"><div class="stars">★★★★★</div><p>"I'd never been to a dentist before and was terrified of my wisdom tooth extraction. Dr. Basantani didn't rush — he explained everything until my fear turned into trust. It was painless, exactly as he said it would be."</p><div class="rev-who"><div class="rev-av">R</div><div><b>Ritika Kushwaha</b><span>Wisdom Tooth Extraction</span></div></div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"I've been visiting his clinic for over 10 years. He's skilled, patient, and always honest about treatment — the staff is just as professional and friendly."</p><div class="rev-who"><div class="rev-av">S</div><div><b>Shivani</b><span>Long-term Patient</span></div></div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"Good and humble doctor with years of experience behind him. I'd highly recommend him to anyone in Prayagraj looking for a dentist who actually listens."</p><div class="rev-who"><div class="rev-av">S</div><div><b>S.S. Shukla</b><span>Long-term Patient</span></div></div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"My root canal, extractions and surgery were all handled with real care — clear instructions, minimal pain, and a calm, supportive team throughout recovery."</p><div class="rev-who"><div class="rev-av">V</div><div><b>Verified Patient</b><span>Root Canal Treatment</span></div></div></div>
+    <!-- duplicate for seamless loop -->
+    <div class="review"><div class="stars">★★★★★</div><p>"I'd never been to a dentist before and was terrified of my wisdom tooth extraction. Dr. Basantani didn't rush — he explained everything until my fear turned into trust. It was painless, exactly as he said it would be."</p><div class="rev-who"><div class="rev-av">R</div><div><b>Ritika Kushwaha</b><span>Wisdom Tooth Extraction</span></div></div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"I've been visiting his clinic for over 10 years. He's skilled, patient, and always honest about treatment — the staff is just as professional and friendly."</p><div class="rev-who"><div class="rev-av">S</div><div><b>Shivani</b><span>Long-term Patient</span></div></div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"Good and humble doctor with years of experience behind him. I'd highly recommend him to anyone in Prayagraj looking for a dentist who actually listens."</p><div class="rev-who"><div class="rev-av">S</div><div><b>S.S. Shukla</b><span>Long-term Patient</span></div></div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"My root canal, extractions and surgery were all handled with real care — clear instructions, minimal pain, and a calm, supportive team throughout recovery."</p><div class="rev-who"><div class="rev-av">V</div><div><b>Verified Patient</b><span>Root Canal Treatment</span></div></div></div>
+  </div>
+
+  <div class="rev-row b">
+    <div class="review"><div class="stars">★★★★★</div><p>"Excellent in his work and his explanations. The clinic felt clean with a calm, happy vibe, the staff was friendly, and there was no waiting time at all."</p><div class="rev-who"><div class="rev-av">V</div><div><b>Verified Patient</b><span>General Checkup</span></div></div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"First visit, for a root canal, and I really liked his approach. He explained everything clearly before starting, and the staff were cooperative throughout."</p><div class="rev-who"><div class="rev-av">V</div><div><b>Verified Patient</b><span>Root Canal Treatment</span></div></div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"I've known Dr. Basantani a long time and was fully satisfied even twenty years ago. When I saw he'd set up his own clinic, I came straight here. Clean, warm, and excellent care."</p><div class="rev-who"><div class="rev-av">V</div><div><b>Verified Patient</b><span>General Dental Care</span></div></div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"A genuinely good doctor — straightforward, skilled, and easy to trust from the very first visit."</p><div class="rev-who"><div class="rev-av">V</div><div><b>Verified Patient</b><span>Dental Care</span></div></div></div>
+    <!-- duplicate for seamless loop -->
+    <div class="review"><div class="stars">★★★★★</div><p>"Excellent in his work and his explanations. The clinic felt clean with a calm, happy vibe, the staff was friendly, and there was no waiting time at all."</p><div class="rev-who"><div class="rev-av">V</div><div><b>Verified Patient</b><span>General Checkup</span></div></div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"First visit, for a root canal, and I really liked his approach. He explained everything clearly before starting, and the staff were cooperative throughout."</p><div class="rev-who"><div class="rev-av">V</div><div><b>Verified Patient</b><span>Root Canal Treatment</span></div></div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"I've known Dr. Basantani a long time and was fully satisfied even twenty years ago. When I saw he'd set up his own clinic, I came straight here. Clean, warm, and excellent care."</p><div class="rev-who"><div class="rev-av">V</div><div><b>Verified Patient</b><span>General Dental Care</span></div></div></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"A genuinely good doctor — straightforward, skilled, and easy to trust from the very first visit."</p><div class="rev-who"><div class="rev-av">V</div><div><b>Verified Patient</b><span>Dental Care</span></div></div></div>
   </div>
 </section>
 
-<!-- BOOKING -->
+<!-- ============ BOOKING ============ -->
 <section id="booking">
   <div class="container">
-    <div class="booking-card">
-      <div class="booking-left">
-        <span class="mini-title">BOOK YOUR VISIT</span>
-        <h2>Schedule Your Consultation Today</h2>
-        <p>
-          Fill this in and our team will call you back to confirm your slot. No payment,
-          no account, no waiting on hold.
-        </p>
-        <div class="booking-perks">
-          <div>✓ Takes under a minute</div>
-          <div>✓ Confirmation call from our team</div>
-          <div>✓ Mon–Sat, 10:00 AM – 8:00 PM</div>
-          <div>✓ Emergencies prioritised same-day</div>
+    <div class="booking reveal">
+      <div class="book-left">
+        <span class="eyebrow">Book Your Visit</span>
+        <h2 class="display">Schedule your consultation today</h2>
+        <p>Fill this in and our team will call you back to confirm your slot. No payment, no account, no waiting on hold.</p>
+        <div class="perks">
+          <div class="perk"><span class="tick">✓</span>Takes under a minute</div>
+          <div class="perk"><span class="tick">✓</span>Confirmation call from our team</div>
+          <div class="perk"><span class="tick">✓</span>Mon–Sat, 10:00 AM – 8:00 PM</div>
+          <div class="perk"><span class="tick">✓</span>Emergencies prioritised same-day</div>
+        </div>
+        <div class="book-contact">
+          Prefer to talk? Call us on <a href="tel:+919999999999">+91 99999 99999</a><br>
+          Dental Zone, Lukerganj, Prayagraj, Uttar Pradesh
         </div>
       </div>
 
-      <form class="booking-form" id="bookingForm">
-        <input type="text" id="name" placeholder="Full Name" required>
-        <input type="tel" id="phone" placeholder="Phone Number" required pattern="[0-9]{10}" maxlength="10">
-        <select id="treatment" required>
-          <option value="" disabled selected>Select Treatment</option>
-          <option>Root Canal Treatment</option>
-          <option>Dental Implant</option>
-          <option>Braces / Aligners</option>
-          <option>Teeth Whitening</option>
-          <option>Tooth Extraction</option>
-          <option>Scaling &amp; Polishing</option>
-          <option>Crowns &amp; Bridges</option>
-          <option>Children's Dentistry</option>
-          <option>General Checkup</option>
-          <option>Dental Emergency</option>
-          <option>Other</option>
-        </select>
-        <div class="form-row">
-          <input type="date" id="date" required>
-          <select id="time" required>
-            <option value="" disabled selected>Preferred Time</option>
-            <option>10:00 AM</option>
-            <option>11:00 AM</option>
-            <option>12:00 PM</option>
-            <option>4:00 PM</option>
-            <option>5:00 PM</option>
-            <option>6:00 PM</option>
-            <option>7:00 PM</option>
+      <div class="book-right">
+        <form class="book-form" id="bookingForm">
+          <div class="field"><input type="text" id="name" placeholder=" " required><label for="name">Full name</label></div>
+          <div class="field"><input type="tel" id="phone" placeholder=" " required pattern="[0-9]{10}" maxlength="10" inputmode="numeric"><label for="phone">Phone number (10 digits)</label></div>
+          <select id="treatment" required>
+            <option value="" disabled selected>Select treatment</option>
+            <option>Root Canal Treatment</option>
+            <option>Dental Implant</option>
+            <option>Braces / Aligners</option>
+            <option>Teeth Whitening</option>
+            <option>Tooth Extraction</option>
+            <option>Scaling &amp; Polishing</option>
+            <option>Crowns &amp; Bridges</option>
+            <option>Children's Dentistry</option>
+            <option>General Checkup</option>
+            <option>Dental Emergency</option>
+            <option>Other</option>
           </select>
-        </div>
-        <textarea id="notes" placeholder="Tell us about your concern (optional)"></textarea>
-        <button type="submit" class="primary" id="submitBtn">Book Appointment</button>
-        <div id="formStatus"></div>
-      </form>
+          <div class="row2">
+            <input type="date" id="date" required>
+            <select id="time" required>
+              <option value="" disabled selected>Preferred time</option>
+              <option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option>
+              <option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option><option>7:00 PM</option>
+            </select>
+          </div>
+          <textarea id="notes" placeholder="Tell us about your concern (optional)"></textarea>
+          <button type="submit" class="submit" id="submitBtn">Book Appointment</button>
+          <div id="formStatus"></div>
+          <p class="form-note">For a dental emergency, please call the clinic directly rather than booking online.</p>
+        </form>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- ============ FAQ ============ -->
 <section id="faq">
   <div class="container">
-    <div class="section-title">
-      <span>FAQ</span>
-      <h2>Before You Book</h2>
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="display">Before <em>you book</em></h2>
       <p>The questions patients ask us most often.</p>
     </div>
-
     <div class="faq">
-      <div class="faq-item">
-        <button class="faq-question">Is root canal treatment painful?<span>+</span></button>
-        <div class="faq-answer"><p>No. With modern anaesthesia and rotary equipment, most patients describe it as no worse than getting a filling. If you're anxious, tell us before we begin — we'll take it at your pace.</p></div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Is root canal treatment painful?<span class="sign">+</span></button>
+        <div class="faq-a"><p>No. With modern anaesthesia and rotary equipment, most patients describe it as no worse than getting a filling. If you're anxious, tell us before we begin — we'll take it at your pace.</p></div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question">How much do dental implants cost?<span>+</span></button>
-        <div class="faq-answer"><p>Cost depends on the tooth position, bone condition and implant type, so an honest quote needs an examination first. Book a consultation and you'll get a clear figure with no obligation to proceed.</p></div>
+      <div class="faq-item reveal">
+        <button class="faq-q">How much do dental implants cost?<span class="sign">+</span></button>
+        <div class="faq-a"><p>Cost depends on the tooth position, bone condition and implant type, so an honest quote needs an examination first. Book a consultation and you'll get a clear figure with no obligation to proceed.</p></div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question">Do you treat children?<span>+</span></button>
-        <div class="faq-answer"><p>Yes. We see paediatric patients with a gentler, unhurried approach — the goal for a first visit is that your child leaves unafraid of coming back.</p></div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Do you treat children?<span class="sign">+</span></button>
+        <div class="faq-a"><p>Yes. We see paediatric patients with a gentler, unhurried approach — the goal for a first visit is that your child leaves unafraid of coming back.</p></div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question">Do you handle dental emergencies?<span>+</span></button>
-        <div class="faq-answer"><p>Yes. Severe pain, facial swelling, a knocked-out or broken tooth are treated as priority cases and we do our best to see you the same day. Call the clinic directly rather than booking online for these.</p></div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Do you handle dental emergencies?<span class="sign">+</span></button>
+        <div class="faq-a"><p>Yes. Severe pain, facial swelling, a knocked-out or broken tooth are treated as priority cases and we do our best to see you the same day. Call the clinic directly rather than booking online for these.</p></div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question">How often should I get a checkup?<span>+</span></button>
-        <div class="faq-answer"><p>Every six months for most people. Decay and gum disease are painless early on, and a six-month visit catches them while they still need a cleaning or a filling rather than a root canal.</p></div>
+      <div class="faq-item reveal">
+        <button class="faq-q">How often should I get a checkup?<span class="sign">+</span></button>
+        <div class="faq-a"><p>Every six months for most people. Decay and gum disease are painless early on, and a six-month visit catches them while they still need a cleaning or a filling rather than a root canal.</p></div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question">Am I too old for braces?<span>+</span></button>
-        <div class="faq-answer"><p>Almost certainly not. A significant share of the 1,000+ orthodontic cases completed here have been adults who assumed they'd missed their chance. Modern aligners also make adult treatment far less visible than it used to be.</p></div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Am I too old for braces?<span class="sign">+</span></button>
+        <div class="faq-a"><p>Almost certainly not. A significant share of the 1,000+ orthodontic cases completed here have been adults who assumed they'd missed their chance. Modern aligners also make adult treatment far less visible than it used to be.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ============ VISIT ============ -->
+<section id="visit">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Visit Us</span>
+      <h2 class="display">Dental Zone, <em>Lukerganj</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card reveal"><div class="ic">📍</div><h4>Location</h4><p>Lukerganj, Prayagraj,<br>Uttar Pradesh</p></div>
+      <div class="visit-card reveal"><div class="ic">🕘</div><h4>Hours</h4><p>Monday – Saturday<br>10:00 AM – 8:00 PM</p></div>
+      <div class="visit-card reveal"><div class="ic">📞</div><h4>Call Us</h4><p><a href="tel:+919999999999">+91 99999 99999</a><br>Emergencies prioritised</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
 <footer>
-  <div class="container footer-grid">
+  <div class="container foot-grid">
     <div>
-      <h2>Dental<span class="gradient">Zone</span></h2>
-      <p>
-        A super speciality dental hospital in Prayagraj, founded and led by
-        Dr. Mukesh Basantani, BDS — Dental Surgeon &amp; Implantologist.
-      </p>
+      <h2>Dental<span>Zone</span></h2>
+      <p>A super speciality dental hospital in Prayagraj, founded and led by Dr. Mukesh Basantani, BDS — Dental Surgeon &amp; Implantologist.</p>
     </div>
     <div>
-      <h3>Quick Links</h3>
+      <h3>Explore</h3>
       <ul>
         <li><a href="#services">Services</a></li>
         <li><a href="#about">About Dr. Basantani</a></li>
+        <li><a href="#clinic">The Clinic</a></li>
         <li><a href="#team">Our Team</a></li>
         <li><a href="#reviews">Patient Stories</a></li>
         <li><a href="#booking">Book Appointment</a></li>
@@ -673,103 +908,346 @@ footer{background:#0f172a;color:white;padding:100px 8% 40px;margin-top:120px;}
     </div>
     <div>
       <h3>Contact</h3>
-      <p>+91 XXXXX XXXXX</p>
-      <p>Lukerganj, Prayagraj, Uttar Pradesh</p>
-      <p>Mon–Sat · 10:00 AM – 8:00 PM</p>
+      <ul>
+        <li><a href="tel:+919999999999">+91 99999 99999</a></li>
+        <li>Lukerganj, Prayagraj, UP</li>
+        <li>Mon–Sat · 10:00 AM – 8:00 PM</li>
+      </ul>
     </div>
   </div>
-  <div class="copyright">© 2026 Dental Zone · Dr. Mukesh Basantani. All Rights Reserved.</div>
+  <div class="container copyright">© <span id="year">2026</span> Dental Zone · Dr. Mukesh Basantani. All rights reserved.</div>
 </footer>
 
+<!-- ============ FLOATING ACTIONS ============ -->
+<div class="fabs">
+  <a href="tel:+919999999999" class="fab call" aria-label="Call the clinic">📞</a>
+  <button class="fab top" id="toTop" aria-label="Back to top">↑</button>
+</div>
+
 <script>
-gsap.registerPlugin(ScrollTrigger);
+(function(){
+  "use strict";
 
-/* ---------- SCROLL ANIMATIONS ---------- */
-gsap.from(".service",{opacity:0,y:80,duration:1,stagger:.12,scrollTrigger:{trigger:"#services",start:"top 75%"}});
-gsap.from(".why",{opacity:0,y:70,duration:1,scrollTrigger:{trigger:"#about",start:"top 75%"}});
-gsap.from(".gallery-item",{opacity:0,y:70,duration:1,stagger:.15,scrollTrigger:{trigger:"#gallery",start:"top 75%"}});
-gsap.from(".team-card",{opacity:0,y:70,duration:1,stagger:.2,scrollTrigger:{trigger:"#team",start:"top 75%"}});
-gsap.from(".timeline-card",{opacity:0,y:80,duration:1,stagger:.18,scrollTrigger:{trigger:".timeline",start:"top 75%"}});
-gsap.from(".testimonial",{opacity:0,y:60,duration:1,stagger:.15,scrollTrigger:{trigger:"#reviews",start:"top 75%"}});
-gsap.from(".booking-card",{opacity:0,y:70,duration:1,scrollTrigger:{trigger:"#booking",start:"top 78%"}});
-gsap.from(".faq-item",{opacity:0,y:50,duration:.9,stagger:.12,scrollTrigger:{trigger:"#faq",start:"top 78%"}});
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasGSAP = typeof gsap !== 'undefined';
+  if (hasGSAP && typeof ScrollTrigger !== 'undefined') gsap.registerPlugin(ScrollTrigger);
 
-/* Hygiene section — slower, more deliberate fade */
-gsap.from(".reveal-line",{opacity:0,y:40,duration:1.4,stagger:.35,ease:"power2.out",scrollTrigger:{trigger:"#hygiene",start:"top 70%"}});
-gsap.from(".reveal-fact",{opacity:0,y:50,duration:1.1,stagger:.22,ease:"power2.out",scrollTrigger:{trigger:".hygiene-facts",start:"top 85%"}});
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-/* ---------- COUNTERS ---------- */
-document.querySelectorAll(".counter").forEach(counter=>{
-  const target = +counter.dataset.target;
-  gsap.to(counter,{
-    innerText:target,
-    duration:2,
-    snap:{innerText:1},
-    scrollTrigger:{trigger:counter,start:"top 85%"},
-    onUpdate:function(){
-      counter.innerText = Math.floor(counter.innerText).toLocaleString();
-    }
-  });
-});
+  /* ---------- HERO HEADLINE SPLIT ----------
+     Runs immediately (behind the preloader) so the words are already
+     parked off-screen before the curtain lifts — no flash of unsplit text. */
+  function splitHeadline(){
+    if (!hasGSAP || reduced) return;
+    var head = document.querySelector('[data-split]');
+    if (!head) return;
 
-/* ---------- FAQ ACCORDION ---------- */
-document.querySelectorAll(".faq-question").forEach(btn=>{
-  btn.onclick=()=>{
-    const answer = btn.nextElementSibling;
-    const open = answer.style.display === "block";
-    document.querySelectorAll(".faq-answer").forEach(a=>a.style.display="none");
-    document.querySelectorAll(".faq-question span").forEach(s=>s.textContent="+");
-    if(!open){
-      answer.style.display="block";
-      btn.querySelector("span").textContent="−";
-    }
-  };
-});
+    var frag = document.createDocumentFragment();
+    var walk = function(node, targetEm){
+        Array.prototype.slice.call(node.childNodes).forEach(function(child){
+          if (child.nodeType === 3) {
+            child.textContent.split(/(\s+)/).forEach(function(chunk){
+              if (!chunk.trim()) { frag.appendChild(document.createTextNode(' ')); return; }
+              var outer = document.createElement('span');
+              outer.style.display = 'inline-block';
+              outer.style.overflow = 'hidden';
+              outer.style.verticalAlign = 'top';
+              var inner = document.createElement('span');
+              inner.className = 'word';
+              inner.style.display = 'inline-block';
+              if (targetEm) inner.style.cssText += 'font-style:italic;color:var(--blue);';
+              inner.textContent = chunk;
+              outer.appendChild(inner);
+              frag.appendChild(outer);
+            });
+          } else if (child.nodeType === 1) {
+            walk(child, child.tagName === 'EM');
+          }
+        });
+      };
+    walk(head, false);
+    head.innerHTML = '';
+    head.appendChild(frag);
+    gsap.set('.hero .word', { yPercent: 118 });
+  }
+  splitHeadline();
 
-/* ---------- BOOKING FORM → GOOGLE SHEET ---------- */
-const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbzmZLd4rWVlJFpXtADoDaKBlAuy7KxhlfII4Jk2NM4gZZ-XGk2B4_lExZnZY4Jm8PmnpA/exec";
+  /* ---------- ENTRANCE + SCROLL ANIMATIONS ---------- */
+  function bootAnimations(){
+    if (!hasGSAP || reduced) return;
 
-const form = document.getElementById('bookingForm');
-const statusEl = document.getElementById('formStatus');
-const btn = document.getElementById('submitBtn');
+    var tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    tl.to('.hero .word', { yPercent: 0, duration: 1.05, stagger: 0.045 }, 0.1)
+      .from('[data-hero]', { y: 26, opacity: 0, duration: .85, stagger: .11 }, 0.42)
+      .from('.orbit .doc-photo', { scale: .82, opacity: 0, duration: 1.15, ease: 'power2.out' }, 0.2)
+      .from('.orbit .ring', { scale: .84, opacity: 0, duration: 1.2, stagger: .1 }, 0.15)
+      .from('.float-card', { y: 22, opacity: 0, scale: .9, duration: .8, stagger: .1 }, 0.75)
+      .from('.scroll-hint', { opacity: 0, y: -12, duration: .7 }, 1.1);
 
-document.getElementById('date').min = new Date().toISOString().split('T')[0];
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  btn.disabled = true;
-  btn.textContent = "Booking...";
-  statusEl.textContent = "";
-  statusEl.className = "";
-
-  const data = {
-    name: document.getElementById('name').value,
-    phone: document.getElementById('phone').value,
-    treatment: document.getElementById('treatment').value,
-    date: document.getElementById('date').value,
-    time: document.getElementById('time').value,
-    notes: document.getElementById('notes').value,
-    submittedAt: new Date().toLocaleString()
-  };
-
-  try {
-    await fetch(SHEET_ENDPOINT, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body: JSON.stringify(data)
+    /* float cards drift */
+    gsap.utils.toArray('.float-card').forEach(function(card, i){
+      gsap.to(card, {
+        y: i % 2 ? 13 : -13, duration: 3 + i * .4,
+        repeat: -1, yoyo: true, ease: 'sine.inOut', delay: i * .25
+      });
     });
-    statusEl.textContent = "✓ Appointment requested — we'll call you shortly to confirm.";
-    statusEl.className = "success";
-    form.reset();
-  } catch (err) {
-    statusEl.textContent = "Something went wrong. Please call the clinic directly to book.";
-    statusEl.className = "error";
+
+    /* dark section headline */
+    var dark = document.querySelector('[data-split-dark]');
+    if (dark) {
+      gsap.from(dark, {
+        opacity: 0, y: 40, duration: 1.3, ease: 'power2.out',
+        scrollTrigger: { trigger: dark, start: 'top 82%' }
+      });
+    }
+
+    /* generic reveals */
+    gsap.utils.toArray('.reveal').forEach(function(el){
+      gsap.from(el, {
+        opacity: 0, y: 46, duration: 1, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 88%' }
+      });
+    });
+
+    /* section headings */
+    gsap.utils.toArray('.section-head').forEach(function(el){
+      gsap.from(el.children, {
+        opacity: 0, y: 34, duration: .95, stagger: .12, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 86%' }
+      });
+    });
+
+    /* gallery parallax */
+    gsap.utils.toArray('.g-item img').forEach(function(img){
+      gsap.fromTo(img, { yPercent: -6 }, {
+        yPercent: 6, ease: 'none',
+        scrollTrigger: { trigger: img.parentNode, start: 'top bottom', end: 'bottom top', scrub: true }
+      });
+    });
+
+    /* process line draw */
+    var fill = document.getElementById('procFill');
+    if (fill) {
+      gsap.to(fill, {
+        scaleX: 1, ease: 'none',
+        scrollTrigger: { trigger: '.process', start: 'top 72%', end: 'bottom 72%', scrub: .6 }
+      });
+    }
+
+    /* hero glow parallax on scroll */
+    gsap.to('.glow-a', { yPercent: 34, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+    gsap.to('.glow-b', { yPercent: -26, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+
+    /* counters */
+    document.querySelectorAll('.count').forEach(function(el){
+      var target = +el.dataset.target;
+      var obj = { v: 0 };
+      gsap.to(obj, {
+        v: target, duration: 2.1, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 90%' },
+        onUpdate: function(){ el.textContent = Math.floor(obj.v).toLocaleString('en-IN'); },
+        onComplete: function(){ el.textContent = target.toLocaleString('en-IN'); }
+      });
+    });
   }
 
-  btn.disabled = false;
-  btn.textContent = "Book Appointment";
-});
+  var pre = document.getElementById('preloader');
+  function dismissPreloader(){
+    if (!pre || pre.dataset.done) return;
+    pre.dataset.done = '1';
+    if (hasGSAP && !reduced) {
+      gsap.timeline()
+        .to('.pre-bar i', { width: '100%', duration: .55, ease: 'power2.inOut' })
+        .to(pre, { opacity: 0, duration: .55, ease: 'power2.inOut', onComplete: function(){ pre.style.display = 'none'; } }, '+=.1')
+        .add(bootAnimations, '-=.35');
+    } else {
+      pre.style.display = 'none';
+      bootAnimations();
+    }
+  }
+  window.addEventListener('load', dismissPreloader);
+  setTimeout(dismissPreloader, 2600); // never trap the user behind a slow image
+
+  /* ---------- SCROLL PROGRESS + NAV + BACK TO TOP ---------- */
+  var nav = document.getElementById('nav');
+  var bar = document.getElementById('progress');
+  var toTop = document.getElementById('toTop');
+  var topbar = document.getElementById('topbar');
+  var lastY = 0, ticking = false;
+
+  /* park the nav directly under the topbar, whatever height it wraps to */
+  function measureTopbar(){
+    document.documentElement.style.setProperty('--tbh', topbar.offsetHeight + 'px');
+  }
+  measureTopbar();
+  window.addEventListener('resize', measureTopbar);
+
+  function onScroll(){
+    var y = window.scrollY;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+
+    nav.classList.toggle('docked', y > topbar.offsetHeight);
+    // hide nav going down, reveal going up — but never while the menu is open
+    if (!document.body.classList.contains('menu-open')) {
+      nav.classList.toggle('hidden', y > lastY && y > 420);
+    }
+    toTop.classList.toggle('show', y > 700);
+    lastY = y;
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
+  }, { passive: true });
+
+  toTop.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }); });
+
+  /* ---------- MOBILE DRAWER ---------- */
+  var burger = document.getElementById('burger');
+  var drawer = document.getElementById('drawer');
+  burger.addEventListener('click', function(){
+    document.body.classList.toggle('menu-open');
+    document.body.style.overflow = document.body.classList.contains('menu-open') ? 'hidden' : '';
+  });
+  drawer.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      document.body.classList.remove('menu-open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  /* ---------- CUSTOM CURSOR + MAGNETIC BUTTONS ---------- */
+  if (window.matchMedia('(hover:hover)').matches && window.innerWidth > 1024 && !reduced) {
+    var cur = document.getElementById('cursor'), dot = document.getElementById('cursorDot');
+    var mx = 0, my = 0, cx = 0, cy = 0;
+    window.addEventListener('mousemove', function(e){
+      mx = e.clientX; my = e.clientY;
+      dot.style.transform = 'translate(' + mx + 'px,' + my + 'px)';
+    });
+    (function loop(){
+      cx += (mx - cx) * 0.16; cy += (my - cy) * 0.16;
+      cur.style.transform = 'translate(' + cx + 'px,' + cy + 'px)';
+      requestAnimationFrame(loop);
+    })();
+    document.querySelectorAll('a,button,.g-item,.service,.faq-q').forEach(function(el){
+      el.addEventListener('mouseenter', function(){ document.body.classList.add('cursor-lg'); });
+      el.addEventListener('mouseleave', function(){ document.body.classList.remove('cursor-lg'); });
+    });
+
+    document.querySelectorAll('.magnetic').forEach(function(el){
+      el.addEventListener('mousemove', function(e){
+        var r = el.getBoundingClientRect();
+        el.style.transform = 'translate(' + (e.clientX - r.left - r.width / 2) * .22 + 'px,' +
+                             (e.clientY - r.top - r.height / 2) * .32 + 'px)';
+      });
+      el.addEventListener('mouseleave', function(){ el.style.transform = ''; });
+    });
+
+    /* hero orbit follows the pointer slightly */
+    var orbit = document.getElementById('orbit');
+    if (orbit) {
+      window.addEventListener('mousemove', function(e){
+        var dx = (e.clientX / window.innerWidth - .5);
+        var dy = (e.clientY / window.innerHeight - .5);
+        orbit.querySelectorAll('.float-card').forEach(function(card){
+          var d = +card.dataset.depth || 16;
+          card.style.marginLeft = (dx * d) + 'px';
+          card.style.marginTop  = (dy * d) + 'px';
+        });
+      });
+    }
+  }
+
+  /* ---------- GALLERY LIGHTBOX ---------- */
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb.querySelector('img');
+  document.querySelectorAll('.g-item').forEach(function(item){
+    item.addEventListener('click', function(){
+      var img = item.querySelector('img');
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lb.classList.add('on');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  function closeLB(){ lb.classList.remove('on'); document.body.style.overflow = ''; }
+  lb.addEventListener('click', closeLB);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') {
+      closeLB();
+      if (document.body.classList.contains('menu-open')) {
+        document.body.classList.remove('menu-open');
+        document.body.style.overflow = '';
+      }
+    }
+  });
+
+  /* ---------- FAQ ACCORDION (animated height) ---------- */
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(other){
+        other.classList.remove('open');
+        other.querySelector('.faq-a').style.height = '0px';
+        other.querySelector('.sign').textContent = '+';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        a.style.height = a.scrollHeight + 'px';
+        q.querySelector('.sign').textContent = '+';
+      }
+    });
+  });
+  window.addEventListener('resize', function(){
+    var open = document.querySelector('.faq-item.open .faq-a');
+    if (open) open.style.height = open.scrollHeight + 'px';
+  });
+
+  /* ---------- BOOKING FORM → GOOGLE SHEET ---------- */
+  var SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbzmZLd4rWVlJFpXtADoDaKBlAuy7KxhlfII4Jk2NM4gZZ-XGk2B4_lExZnZY4Jm8PmnpA/exec";
+
+  var form = document.getElementById('bookingForm');
+  var statusEl = document.getElementById('formStatus');
+  var btn = document.getElementById('submitBtn');
+  document.getElementById('date').min = new Date().toISOString().split('T')[0];
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Booking…';
+    statusEl.textContent = '';
+    statusEl.className = '';
+
+    var data = {
+      name: document.getElementById('name').value,
+      phone: document.getElementById('phone').value,
+      treatment: document.getElementById('treatment').value,
+      date: document.getElementById('date').value,
+      time: document.getElementById('time').value,
+      notes: document.getElementById('notes').value,
+      submittedAt: new Date().toLocaleString()
+    };
+
+    fetch(SHEET_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(data)
+    }).then(function(){
+      statusEl.textContent = "✓ Appointment requested — we'll call you shortly to confirm.";
+      statusEl.className = 'success';
+      form.reset();
+    }).catch(function(){
+      statusEl.textContent = 'Something went wrong. Please call the clinic directly to book.';
+      statusEl.className = 'error';
+    }).then(function(){
+      btn.disabled = false;
+      btn.textContent = 'Book Appointment';
+    });
+  });
+})();
 </script>
 
 </body>
