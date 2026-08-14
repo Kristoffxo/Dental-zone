@@ -24,8 +24,8 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="geo.region" content="IN-UP">
 <meta name="geo.placename" content="Prayagraj, Allahabad">
-<meta name="geo.position" content="25.4392;81.8331">
-<meta name="ICBM" content="25.4392, 81.8331">
+<meta name="geo.position" content="25.4405;81.8155">
+<meta name="ICBM" content="25.4405, 81.8155">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Dental Zone">
@@ -59,8 +59,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<!-- defer: these must not block first paint. They still execute in order and
+     before DOMContentLoaded, which is what the boot guard at the foot of the
+     body waits on — so gsap is always defined by the time it runs. -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 
 <style>
 :root{
@@ -632,6 +636,24 @@ body.menu-open .drawer{clip-path:circle(150% at calc(100% - 54px) 54px);}
 .error{color:#e5484d;}
 .form-note{font-size:13px;color:#93a0b5;text-align:center;line-height:1.6;}
 
+/* ============ COSTS ============ */
+.cost-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.cost-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:40px 36px;box-shadow:var(--shadow-sm);
+  transition:transform .55s var(--ease),box-shadow .55s var(--ease);
+}
+.cost-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg);}
+.cost-card h3{font-size:21px;font-weight:700;margin-bottom:14px;letter-spacing:-.3px;}
+.cost-card p{color:var(--muted);font-size:16px;line-height:1.85;}
+.cost-card p strong{color:var(--ink);font-weight:700;}
+.cost-note{
+  margin-top:28px;background:var(--white);border:1px solid var(--line);
+  border-left:4px solid var(--blue);border-radius:20px;padding:30px 34px;
+  color:var(--muted);font-size:16.5px;line-height:1.85;box-shadow:var(--shadow-sm);
+}
+.cost-note strong{color:var(--ink);font-weight:700;}
+
 /* ============ FAQ ============ */
 .faq{max-width:880px;margin:0 auto;display:grid;gap:14px;}
 .faq-item{background:var(--white);border-radius:22px;box-shadow:var(--shadow-sm);overflow:hidden;border:1px solid rgba(228,234,243,.8);}
@@ -737,6 +759,7 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
   .team-grid{grid-template-columns:1fr;}
   .map-wrap{grid-template-columns:1fr;}
   .why-grid{grid-template-columns:1fr;gap:34px;}
+  .cost-grid{grid-template-columns:1fr;}
   .map-side{padding:36px 30px;}
   .g-badge{gap:16px;padding:22px 24px;}
   .process{grid-template-columns:1fr 1fr;gap:44px 26px;}
@@ -778,9 +801,11 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
      STRUCTURED DATA
      This is what lets Google show the star rating, address, hours
      and phone number directly in the result. Two things to check:
-       1. "geo" below is approximate. Right-click the clinic pin in
-          Google Maps -> the first menu item is the exact lat/long.
-          Paste it in.
+       1. "geo" is triangulated from OpenStreetMap onto Grand Trunk Road in
+          Lukarganj — good to a few hundred metres, and a large correction
+          from the earlier value which landed in Chowk, 1.7km east. For the
+          exact pin: right-click the clinic in Google Maps, the first menu
+          item is the precise lat/long.
        2. aggregateRating must keep matching the real Google numbers.
           Inflating it is a manual-action risk, not a shortcut.
      ============================================================ -->
@@ -807,7 +832,7 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
         "postalCode": "211003",
         "addressCountry": "IN"
       },
-      "geo": { "@type": "GeoCoordinates", "latitude": 25.4392, "longitude": 81.8331 },
+      "geo": { "@type": "GeoCoordinates", "latitude": 25.4405, "longitude": 81.8155 },
       "areaServed": [
         { "@type": "City", "name": "Prayagraj" },
         { "@type": "City", "name": "Allahabad" }
@@ -896,6 +921,16 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
           "@type": "Question",
           "name": "Am I too old for braces?",
           "acceptedAnswer": { "@type": "Answer", "text": "Almost certainly not. A significant share of the 1,000+ orthodontic cases completed here have been adults who assumed they'd missed their chance. Modern aligners also make adult treatment far less visible than it used to be." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a root canal or implant cost in Prayagraj?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on the tooth and the condition it's in — a front-tooth root canal is a very different job from a molar with four canals, and an implant costs more if the bone needs grafting first. Rather than quote a misleading range, Dental Zone examines the tooth, takes an X-ray where needed, and gives a firm figure before any treatment begins." }
+        },
+        {
+          "@type": "Question",
+          "name": "Where exactly is Dental Zone in Allahabad?",
+          "acceptedAnswer": { "@type": "Answer", "text": "26/17/3 Grand Trunk Road, near Geetanjali Apartments and opposite Luvkush Colony, in Lukarganj, Prayagraj 211003. Allahabad and Prayagraj are the same city — the name changed in 2018 — so either will get you here. There is a wheelchair-accessible entrance." }
         },
         {
           "@type": "Question",
@@ -990,7 +1025,7 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
   <div class="container hero-grid">
     <div class="hero-copy">
       <div class="pill" data-hero>
-        <span class="dot"></span><span class="stars">★★★★★</span> Medical Registration Verified · 97% Satisfaction
+        <span class="dot"></span><span class="stars">★★★★★</span> 4.6 on Google · 199 patient reviews
       </div>
       <!-- Both city names sit in the H1 on purpose. Allahabad was renamed
            Prayagraj in 2018 and patients still search heavily for both, so a
@@ -1020,7 +1055,7 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
       <div class="float-card fc1" data-depth="24"><b>23</b>Years experience</div>
       <div class="float-card fc2" data-depth="-18"><b>50K+</b>Procedures</div>
       <div class="float-card fc3" data-depth="20"><b>19</b>Yrs implantology</div>
-      <div class="float-card fc4 gold" data-depth="-26"><b>97%</b>Satisfaction</div>
+      <div class="float-card fc4 gold" data-depth="-26"><b>4.6★</b>199 Google reviews</div>
     </div>
   </div>
   <div class="scroll-hint"><span>Scroll</span><i></i></div>
@@ -1088,7 +1123,7 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
         <div class="cred reveal"><span class="tick">✓</span>COE Orthodontics, Winnipeg (Canada)</div>
         <div class="cred reveal"><span class="tick">✓</span>Member, IOA Orthodontics, Milwaukee (USA)</div>
         <div class="cred reveal"><span class="tick">✓</span>Certified Orthodontist</div>
-        <div class="cred reveal"><span class="tick">✓</span>97% satisfaction across 450+ tracked patients</div>
+        <div class="cred reveal"><span class="tick">✓</span>Rated 4.6★ by 199 patients on Google</div>
         <div class="cred reveal"><span class="tick">✓</span>Founder &amp; lead surgeon at Dental Zone</div>
       </div>
     </div>
@@ -1102,7 +1137,7 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
       <div class="stat"><b><span class="count" data-target="50000">0</span>+</b><p>RCTs, implants &amp; extractions</p></div>
       <div class="stat"><b><span class="count" data-target="23">0</span></b><p>Years of experience</p></div>
       <div class="stat"><b><span class="count" data-target="1000">0</span>+</b><p>Orthodontic cases</p></div>
-      <div class="stat"><b><span class="count" data-target="97">0</span>%</b><p>Patient satisfaction</p></div>
+      <div class="stat"><b><span class="count" data-target="199">0</span></b><p>Google reviews, rated 4.6★</p></div>
     </div>
   </div>
 </section>
@@ -1323,6 +1358,40 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
   </div>
 </section>
 
+<!-- ============ COSTS ============
+     "root canal cost in allahabad" and its variants are the highest-intent
+     queries in this niche. This section answers that intent honestly — it
+     explains what drives the number without inventing figures, because a
+     wrong price on a medical site is worse than no price. -->
+<section id="costs">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Treatment Costs</span>
+      <h2 class="display">What dental treatment<br><em>actually costs</em></h2>
+      <p>Prices vary more than most people expect. Here's what genuinely drives the number — and why an honest figure needs an examination first.</p>
+    </div>
+
+    <div class="cost-grid">
+      <div class="cost-card reveal">
+        <h3>Root canal treatment</h3>
+        <p>The main variable is <strong>which tooth</strong>. A front tooth has a single canal; a molar can have three or four, and takes considerably longer. Cost also depends on whether there is existing infection to clear, and whether the tooth needs a crown afterwards to stop it fracturing — for back teeth, it usually does.</p>
+      </div>
+      <div class="cost-card reveal">
+        <h3>Dental implants</h3>
+        <p>Driven by <strong>bone condition</strong> more than anything. If the bone has receded after a tooth has been missing a while, a graft is needed first and that adds both cost and months. The implant system used and the number of teeth being replaced account for the rest.</p>
+      </div>
+      <div class="cost-card reveal">
+        <h3>Braces &amp; aligners</h3>
+        <p>Depends on <strong>how far the teeth have to move</strong> and what you wear while they do. Metal braces, ceramic braces and clear aligners sit at different price points, and treatment typically runs twelve to twenty-four months — longer cases cost more because they need more visits.</p>
+      </div>
+    </div>
+
+    <div class="cost-note reveal">
+      <strong>You get the figure before anything starts.</strong> After the examination — and digital X-rays where they're needed — we tell you what the treatment will cost and why. Nothing begins until you've heard the number and agreed to it. If a cheaper option is reasonable for your case, we'll say so.
+    </div>
+  </div>
+</section>
+
 <!-- ============ FAQ ============ -->
 <section id="faq">
   <div class="container">
@@ -1337,7 +1406,7 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
         <div class="faq-a"><p>No. With modern anaesthesia and rotary equipment, most patients describe it as no worse than getting a filling. If you're anxious, tell us before we begin — we'll take it at your pace.</p></div>
       </div>
       <div class="faq-item reveal">
-        <button class="faq-q">How much do dental implants cost?<span class="sign">+</span></button>
+        <button class="faq-q">How much do dental implants cost in Allahabad?<span class="sign">+</span></button>
         <div class="faq-a"><p>Cost depends on the tooth position, bone condition and implant type, so an honest quote needs an examination first. Book a consultation and you'll get a clear figure with no obligation to proceed.</p></div>
       </div>
       <div class="faq-item reveal">
@@ -1355,6 +1424,18 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
       <div class="faq-item reveal">
         <button class="faq-q">Am I too old for braces?<span class="sign">+</span></button>
         <div class="faq-a"><p>Almost certainly not. A significant share of the 1,000+ orthodontic cases completed here have been adults who assumed they'd missed their chance. Modern aligners also make adult treatment far less visible than it used to be.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">How much does a root canal or implant cost in Prayagraj?<span class="sign">+</span></button>
+        <div class="faq-a"><p>It depends on the tooth and the condition it's in — a front-tooth root canal is a very different job from a molar with four canals, and an implant costs more if the bone needs grafting first. Rather than quote a misleading range, we examine the tooth, take an X-ray where needed, and give you a firm figure before any treatment begins.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Who is the best dentist in Allahabad?<span class="sign">+</span></button>
+        <div class="faq-a"><p>Dental Zone in Lukarganj is among the highest-rated dental clinics in Allahabad (Prayagraj), holding 4.6 stars across 199 Google reviews. It is led by Dr. Mukesh Basantani, BDS, a dental surgeon and implantologist with 23 years of experience and more than 50,000 root canals, implants and extractions performed. The honest answer is to read the reviews and judge for yourself &mdash; they are all public on Google.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Where exactly is Dental Zone in Allahabad?<span class="sign">+</span></button>
+        <div class="faq-a"><p>26/17/3 Grand Trunk Road, near Geetanjali Apartments and opposite Luvkush Colony, in Lukarganj, Prayagraj 211003. Allahabad and Prayagraj are the same city — the name changed in 2018 — so either will get you here. There's a wheelchair-accessible entrance, and patients come to us from Civil Lines, Katra, Georgetown, Naini and across the city.</p></div>
       </div>
     </div>
   </div>
@@ -1482,6 +1563,8 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
         <li><a href="#about">About Dr. Basantani</a></li>
         <li><a href="#clinic">The Clinic</a></li>
         <li><a href="#why-us">Best Dentist in Allahabad</a></li>
+        <li><a href="#costs">Treatment Costs</a></li>
+        <li><a href="#faq">Questions Before Booking</a></li>
         <li><a href="#team">Our Team</a></li>
         <li><a href="#reviews">Patient Stories</a></li>
         <li><a href="#booking">Book Appointment</a></li>
@@ -1506,7 +1589,7 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
 </div>
 
 <script>
-(function(){
+function bootDentalZone(){
   "use strict";
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1987,7 +2070,15 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
       btn.textContent = 'Book Appointment';
     });
   });
-})();
+}
+/* Deferred scripts finish before DOMContentLoaded fires, so waiting on it is
+   what guarantees gsap exists. readyState is checked in case the parser has
+   already passed that point. */
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", bootDentalZone);
+} else {
+  bootDentalZone();
+}
 </script>
 
 </body>
