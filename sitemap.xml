@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Single-page site, so the anchors are listed to help Google pick up
+     jump-to-section links. Update <lastmod> whenever the page changes
+     substantially, and swap the domain if you move off GitHub Pages. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://kristoffxo.github.io/Dental-zone/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://kristoffxo.github.io/Dental-zone/images/images-2.jpeg</image:loc>
+      <image:title>Treatment room at Dental Zone, Lukarganj, Prayagraj</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kristoffxo.github.io/Dental-zone/images/dr-basantani.jpeg</image:loc>
+      <image:title>Dr. Mukesh Basantani, BDS — best dentist in Allahabad (Prayagraj)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kristoffxo.github.io/Dental-zone/images/images-4.jpeg</image:loc>
+      <image:title>Dr. Mukesh Basantani treating a patient at Dental Zone</image:title>
+    </image:image>
+  </url>
+</urlset>
