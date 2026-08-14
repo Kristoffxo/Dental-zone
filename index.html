@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,18 @@
 <meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#080d17" media="(prefers-color-scheme: dark)">
 
-<!-- SET THIS to your real domain once you have one. Every absolute URL below,
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- The hero portrait is the largest element above the fold, so it is fetched
+     at high priority rather than waiting its turn behind the stylesheet. -->
+<link rel="preload" as="image" href="/images/dr-basantani.jpeg" fetchpriority="high">
+
+<!-- Canonical host. www does not resolve, so the apex is the only variant. -->
+<!-- Domain is live at dentalzoneprayagraj.in. Every absolute URL below,
      the sitemap and the JSON-LD all key off it. -->
-<link rel="canonical" href="https://kristoffxo.github.io/Dental-zone/">
+<link rel="canonical" href="https://dentalzoneprayagraj.in/">
 
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="geo.region" content="IN-UP">
@@ -21,15 +30,15 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Dental Zone">
 <meta property="og:locale" content="en_IN">
-<meta property="og:url" content="https://kristoffxo.github.io/Dental-zone/">
+<meta property="og:url" content="https://dentalzoneprayagraj.in/">
 <meta property="og:title" content="Best Dentist in Allahabad (Prayagraj) | Dental Zone">
 <meta property="og:description" content="Dr. Mukesh Basantani, BDS — 23 years, 50,000+ procedures. Super speciality dentistry in Lukarganj, Prayagraj. Rated 4.6★ by 199 patients.">
-<meta property="og:image" content="https://kristoffxo.github.io/Dental-zone/images/images-2.jpeg">
+<meta property="og:image" content="https://dentalzoneprayagraj.in/images/images-2.jpeg">
 <meta property="og:image:alt" content="Treatment room at Dental Zone, Lukarganj, Prayagraj">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Best Dentist in Allahabad (Prayagraj) | Dental Zone">
 <meta name="twitter:description" content="Dr. Mukesh Basantani, BDS — 23 years, 50,000+ procedures. Rated 4.6★ by 199 patients.">
-<meta name="twitter:image" content="https://kristoffxo.github.io/Dental-zone/images/images-2.jpeg">
+<meta name="twitter:image" content="https://dentalzoneprayagraj.in/images/images-2.jpeg">
 
 <!-- Theme is resolved before first paint. If this ran with the rest of the JS at
      the end of <body>, a dark-mode visitor would get a white flash first. -->
@@ -781,15 +790,15 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
   "@graph": [
     {
       "@type": "Dentist",
-      "@id": "https://kristoffxo.github.io/Dental-zone/#clinic",
+      "@id": "https://dentalzoneprayagraj.in/#clinic",
       "name": "Dental Zone — Super Speciality Dental Hospital",
       "alternateName": ["Dental Zone Prayagraj", "Dental Zone Allahabad", "डेंटल जोन"],
       "description": "Super speciality dental hospital in Lukarganj, Prayagraj (Allahabad), led by Dr. Mukesh Basantani, BDS — Dental Surgeon and Implantologist with 23 years of experience.",
-      "url": "https://kristoffxo.github.io/Dental-zone/",
+      "url": "https://dentalzoneprayagraj.in/",
       "telephone": "+91-94506-29270",
       "priceRange": "₹₹",
       "currenciesAccepted": "INR",
-      "image": "https://kristoffxo.github.io/Dental-zone/images/images-2.jpeg",
+      "image": "https://dentalzoneprayagraj.in/images/images-2.jpeg",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "26/17/3, Grand Trunk Road, near Geetanjali Apartments, opposite Luvkush Colony, Lukarganj",
@@ -829,19 +838,19 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
       ],
       "isAccessibleForFree": false,
       "publicAccess": true,
-      "founder": { "@id": "https://kristoffxo.github.io/Dental-zone/#dentist" },
-      "employee": [{ "@id": "https://kristoffxo.github.io/Dental-zone/#dentist" }]
+      "founder": { "@id": "https://dentalzoneprayagraj.in/#dentist" },
+      "employee": [{ "@id": "https://dentalzoneprayagraj.in/#dentist" }]
     },
     {
       "@type": "Physician",
-      "@id": "https://kristoffxo.github.io/Dental-zone/#dentist",
+      "@id": "https://dentalzoneprayagraj.in/#dentist",
       "name": "Dr. Mukesh Basantani",
       "honorificPrefix": "Dr.",
       "jobTitle": "Dental Surgeon & Implantologist",
       "medicalSpecialty": "Dentistry",
-      "image": "https://kristoffxo.github.io/Dental-zone/images/dr-basantani.jpeg",
+      "image": "https://dentalzoneprayagraj.in/images/dr-basantani.jpeg",
       "telephone": "+91-94506-29270",
-      "worksFor": { "@id": "https://kristoffxo.github.io/Dental-zone/#clinic" },
+      "worksFor": { "@id": "https://dentalzoneprayagraj.in/#clinic" },
       "alumniOf": {
         "@type": "CollegeOrUniversity",
         "name": "Manipal Academy of Higher Education"
@@ -856,7 +865,7 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
     },
     {
       "@type": "FAQPage",
-      "@id": "https://kristoffxo.github.io/Dental-zone/#faq",
+      "@id": "https://dentalzoneprayagraj.in/#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -1007,7 +1016,7 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
       <div class="ring ring-1"><span class="ring-dot"></span></div>
       <div class="ring ring-2"></div>
       <div class="ring ring-3"><span class="ring-dot"></span></div>
-      <img src="images/dr-basantani.jpeg" class="doc-photo" alt="Dr. Mukesh Basantani, Dental Surgeon and Implantologist, Prayagraj">
+      <img src="images/dr-basantani.jpeg" class="doc-photo" alt="Dr. Mukesh Basantani, Dental Surgeon and Implantologist, Prayagraj" width="600" height="600" fetchpriority="high" decoding="async">
       <div class="float-card fc1" data-depth="24"><b>23</b>Years experience</div>
       <div class="float-card fc2" data-depth="-18"><b>50K+</b>Procedures</div>
       <div class="float-card fc3" data-depth="20"><b>19</b>Yrs implantology</div>
@@ -1052,7 +1061,7 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
 <section id="about">
   <div class="container about-wrap">
     <div class="about-sticky">
-      <div class="about-photo reveal"><img src="images/images-4.jpeg" alt="Dr. Mukesh Basantani treating a patient at Dental Zone, Prayagraj"></div>
+      <div class="about-photo reveal"><img src="images/images-4.jpeg" alt="Dr. Mukesh Basantani treating a patient at Dental Zone, Prayagraj" width="1600" height="1068" loading="lazy" decoding="async"></div>
       <div class="award-card reveal">
         <b><svg viewBox="0 0 24 24" aria-hidden="true" style="width:17px;height:17px;vertical-align:-2px;margin-right:7px;fill:none;stroke:var(--gold);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="9" r="5.6"/><path d="M8.6 13.8 7.4 21l4.6-2.4 4.6 2.4-1.2-7.2"/></svg>Pride of Allahabad Award</b>
         Felicitated by the Honourable Governor of Uttar Pradesh, Shri Keshari Nath Tripathi,
@@ -1146,9 +1155,9 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
          images-5 (a credentials poster) were previously captioned as the
          treatment room and the waiting area — both have been pulled. -->
     <div class="gallery">
-      <div class="g-item wide tall reveal"><img src="images/images-2.jpeg" alt="Treatment room at Dental Zone with dental chair and equipment"><div class="g-cap">Inside the Treatment Room</div></div>
-      <div class="g-item reveal"><img src="images/images.jpeg" alt="The Dental Zone team, Lukarganj, Prayagraj"><div class="g-cap">The Dental Zone Team</div></div>
-      <div class="g-item reveal"><img src="images/images-4.jpeg" alt="Dr. Mukesh Basantani treating a patient"><div class="g-cap">Care in Progress</div></div>
+      <div class="g-item wide tall reveal"><img src="images/images-2.jpeg" alt="Treatment room at Dental Zone with dental chair and equipment" width="1600" height="1068" loading="lazy" decoding="async"><div class="g-cap">Inside the Treatment Room</div></div>
+      <div class="g-item reveal"><img src="images/images.jpeg" alt="The Dental Zone team, Lukarganj, Prayagraj" width="1600" height="1068" loading="lazy" decoding="async"><div class="g-cap">The Dental Zone Team</div></div>
+      <div class="g-item reveal"><img src="images/images-4.jpeg" alt="Dr. Mukesh Basantani treating a patient" width="1600" height="1068" loading="lazy" decoding="async"><div class="g-cap">Care in Progress</div></div>
     </div>
   </div>
 </section>

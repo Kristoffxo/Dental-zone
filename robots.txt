@@ -4,4 +4,4 @@ Allow: /
 # Working copies of the photos — no reason for these in image search
 Disallow: /images/originals/
 
-Sitemap: https://kristoffxo.github.io/Dental-zone/sitemap.xml
+Sitemap: https://dentalzoneprayagraj.in/sitemap.xml
