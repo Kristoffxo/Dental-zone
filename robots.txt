@@ -3,5 +3,6 @@ Allow: /
 
 # Working copies of the photos — no reason for these in image search
 Disallow: /images/originals/
+Disallow: /images/blog/_originals/
 
 Sitemap: https://dentalzoneprayagraj.in/sitemap.xml
