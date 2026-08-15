@@ -335,7 +335,10 @@ body.menu-open .drawer{clip-path:circle(150% at calc(100% - 54px) 54px);}
 .ring-3 .ring-dot{background:var(--gold);box-shadow:0 0 14px rgba(200,145,42,.8);}
 @keyframes spin{to{transform:rotate(360deg);}}
 .doc-photo{
-  width:64%;aspect-ratio:1;border-radius:50%;object-fit:cover;z-index:3;
+  /* height:auto is load-bearing. The height="" attribute is a presentational
+     hint, and with no height declared here it beat aspect-ratio and squashed
+     the circle into a 218x600 ellipse. */
+  width:64%;height:auto;aspect-ratio:1;border-radius:50%;object-fit:cover;z-index:3;
   border:9px solid #fff;box-shadow:0 44px 90px rgba(22,96,255,.3);
 }
 .float-card{
@@ -1081,7 +1084,7 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
       <div class="ring ring-1"><span class="ring-dot"></span></div>
       <div class="ring ring-2"></div>
       <div class="ring ring-3"><span class="ring-dot"></span></div>
-      <img src="images/dr-basantani.jpeg" class="doc-photo" alt="Dr. Mukesh Basantani, Dental Surgeon and Implantologist, Prayagraj" width="600" height="600" fetchpriority="high" decoding="async">
+      <img src="images/dr-basantani.jpeg" class="doc-photo" alt="Dr. Mukesh Basantani, Dental Surgeon and Implantologist, Prayagraj" width="760" height="760" fetchpriority="high" decoding="async">
       <div class="float-card fc1" data-depth="24"><b>23</b>Years experience</div>
       <div class="float-card fc2" data-depth="-18"><b>50K+</b>Procedures</div>
       <div class="float-card fc3" data-depth="20"><b>19</b>Yrs implantology</div>
