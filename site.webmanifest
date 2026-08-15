@@ -1,5 +1,5 @@
 {
-  "name": "Dental Zone — Dr. Mukesh Basantani, Prayagraj",
+  "name": "Dental Zone \u2014 Dr. Mukesh Basantani, Prayagraj",
   "short_name": "Dental Zone",
   "description": "Super speciality dental hospital in Lukarganj, Prayagraj (Allahabad). Root canals, implants, braces and emergency dental care.",
   "start_url": "/",
@@ -9,7 +9,23 @@
   "theme_color": "#1660ff",
   "lang": "en-IN",
   "icons": [
-    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+    {
+      "src": "/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
   ]
 }
