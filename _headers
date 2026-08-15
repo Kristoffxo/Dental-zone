@@ -1,13 +1,16 @@
 # Cloudflare Pages reads this file. Rules are matched top-down, most specific first.
 
-# Fingerprinted-by-content assets. These filenames only change when the picture
-# changes, so a year of caching is safe and takes repeat visits to near-zero
-# image bytes — which is most of this page's weight.
+# NOT immutable. These filenames are not all content-hashed, and "immutable"
+# tells the browser never to re-check — so replacing a photo under the same name
+# left visitors pinned to the old one for a year with no way to bust it. A day
+# of freshness plus background revalidation keeps the bandwidth win without the
+# trap. Files that ARE hashed (e.g. dr-basantani.<hash>.jpeg) get a new URL when
+# they change, so this is belt and braces.
 /images/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 /*.png
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 /favicon.ico
   Cache-Control: public, max-age=604800
 
