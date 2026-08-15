@@ -23,6 +23,15 @@
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
 
+# Every HTML page needs the same treatment, not just the homepage — without
+# this the blog served a stale copy after deploy, including a stale canonical.
+/blog/*
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+/404.html
+  Cache-Control: public, max-age=0, must-revalidate
+
 # Crawlers should always get the current version of these.
 /sitemap.xml
   Cache-Control: public, max-age=3600
