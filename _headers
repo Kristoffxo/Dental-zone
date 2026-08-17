@@ -36,7 +36,9 @@
   Cache-Control: public, max-age=0, must-revalidate
 
 # Crawlers should always get the current version of these.
+# Short TTL: new pages are being added, and Google should see them on its
+# next fetch rather than up to an hour late.
 /sitemap.xml
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=300, must-revalidate
 /robots.txt
   Cache-Control: public, max-age=3600
