@@ -28,8 +28,10 @@ MUTED = (150, 168, 194)
 
 DIN    = "/System/Library/Fonts/Supplemental/DIN Condensed Bold.ttf"
 HELV_B = "/System/Library/Fonts/Helvetica.ttc"
+RYE    = os.path.join(SP, "fonts/Rye-Regular.ttf")   # letterhead face
 
 def f_din(sz):  return ImageFont.truetype(DIN, sz)
+def f_rye(sz):  return ImageFont.truetype(RYE, sz)
 def f_helv(sz, idx=1):
     fo = ImageFont.truetype(HELV_B, sz, index=idx)
     return fo
@@ -169,18 +171,18 @@ for i in range(N):
         # wordmark
         wa = ease_out(min(1, max(0, (tt - 0.28) / 0.55)))
         if wa > 0:
-            fw = f_din(132)
-            dental_w = d.textlength("DENTAL", font=fw)
-            zone_w   = d.textlength("ZONE", font=fw)
-            gap = 26
+            fw = f_rye(104)
+            dental_w = d.textlength("Dental", font=fw)
+            zone_w   = d.textlength("Zone", font=fw)
+            gap = 6
             total = dental_w + gap + zone_w
             x = (W - total) / 2
             yy = 690 + (1 - wa) * 22
-            d.text((x, yy), "DENTAL", font=fw, fill=(RED[0], RED[1], RED[2], int(255*wa)))
-            d.text((x + dental_w + gap, yy), "ZONE", font=fw,
+            d.text((x, yy), "Dental", font=fw, fill=(RED[0], RED[1], RED[2], int(255*wa)))
+            d.text((x + dental_w + gap, yy), "Zone", font=fw,
                    fill=(BLUE[0], BLUE[1], BLUE[2], int(255*wa)))
             fs = f_din(40)
-            centred(d, "SUPER SPECIALITY DENTAL HOSPITAL", fs, yy + 150,
+            centred(d, "SUPER SPECIALITY DENTAL HOSPITAL", fs, yy + 168,
                     (95, 107, 129, int(230*wa)), spacing=5)
 
         # the promise
