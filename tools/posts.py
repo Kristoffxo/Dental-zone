@@ -533,4 +533,100 @@ POSTS = [
  },
 },
 
+# ─────────────────────────────────────────────────────────────────────
+{
+ "slug": "enamel-never-grows-back",
+ "cat": "Oral Health",
+ "date": "2026-08-19",
+ "img": "enamel",
+ "en": {
+  "title": "Enamel Never Grows Back — Why That Matters | Dental Zone, Prayagraj",
+  "h1": "Your enamel never grows back",
+  "meta": "Enamel is the hardest tissue in the body and the only one that cannot repair itself. What that means for cavities, sensitivity and how often you should be checked.",
+  "lede": "It is the hardest substance your body makes. It is also the only part of you that, once lost, is gone permanently.",
+  "body": """
+<h2>Two facts that only matter together</h2>
+<p>Enamel is the hardest tissue in the human body — harder than bone. That part is well known.</p>
+<p>The part that matters more: <strong>enamel contains no living cells.</strong> Bone heals because living cells rebuild it. Skin heals for the same reason. Enamel has none, so it has no mechanism to repair itself. Every bit you lose, you have lost for good.</p>
+
+<h2>What this changes in practice</h2>
+<ul>
+  <li><strong>A cavity is permanent damage, not a temporary illness.</strong> We can clean it out and fill the hole. Nobody can regrow what decayed.</li>
+  <li><strong>Fillings are repairs, and repairs have a lifespan.</strong> A filled tooth needs watching for the rest of its life, because decay can restart at the margins.</li>
+  <li><strong>Sensitivity is often enamel loss, not a passing phase.</strong> Once it is thin enough for cold to reach the dentine underneath, it does not thicken again.</li>
+</ul>
+
+<h2>What actually wears it away</h2>
+<p>Decay is only one route. The commoner and quieter one is <strong>acid erosion</strong>, which dissolves enamel chemically across years:</p>
+<ul>
+  <li>Frequent soft drinks, packaged juice and lemon water — the acid does this, independently of sugar</li>
+  <li>Sipping anything acidic slowly through the day, which keeps the mouth acidic for hours</li>
+  <li>Reflux, which brings stomach acid up at night</li>
+  <li>Brushing hard with a stiff brush, which scrubs away softened enamel</li>
+</ul>
+<p>One useful habit: <strong>wait about thirty minutes after anything acidic before brushing.</strong> Enamel is temporarily softened straight afterwards, and brushing in that window removes more of it than it protects. Rinse with plain water instead, then brush later.</p>
+
+<h2>Remineralisation — what fluoride can and cannot do</h2>
+<p>Fluoride helps genuinely, but not in the way most people assume. It can re-harden enamel that has been weakened but not yet broken through — an early white-spot lesion can be arrested and strengthened.</p>
+<p>What it cannot do is rebuild a hole. Once decay has broken the surface, it needs a filling. This is exactly why the timing of a checkup decides how much treatment you need.</p>
+
+<h2>Why six months is the number</h2>
+<p>Early decay is invisible to you and painless. It is visible to us, and at that stage it is often reversible with fluoride and a change of habit. Left for two years, the same tooth needs a filling. Left longer, a root canal and a crown.</p>
+<p>The interval is not arbitrary — it is roughly how long it takes decay to move from a stage we can reverse to a stage we can only repair.</p>
+""",
+  "faq": [
+   ("Can enamel grow back or be regenerated?",
+    "No. Enamel has no living cells, so it cannot repair itself the way bone or skin can. Fluoride can re-harden enamel that is weakened but still intact; once the surface is broken, the tooth needs a filling."),
+   ("Is tooth sensitivity a sign of enamel loss?",
+    "Often, yes. When enamel thins, the dentine beneath it — which connects to the nerve — is more exposed, so cold and sweet register sharply. Sensitivity can have other causes too, including gum recession and cracks, which is why it is worth having looked at rather than managed with toothpaste indefinitely."),
+   ("Should I brush immediately after a soft drink?",
+    "No. Enamel is temporarily softened by acid, and brushing in that window scrubs some of it away. Rinse with plain water and brush about thirty minutes later."),
+  ],
+ },
+ "hi": {
+  "title": "इनेमल दोबारा नहीं बनता — यह क्यों मायने रखता है | डेंटल ज़ोन, प्रयागराज",
+  "h1": "आपका इनेमल दोबारा कभी नहीं बनता",
+  "meta": "इनेमल शरीर का सबसे कठोर हिस्सा है और अकेला ऐसा जो खुद की मरम्मत नहीं कर सकता। कीड़े, झनझनाहट और जाँच के अंतराल के लिए इसका क्या मतलब है।",
+  "lede": "यह आपका शरीर बनाता है सबसे कठोर चीज़। और यही अकेला हिस्सा है जो एक बार चला जाए तो हमेशा के लिए चला जाता है।",
+  "body": """
+<h2>दो बातें, जो साथ में ही मायने रखती हैं</h2>
+<p>इनेमल इंसानी शरीर का सबसे कठोर ऊतक है — हड्डी से भी ज़्यादा कठोर। यह बात तो जानी-पहचानी है।</p>
+<p>ज़्यादा अहम बात यह है: <strong>इनेमल में कोई जीवित कोशिका नहीं होती।</strong> हड्डी इसलिए जुड़ जाती है क्योंकि जीवित कोशिकाएँ उसे दोबारा बनाती हैं। त्वचा भी इसी वजह से भर जाती है। इनेमल में ऐसी कोशिकाएँ हैं ही नहीं, इसलिए उसके पास खुद को ठीक करने का कोई तरीका नहीं। जितना घिसा, वह हमेशा के लिए गया।</p>
+
+<h2>इससे व्यवहार में क्या बदलता है</h2>
+<ul>
+  <li><strong>कीड़ा एक स्थायी नुकसान है, कोई अस्थायी बीमारी नहीं।</strong> हम उसे साफ़ करके गड्ढा भर सकते हैं। जो सड़ चुका, उसे कोई दोबारा नहीं उगा सकता।</li>
+  <li><strong>फिलिंग मरम्मत है, और हर मरम्मत की एक उम्र होती है।</strong> भरे हुए दांत पर ज़िंदगी भर नज़र रखनी पड़ती है, क्योंकि किनारों से सड़न दोबारा शुरू हो सकती है।</li>
+  <li><strong>झनझनाहट अक्सर इनेमल घिसने का संकेत है, कोई गुज़र जाने वाली बात नहीं।</strong> एक बार वह इतना पतला हो जाए कि ठंडा नीचे की डेंटिन तक पहुँचे, तो वह दोबारा मोटा नहीं होता।</li>
+</ul>
+
+<h2>असल में इसे घिसता क्या है</h2>
+<p>कीड़ा तो सिर्फ़ एक रास्ता है। ज़्यादा आम और चुपचाप चलने वाला रास्ता है <strong>एसिड से कटाव</strong>, जो सालों में इनेमल को रासायनिक रूप से घोल देता है:</p>
+<ul>
+  <li>बार-बार कोल्ड ड्रिंक, डिब्बाबंद जूस और नींबू पानी — इसमें नुकसान चीनी से अलग, एसिड से होता है</li>
+  <li>दिन भर घूँट-घूँट कुछ खट्टा पीते रहना, जिससे मुँह घंटों अम्लीय बना रहता है</li>
+  <li>एसिडिटी, जो रात में पेट का एसिड ऊपर ले आती है</li>
+  <li>सख़्त ब्रश से ज़ोर लगाकर घिसना, जो नरम पड़े इनेमल को रगड़कर हटा देता है</li>
+</ul>
+<p>एक काम की आदत: <strong>कुछ भी खट्टा लेने के बाद करीब आधे घंटे तक ब्रश मत कीजिए।</strong> उसके तुरंत बाद इनेमल कुछ देर के लिए नरम रहता है, और उसी समय ब्रश करने से बचाव कम, नुकसान ज़्यादा होता है। उसकी जगह सादे पानी से कुल्ला कर लीजिए और बाद में ब्रश कीजिए।</p>
+
+<h2>फ़्लोराइड क्या कर सकता है और क्या नहीं</h2>
+<p>फ़्लोराइड सचमुच मदद करता है, पर उस तरह नहीं जैसा ज़्यादातर लोग समझते हैं। जो इनेमल कमज़ोर तो हुआ है पर टूटा नहीं, उसे वह दोबारा सख़्त कर सकता है — शुरुआती सफ़ेद दाग़ को वहीं रोका और मज़बूत किया जा सकता है।</p>
+<p>जो वह नहीं कर सकता, वह है गड्ढा भरना। एक बार सड़न सतह तोड़ चुकी हो तो फिलिंग चाहिए ही। इसीलिए जाँच का समय तय करता है कि इलाज कितना करना पड़ेगा।</p>
+
+<h2>छह महीने ही क्यों</h2>
+<p>शुरुआती सड़न आपको दिखती नहीं और दर्द भी नहीं देती। हमें वह दिख जाती है, और उस अवस्था में अक्सर फ़्लोराइड और आदत बदलने से ही पलटी जा सकती है। दो साल छोड़ दीजिए तो उसी दांत में फिलिंग चाहिए। और छोड़ दीजिए तो रूट कैनाल और कैप।</p>
+<p>यह अंतराल यूँ ही नहीं चुना गया — मोटे तौर पर इतना ही समय लगता है सड़न को उस हालत से, जिसे पलटा जा सकता है, उस हालत तक पहुँचने में जिसे सिर्फ़ मरम्मत किया जा सकता है।</p>
+""",
+  "faq": [
+   ("क्या इनेमल दोबारा बन सकता है?",
+    "नहीं। इनेमल में जीवित कोशिकाएँ नहीं होतीं, इसलिए वह हड्डी या त्वचा की तरह खुद को ठीक नहीं कर सकता। फ़्लोराइड कमज़ोर पड़े लेकिन साबुत इनेमल को दोबारा सख़्त कर सकता है; सतह टूट जाने के बाद फिलिंग ही करानी पड़ती है।"),
+   ("क्या दांतों की झनझनाहट इनेमल घिसने की निशानी है?",
+    "अक्सर हाँ। इनेमल पतला होने पर उसके नीचे की डेंटिन — जो नस से जुड़ी होती है — ज़्यादा खुल जाती है, इसलिए ठंडा और मीठा तेज़ चुभता है। झनझनाहट की और वजहें भी होती हैं, जैसे मसूड़े उतरना या दरार, इसीलिए इसे लगातार पेस्ट से दबाने के बजाय एक बार दिखा लेना बेहतर है।"),
+   ("क्या कोल्ड ड्रिंक पीने के तुरंत बाद ब्रश करना चाहिए?",
+    "नहीं। एसिड से इनेमल कुछ देर के लिए नरम हो जाता है, और उसी समय ब्रश करने से वह रगड़कर कुछ और घिस जाता है। सादे पानी से कुल्ला कीजिए और करीब आधे घंटे बाद ब्रश कीजिए।"),
+  ],
+ },
+},
+
 ]

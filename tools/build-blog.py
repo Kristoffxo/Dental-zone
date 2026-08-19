@@ -17,7 +17,7 @@ T = {
  "en": dict(lang="en-IN", blog="Blog", home="Home", other="हिंदी में पढ़ें",
             kicker="From the Clinic", idx_h1="Dental health, explained plainly",
             idx_lede="Straight answers to what patients in Prayagraj actually ask us — no jargon, nothing oversold.",
-            idx_title="Dental Health Blog | Dental Zone, Prayagraj (Allahabad)",
+            idx_title="Dental Health Blog | Dental Zone, Prayagraj",
             idx_meta="Plain-English answers on root canals, implants, braces, children's teeth and oral health, from Dr. Mukesh Basantani's clinic in Lukarganj, Prayagraj.",
             read="Read more", faq="Common questions", back="All posts",
             cta_h="Need to get it looked at?", cta_p="Book a consultation at Lukarganj, or call us directly.",
@@ -25,19 +25,14 @@ T = {
  "hi": dict(lang="hi-IN", blog="ब्लॉग", home="होम", other="Read in English",
             kicker="क्लिनिक से", idx_h1="दांतों की सेहत, आसान भाषा में",
             idx_lede="प्रयागराज के मरीज़ जो सचमुच पूछते हैं, उनके सीधे जवाब — बिना भारी-भरकम शब्दों के, बिना कुछ बढ़ा-चढ़ाकर।",
-            idx_title="दांतों की सेहत पर ब्लॉग | डेंटल ज़ोन, प्रयागराज (इलाहाबाद)",
+            idx_title="दांतों की सेहत पर ब्लॉग | डेंटल ज़ोन, प्रयागराज",
             idx_meta="रूट कैनाल, इम्प्लांट, तार, बच्चों के दांत और मुँह की सेहत पर आसान भाषा में जानकारी — डॉ. मुकेश बसंतानी के लूकरगंज, प्रयागराज क्लिनिक से।",
             read="पूरा पढ़ें", faq="अक्सर पूछे जाने वाले सवाल", back="सभी लेख",
             cta_h="दिखाना ज़रूरी लग रहा है?", cta_p="लूकरगंज में अपॉइंटमेंट लीजिए, या सीधे फ़ोन कीजिए।",
             book="अपॉइंटमेंट बुक करें", call="094506 29270 पर कॉल करें", mins="मिनट का पाठ"),
 }
 
-MARK = ('<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'
- '<path d="M50 93 C50 93 9 64 9 37 C9 20 22 10 34.5 10 C43 10 50 16.5 50 16.5 C50 16.5 57 10 65.5 10 C78 10 91 20 91 37 C91 64 50 93 50 93 Z" fill="none" stroke="#d92b2b" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>'
- '<path d="M50 28 C36 28 27 35 27 46 C27 53 28.5 58 28 65 C27.3 74 29.5 82 34 82.8 C37.8 83.5 39.6 79.5 40.6 72.5 C41.6 65.5 44.5 62 50 62 C55.5 62 58.4 65.5 59.4 72.5 C60.4 79.5 62.2 83.5 66 82.8 C70.5 82 72.7 74 72 65 C71.5 58 73 53 73 46 C73 35 64 28 50 28 Z" fill="#fff" stroke="#d92b2b" stroke-width="2.6" stroke-linejoin="round"/>'
- '<path d="M38.5 44 Q42.5 39 46.5 44" fill="none" stroke="#d92b2b" stroke-width="3.4" stroke-linecap="round"/>'
- '<circle cx="58" cy="42.5" r="3.2" fill="#d92b2b"/>'
- '<path d="M40 51.5 Q50 60.5 60 51.5" fill="none" stroke="#d92b2b" stroke-width="3.6" stroke-linecap="round"/></svg>')
+MARK = ('<img src="/images/logo-mark.png" alt="Dental Zone" width="361" height="520" decoding="async">')
 
 BOOT = ('<script>(function(){try{var s=localStorage.getItem("dz-theme");'
         'var d=s?s==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;'
@@ -72,7 +67,7 @@ a{text-decoration:none;color:inherit;}img{display:block;max-width:100%;}
 nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--line);padding:13px 0;}
 nav .in{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
 .lg{display:flex;align-items:center;gap:10px;}
-.lg svg{width:34px;height:34px;flex-shrink:0;}
+.lg img[src*='logo-mark']{width:auto;height:36px;flex-shrink:0;}
 .lg img{height:19px;width:auto;}
 .acts{display:flex;align-items:center;gap:9px;}
 .lang{padding:8px 15px;border-radius:999px;border:1px solid var(--line);background:var(--bg);
@@ -166,7 +161,7 @@ def head(lang, title, meta, canon, alt, img, extra=""):
 <link rel="alternate" hreflang="hi-IN" href="{alt['hi']}">
 <link rel="alternate" hreflang="x-default" href="{alt['en']}">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="geo.region" content="IN-UP"><meta name="geo.placename" content="Prayagraj, Allahabad">
+<meta name="geo.region" content="IN-UP"><meta name="geo.placename" content="Prayagraj, Prayagraj">
 <meta property="og:type" content="article"><meta property="og:site_name" content="Dental Zone">
 <meta property="og:locale" content="{'en_IN' if lang=='en' else 'hi_IN'}">
 <meta property="og:url" content="{canon}"><meta property="og:title" content="{title}">

@@ -14,7 +14,7 @@
     </image:image>
     <image:image>
       <image:loc>https://dentalzoneprayagraj.in/images/dr-basantani.f41f91c4.jpeg</image:loc>
-      <image:title>Dr. Mukesh Basantani, BDS — best dentist in Allahabad (Prayagraj)</image:title>
+      <image:title>Dr. Mukesh Basantani, BDS — best dentist in Prayagraj</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dentalzoneprayagraj.in/images/images-4.jpeg</image:loc>
@@ -129,6 +129,18 @@
   </url>
   <url>
     <loc>https://dentalzoneprayagraj.in/blog/hi/dental-implants-and-diabetes</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dentalzoneprayagraj.in/blog/enamel-never-grows-back</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dentalzoneprayagraj.in/blog/hi/enamel-never-grows-back</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

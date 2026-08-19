@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" role="img" aria-label="Dental Zone logo — a heart around a smiling tooth">
+  <title>Dental Zone</title>
+  <!-- Redrawn from the clinic signboard. Colours sampled from it:
+       brick red #C0392B, ivory #F7F1E1, sparkle blue #2E6DA4. -->
+
+  <!-- HEART: an open ribbon. The two ends cross low and run past each other,
+       so the tooth sits inside the loop rather than under it. -->
+  <g fill="none" stroke-linecap="round">
+    <path stroke="#F7F1E1" stroke-width="30"
+          d="M140 236 C70 205, 18 152, 18 106 C18 62, 62 42, 88 77
+             C94 85, 98 90, 100 97
+             C102 90, 106 85, 112 77 C138 42, 182 62, 182 106
+             C182 152, 130 205, 60 236"/>
+    <path stroke="#C0392B" stroke-width="19"
+          d="M140 236 C70 205, 18 152, 18 106 C18 62, 62 42, 88 77
+             C94 85, 98 90, 100 97
+             C102 90, 106 85, 112 77 C138 42, 182 62, 182 106
+             C182 152, 130 205, 60 236"/>
+  </g>
+
+  <!-- TOOTH: crown level with the heart's middle, roots below the tails -->
+  <path fill="#F7F1E1" stroke="#C0392B" stroke-width="6" stroke-linejoin="round"
+        d="M103 133 C74 133, 54 152, 54 181
+           C54 203, 57 217, 55 235
+           C53 263, 60 286, 74 287
+           C86 288, 90 275, 92 253
+           C94 235, 98 228, 103 228
+           C108 228, 112 235, 114 253
+           C116 275, 120 288, 132 287
+           C146 286, 153 263, 151 235
+           C149 217, 152 203, 152 181
+           C152 152, 132 133, 103 133 Z"/>
+
+  <!-- SMILE -->
+  <path fill="#C0392B"
+        d="M74 172 C90 183, 118 183, 134 167
+           C132 211, 104 229, 86 210
+           C77 200, 74 186, 74 172 Z"/>
+
+  <!-- WINK -->
+  <path fill="none" stroke="#C0392B" stroke-width="5.4" stroke-linecap="round"
+        d="M93 160 C98 151, 108 151, 113 160"/>
+
+  <!-- OPEN EYE -->
+  <ellipse cx="131" cy="156" rx="5" ry="6.8" fill="#1C1C1C"/>
+
+  <!-- SPARKLE -->
+  <path fill="#2E6DA4"
+        d="M77 138 L81 151 L94 155 L81 159 L77 172 L73 159 L60 155 L73 151 Z"/>
+  <path fill="#CFE4F7"
+        d="M77 146 L79 153 L86 155 L79 157 L77 164 L75 157 L68 155 L75 153 Z"/>
+</svg>
