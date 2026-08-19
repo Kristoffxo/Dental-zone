@@ -834,6 +834,75 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
   .theming,.theming *{transition:none!important;}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}
 }
+
+/* ============ MOBILE DENSITY ============
+   Content is never removed — Google still reads every word. Long prose is
+   clamped behind a Read more so the page stops being a 12-screen scroll,
+   and the section rhythm tightens up. Desktop is untouched. */
+.wm{display:block;width:auto;}
+.logo-wm .wm{height:23px;}
+.wm-foot{height:30px;margin-bottom:2px;}
+.wm-pre{height:40px;}
+@media(max-width:640px){ .logo-wm .wm{height:20px;} .wm-pre{height:32px;} }
+.m-more{display:none;}
+@media(max-width:640px){
+  section{padding:54px 0;}
+  .section-head{margin-bottom:34px;}
+  .section-head p{font-size:16px;line-height:1.7;}
+  .hygiene{padding:44px 22px;}
+  .facts{margin-top:34px;gap:14px;}
+  .fact{padding:26px 22px;}
+  .service{padding:30px 26px;}
+  .team-card{padding:30px 26px;}
+  .cost-card{padding:28px 24px;}
+  .about-body p{margin-bottom:14px;}
+
+  /* Two-up the card grids. Nine service cards stacked one-per-row was 3352px
+     on a 375px screen — over four screens for one section. */
+  .services-grid{grid-template-columns:1fr 1fr;gap:12px;}
+  .service{padding:22px 16px;}
+  .service h3{font-size:16px;margin-bottom:7px;letter-spacing:-.2px;}
+  .svc-icon{width:44px;height:44px;font-size:20px;margin-bottom:14px;border-radius:13px;}
+  .svc-icon svg{width:20px;height:20px;}
+  .svc-no{top:14px;right:14px;font-size:13px;}
+  .svc-link{margin-top:10px;font-size:13.5px;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .stat{padding:30px 14px;}
+  .process{grid-template-columns:1fr 1fr;gap:28px 12px;}
+  .step-no{width:56px;height:56px;font-size:22px;margin-bottom:16px;}
+  .step h3{font-size:17px;}
+  .step p{font-size:14px;padding:0;}
+
+  /* Clamp card copy to a few lines — the text stays in the DOM for Google,
+     it just stops the page running to thirty screens. */
+  .service p,.fact p,.step p,.cost-card p{
+    display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;
+  }
+  .service p{-webkit-line-clamp:2;font-size:13.5px;line-height:1.6;}
+  .fact p{-webkit-line-clamp:3;}
+  .step p{-webkit-line-clamp:3;}
+  .cost-card p{-webkit-line-clamp:4;}
+  .hygiene h2{font-size:26px;}
+  .hygiene .h-sub{font-size:16px;line-height:1.75;margin-top:22px;}
+  .creds{margin-top:22px;gap:10px;}
+
+  /* clamp long prose, keep it in the DOM */
+  .m-clamp{position:relative;max-height:9.2em;overflow:hidden;}
+  .m-clamp::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:3.4em;
+    background:linear-gradient(transparent,var(--bg));pointer-events:none;
+  }
+  .m-clamp.in-card::after{background:linear-gradient(transparent,var(--white));}
+  .m-clamp.open{max-height:none;}
+  .m-clamp.open::after{opacity:0;}
+  .m-more{
+    display:inline-flex;align-items:center;gap:7px;margin-top:12px;
+    font-weight:700;font-size:15px;color:var(--blue);background:none;
+    border:0;padding:0;font-family:inherit;
+  }
+  .m-more .chev{transition:transform .35s var(--ease);display:inline-block;}
+  .m-more[aria-expanded="true"] .chev{transform:rotate(180deg);}
+}
 </style>
 
 <!-- ============================================================
@@ -996,7 +1065,7 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
       <circle cx="58" cy="42.5" r="3.2" fill="#d92b2b"/>
       <path d="M40 51.5 Q50 60.5 60 51.5" fill="none" stroke="#d92b2b" stroke-width="3.6" stroke-linecap="round"/>
     </svg>
-    Dental<span>Zone</span>
+    <img class="wm wm-pre" src="images/wordmark-light.png" alt="Dental Zone" width="1665" height="318">
   </div>
   <div class="pre-bar"><i></i></div>
 </div>
@@ -1022,7 +1091,7 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
         <path d="M40 51.5 Q50 60.5 60 51.5" fill="none" stroke="#d92b2b" stroke-width="3.6" stroke-linecap="round"/>
       </svg>
       <span class="logo-wm">
-        <span class="l1">Dental<span>Zone</span></span>
+        <img class="wm" src="images/wordmark.png" alt="Dental Zone" width="1665" height="318">
         <span class="l2">Super Speciality Dental Hospital</span>
       </span>
     </a>
@@ -1074,9 +1143,8 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
            page carrying only one of them forfeits half the local traffic. -->
       <h1 class="display" data-split>Super speciality dentistry in <em>Allahabad &amp; Prayagraj.</em></h1>
       <p class="lead" data-hero>
-        Dental Zone in Lukarganj is among the highest-rated dental clinics in Allahabad —
-        4.6 stars across 199 Google reviews. Led by Dr. Mukesh Basantani, BDS, with 23 years
-        of practice and over 50,000 root canals, implants and extractions performed.
+        Led by Dr. Mukesh Basantani, BDS — 23 years, and more than 50,000 root canals,
+        implants and extractions performed here in Lukarganj.
       </p>
       <div class="hero-actions" data-hero>
         <a href="#booking" class="btn btn-primary magnetic">Book Appointment <span class="arrow">→</span></a>
@@ -1500,16 +1568,14 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
     <div class="why-grid">
       <div class="why-col reveal">
         <p>
-          If you are looking for the <strong>best dentist in Allahabad</strong>, the honest measure isn't
-          a slogan — it's what patients say afterwards. Dental Zone holds <strong>4.6 stars across 199
-          Google reviews</strong>, and the reviews repeat the same things: the treatment was painless,
-          the diagnosis was explained before anything began, and nobody was sold work they didn't need.
+          If you are looking for the <strong>best dentist in Allahabad</strong>, the honest measure
+          isn't a slogan — it's what patients say afterwards. The reviews repeat the same three
+          things: it was painless, the diagnosis was explained before anything began, and nobody
+          was sold work they didn't need.
         </p>
         <p>
-          The clinic is led by <strong>Dr. Mukesh Basantani, BDS</strong> — a dental surgeon and
-          implantologist with <strong>23 years of experience</strong> and more than 50,000 root canals,
-          implants and extractions behind him, plus advanced orthodontic training in Italy, Canada
-          and the USA. He is also a recipient of the Pride of Allahabad Award.
+          Dr. Mukesh Basantani holds advanced orthodontic training in Italy, Canada and the USA,
+          and the Pride of Allahabad Award.
         </p>
         <p>
           As a super speciality dental hospital, Dental Zone handles root canal treatment, dental
@@ -1623,7 +1689,7 @@ footer{background:var(--dark);color:#fff;padding:96px 0 36px;}
           <path d="M40 51.5 Q50 60.5 60 51.5" fill="none" stroke="#ff6b6b" stroke-width="3.6" stroke-linecap="round"/>
         </svg>
         <div>
-          <h2>Dental<span>Zone</span></h2>
+          <img class="wm wm-foot" src="images/wordmark-light.png" alt="Dental Zone" width="1665" height="318">
           <span class="l2">Super Speciality Dental Hospital</span>
         </div>
       </div>
@@ -2159,5 +2225,36 @@ if (document.readyState === "loading") {
 }
 </script>
 
+<script>
+/* Read-more toggles. Added on phones only; on desktop the blocks are never
+   clamped, so no button is injected and nothing changes. */
+(function(){
+  if (!window.matchMedia("(max-width:640px)").matches) return;
+  var TARGETS = [
+    [".about-body", false],
+    [".why-col", false],
+    [".team-card p:nth-of-type(1)", true],
+    [".cost-card p", true],
+    [".fact p", true]
+  ];
+  TARGETS.forEach(function(pair){
+    document.querySelectorAll(pair[0]).forEach(function(el){
+      if (el.scrollHeight < 200) return;           // already short enough
+      el.classList.add("m-clamp");
+      if (pair[1]) el.classList.add("in-card");
+      var b = document.createElement("button");
+      b.className = "m-more";
+      b.setAttribute("aria-expanded","false");
+      b.innerHTML = 'Read more <span class="chev">\u25BE</span>';
+      b.addEventListener("click", function(){
+        var open = el.classList.toggle("open");
+        b.setAttribute("aria-expanded", open ? "true" : "false");
+        b.innerHTML = (open ? "Show less " : "Read more ") + '<span class="chev">\u25BE</span>';
+      });
+      el.parentNode.insertBefore(b, el.nextSibling);
+    });
+  });
+})();
+</script>
 </body>
 </html>
