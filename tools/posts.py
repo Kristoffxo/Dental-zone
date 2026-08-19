@@ -253,4 +253,284 @@ POSTS = [
  },
 },
 
+# ─────────────────────────────────────────────────────────────────────
+{
+ "slug": "bad-breath-causes-and-fixes",
+ "cat": "Oral Health",
+ "date": "2026-08-19",
+ "img": "breath",
+ "en": {
+  "title": "Bad Breath: What Actually Causes It and What Fixes It | Dental Zone",
+  "h1": "Bad breath: what actually causes it, and what actually fixes it",
+  "meta": "Mouthwash masks it for twenty minutes. Here is where bad breath really comes from and how to deal with it properly, from a dental hospital in Prayagraj.",
+  "lede": "Almost nobody raises this with us directly. It usually comes out near the end of an appointment, phrased as a question about something else.",
+  "body": """
+<h2>It is nearly always the mouth, not the stomach</h2>
+<p>The most common belief we hear is that bad breath comes from the stomach. In the overwhelming majority of cases it does not. Roughly nine times in ten the cause is inside the mouth, and it is bacteria producing sulphur compounds — the same family of chemicals responsible for the smell of rotten eggs.</p>
+<p>That is genuinely good news, because a cause inside the mouth is a cause we can find and treat.</p>
+
+<h2>The tongue is the usual culprit</h2>
+<p>The back of the tongue has a rough surface that traps food debris, dead cells and bacteria in a soft coating. Most people brush their teeth diligently and never touch it.</p>
+<p><strong>Clean your tongue every morning</strong> — a tongue scraper is better than a toothbrush for this, and cheap. Work from as far back as you can comfortably reach, forwards, four or five times, rinsing between strokes. For a great many people this alone solves the problem within a week.</p>
+
+<h2>The other real causes</h2>
+<ul>
+  <li><strong>Gum disease.</strong> Bacteria in the pockets around the teeth produce exactly the compounds that smell. If your gums bleed when you brush, this is likely a factor and it will not resolve on its own.</li>
+  <li><strong>A dry mouth.</strong> Saliva is the mouth's natural cleaner. Anything that reduces it — dehydration, breathing through your mouth, several common medications — makes breath worse. This is why it is nearly always worst first thing in the morning.</li>
+  <li><strong>Decay, or an old broken filling.</strong> A cavity is a sheltered space that traps food and bacteria.</li>
+  <li><strong>Food.</strong> Onion, garlic and spices are absorbed into the bloodstream and released through the lungs, so brushing does not touch them. That version passes on its own.</li>
+  <li><strong>Smoking and tobacco.</strong> Both directly, and by causing gum disease and dry mouth.</li>
+</ul>
+
+<h2>Why mouthwash disappoints</h2>
+<p>Most mouthwash masks the smell rather than removing the cause, and the effect fades within an hour. Strongly alcoholic ones can make things worse over time by drying the mouth, which is the exact condition bacteria prefer.</p>
+<p>If you use one, choose an alcohol-free antibacterial rinse and treat it as a supplement to cleaning, never as a replacement.</p>
+
+<h2>What to do, in order</h2>
+<ul>
+  <li>Clean your tongue daily.</li>
+  <li>Clean between your teeth — brushing reaches roughly three-fifths of each tooth's surface.</li>
+  <li>Drink more water than you think you need.</li>
+  <li>Get a professional cleaning if it has been more than six months.</li>
+</ul>
+<p>If you have done all four properly for a month and it persists, come in. Persistent bad breath with a genuinely clean mouth occasionally points to a sinus problem, reflux, or uncontrolled diabetes — and that is worth identifying.</p>
+""",
+  "faq": [
+   ("Why can I not smell my own bad breath?",
+    "Because you are continuously exposed to it, and the brain filters out constant smells. Licking the back of your wrist, letting it dry for ten seconds and smelling it gives a rough indication. Asking someone you trust is more reliable."),
+   ("Does bad breath come from the stomach?",
+    "Very rarely. Around nine in ten cases originate in the mouth itself. Digestive causes exist but are uncommon, and they are worth investigating only once the mouth has been properly examined and ruled out."),
+  ],
+ },
+ "hi": {
+  "title": "मुँह की बदबू: असली वजह क्या है और ठीक कैसे होगी | डेंटल ज़ोन",
+  "h1": "मुँह की बदबू: असली वजह क्या है, और ठीक किससे होती है",
+  "meta": "माउथवॉश बीस मिनट के लिए छिपा देता है। असल में बदबू कहाँ से आती है और उसका सही इलाज क्या है — प्रयागराज के डेंटल अस्पताल से।",
+  "lede": "यह बात कोई सीधे नहीं कहता। आमतौर पर अपॉइंटमेंट ख़त्म होते-होते, किसी और सवाल की आड़ में सामने आती है।",
+  "body": """
+<h2>वजह लगभग हमेशा मुँह होता है, पेट नहीं</h2>
+<p>सबसे आम धारणा यही सुनने को मिलती है कि बदबू पेट से आती है। ज़्यादातर मामलों में ऐसा नहीं होता। करीब दस में नौ बार वजह मुँह के अंदर ही होती है — बैक्टीरिया जो सल्फ़र वाले यौगिक बनाते हैं, वही रसायन जिनसे सड़े अंडे जैसी गंध आती है।</p>
+<p>यह असल में अच्छी ख़बर है, क्योंकि मुँह के अंदर की वजह ढूँढी भी जा सकती है और उसका इलाज भी हो सकता है।</p>
+
+<h2>असली गुनहगार आमतौर पर जीभ होती है</h2>
+<p>जीभ के पिछले हिस्से की सतह खुरदरी होती है, जिसमें खाने के कण, मरी हुई कोशिकाएँ और बैक्टीरिया एक नरम परत के रूप में फँसे रहते हैं। ज़्यादातर लोग दांत तो ध्यान से साफ़ करते हैं, पर जीभ को छूते तक नहीं।</p>
+<p><strong>हर सुबह जीभ साफ़ कीजिए</strong> — इसके लिए टंग क्लीनर ब्रश से बेहतर है और सस्ता भी। जितना पीछे तक आराम से पहुँच सकें वहाँ से आगे की तरफ़, चार-पाँच बार, बीच-बीच में धोते हुए। बहुत से लोगों की समस्या सिर्फ़ इसी से एक हफ़्ते में हल हो जाती है।</p>
+
+<h2>बाकी असली वजहें</h2>
+<ul>
+  <li><strong>मसूड़ों की बीमारी।</strong> दांतों के आसपास बनी जेबों में मौजूद बैक्टीरिया ठीक वही यौगिक बनाते हैं जिनसे बदबू आती है। अगर ब्रश करते वक़्त मसूड़ों से खून आता है तो यह बड़ी वजह हो सकती है, और यह अपने आप ठीक नहीं होती।</li>
+  <li><strong>मुँह का सूखापन।</strong> लार मुँह की क़ुदरती सफ़ाई है। जो भी उसे कम करे — पानी की कमी, मुँह से साँस लेना, कई आम दवाएँ — बदबू बढ़ा देता है। इसीलिए सुबह उठते ही यह सबसे ज़्यादा होती है।</li>
+  <li><strong>कीड़ा या टूटी पुरानी फिलिंग।</strong> कैविटी एक ऐसी छिपी जगह होती है जिसमें खाना और बैक्टीरिया फँसे रहते हैं।</li>
+  <li><strong>खाना।</strong> प्याज़, लहसुन और मसाले खून में घुलकर फेफड़ों के रास्ते बाहर आते हैं, इसलिए ब्रश करने से फ़र्क़ नहीं पड़ता। यह वाली अपने आप चली जाती है।</li>
+  <li><strong>सिगरेट और तम्बाकू।</strong> सीधे भी, और मसूड़ों की बीमारी तथा सूखा मुँह पैदा करके भी।</li>
+</ul>
+
+<h2>माउथवॉश से निराशा क्यों होती है</h2>
+<p>ज़्यादातर माउथवॉश वजह हटाते नहीं, गंध छिपाते हैं, और असर घंटे भर में उतर जाता है। तेज़ अल्कोहल वाले तो समय के साथ हालत बिगाड़ भी सकते हैं, क्योंकि वे मुँह सुखाते हैं — और सूखा मुँह ही बैक्टीरिया को सबसे ज़्यादा भाता है।</p>
+<p>अगर इस्तेमाल करना ही है तो अल्कोहल-रहित एंटीबैक्टीरियल चुनिए, और उसे सफ़ाई के साथ का सहारा मानिए, सफ़ाई का विकल्प कभी नहीं।</p>
+
+<h2>क्या करें, इसी क्रम में</h2>
+<ul>
+  <li>रोज़ जीभ साफ़ कीजिए।</li>
+  <li>दांतों के बीच सफ़ाई कीजिए — ब्रश हर दांत की करीब तीन-पाँचवीं सतह तक ही पहुँचता है।</li>
+  <li>जितना ज़रूरी लगे उससे ज़्यादा पानी पीजिए।</li>
+  <li>छह महीने से ज़्यादा हो गए हों तो सफ़ाई करवा लीजिए।</li>
+</ul>
+<p>अगर आप एक महीने तक ये चारों ठीक से कर चुके हैं और फिर भी बदबू बनी हुई है, तो दिखाइए। साफ़ मुँह के बावजूद लगातार बदबू कभी-कभी साइनस, एसिडिटी या बेक़ाबू शुगर की ओर इशारा करती है — और उसे पहचान लेना ज़रूरी है।</p>
+""",
+  "faq": [
+   ("मुझे अपने मुँह की बदबू खुद क्यों नहीं आती?",
+    "क्योंकि आप लगातार उसी के संपर्क में रहते हैं, और दिमाग़ लगातार आने वाली गंध को अनदेखा कर देता है। कलाई के पिछले हिस्से पर चाटकर दस सेकंड सूखने दें और सूँघें — इससे मोटा अंदाज़ा लग जाता है। किसी भरोसेमंद व्यक्ति से पूछना ज़्यादा सही रहता है।"),
+   ("क्या मुँह की बदबू पेट से आती है?",
+    "बहुत कम। करीब दस में नौ मामलों की वजह मुँह के अंदर ही होती है। पेट से जुड़े कारण होते तो हैं, पर आम नहीं — और उन्हें तभी देखना चाहिए जब मुँह की ठीक से जाँच करके वजह वहाँ न मिली हो।"),
+  ],
+ },
+},
+
+# ─────────────────────────────────────────────────────────────────────
+{
+ "slug": "teeth-whitening-vs-scaling",
+ "cat": "Cosmetic",
+ "date": "2026-08-19",
+ "img": "whitening",
+ "en": {
+  "title": "Teeth Whitening vs Scaling: Which One Do You Actually Need? | Dental Zone",
+  "h1": "Teeth whitening vs scaling: which one do you actually need?",
+  "meta": "Most people asking for whitening in Prayagraj need a cleaning instead. The difference, the types, what it costs and what it will not fix.",
+  "lede": "Patients frequently ask us for whitening when what they describe is a job for a cleaning. They are different procedures solving different problems, and the cheaper one is often the right one.",
+  "body": """
+<h2>The difference in one line</h2>
+<p><strong>Scaling removes what is stuck on your teeth. Whitening changes the colour of the teeth themselves.</strong></p>
+<p>If your teeth have gone yellow-brown from tea, coffee, tobacco or hardened tartar, that colour is sitting <em>on</em> the surface. Scaling and polishing removes it, and people are regularly surprised at how much brighter their teeth are afterwards — no whitening required.</p>
+<p>If the tooth is uniformly darker in its own structure, no amount of cleaning changes it. That is what whitening is for.</p>
+
+<h2>Start with a cleaning</h2>
+<p>We will nearly always suggest scaling first, for two practical reasons. It may be all you need. And if you do go on to whiten, the result is far more even on a clean surface — bleaching over a layer of tartar produces a patchy outcome.</p>
+
+<h2>The whitening options</h2>
+<h3>In-clinic whitening</h3>
+<p>A high-concentration gel applied under controlled conditions, with the gums protected. Around an hour, and the change is visible the same day. The fastest route, and the one where the concentration is high enough that it genuinely needs supervising.</p>
+<h3>Take-home trays</h3>
+<p>Custom trays made from impressions of your teeth, with a lower-strength gel worn for a set period daily over two to three weeks. Slower, gentler on sensitivity, and generally less expensive.</p>
+<h3>Whitening toothpaste</h3>
+<p>Mildly abrasive, so it removes some surface staining. It does not change the colour of the tooth. Reasonable for maintaining a result; ineffective at creating one.</p>
+
+<h2>What whitening will not do</h2>
+<ul>
+  <li><strong>It does not work on crowns, veneers or fillings.</strong> These keep their original shade. If you have a white filling on a front tooth and whiten around it, it will suddenly stand out — which is why we plan the order carefully.</li>
+  <li><strong>It does not fix greyish discolouration from an old root canal.</strong> That needs a different approach, usually internal bleaching or a veneer.</li>
+  <li><strong>It is not permanent.</strong> Expect one to three years depending on tea, coffee and tobacco.</li>
+</ul>
+
+<h2>Sensitivity</h2>
+<p>Common, and usually temporary. Most people notice a few days of sharper reaction to cold, which settles. If you already have sensitive teeth, tell us — we would generally choose the slower take-home route for you, which is markedly gentler.</p>
+
+<h2>A word on shop-bought kits</h2>
+<p>The strips and kits sold online vary enormously in quality, and the risk is not the whitening — it is the gel sitting against the gums in an ill-fitting tray, which causes chemical burns we then have to treat. If cost is the concern, tell us and we will talk about the take-home option honestly.</p>
+""",
+  "faq": [
+   ("Is teeth whitening safe?",
+    "Done professionally, yes. The gel is applied with the gums protected and the concentration is matched to your teeth. The problems we see come almost entirely from unsupervised shop-bought kits with poorly fitting trays, where gel contacts the gum tissue."),
+   ("How long does teeth whitening last?",
+    "Typically one to three years. It depends heavily on tea, coffee, red wine and tobacco. A cleaning every six months and cutting back on staining drinks extends it considerably."),
+  ],
+ },
+ "hi": {
+  "title": "दांत सफ़ेद कराना या सफ़ाई: आपको असल में किसकी ज़रूरत है? | डेंटल ज़ोन",
+  "h1": "दांत सफ़ेद कराना या सफ़ाई — आपको असल में किसकी ज़रूरत है?",
+  "meta": "प्रयागराज में जो लोग दांत सफ़ेद कराने आते हैं, उनमें से ज़्यादातर को सिर्फ़ सफ़ाई चाहिए होती है। फ़र्क़ क्या है, कौन-कौन से तरीक़े हैं, और किससे क्या ठीक नहीं होता।",
+  "lede": "मरीज़ अक्सर दांत सफ़ेद कराने की बात करते हैं, जबकि जो समस्या वे बताते हैं वह सफ़ाई से हल होती है। ये दो अलग इलाज हैं, अलग समस्याओं के लिए — और अक्सर सस्ता वाला ही सही होता है।",
+  "body": """
+<h2>फ़र्क़, एक लाइन में</h2>
+<p><strong>सफ़ाई वह हटाती है जो दांतों पर जमा है। व्हाइटनिंग दांत के अपने रंग को बदलती है।</strong></p>
+<p>अगर चाय, कॉफ़ी, तम्बाकू या जमी हुई टार्टर की वजह से दांत पीले-भूरे हो गए हैं, तो वह रंग सतह <em>पर</em> बैठा है। स्केलिंग और पॉलिशिंग से वह हट जाता है, और लोग अक्सर हैरान होते हैं कि बाद में दांत कितने चमक जाते हैं — व्हाइटनिंग की ज़रूरत ही नहीं पड़ती।</p>
+<p>अगर दांत अपनी बनावट में ही एक-सा गहरा है, तो कितनी भी सफ़ाई से रंग नहीं बदलेगा। व्हाइटनिंग इसी के लिए है।</p>
+
+<h2>शुरुआत सफ़ाई से कीजिए</h2>
+<p>हम लगभग हमेशा पहले सफ़ाई की सलाह देते हैं, दो व्यावहारिक वजहों से। हो सकता है इतने से ही काम बन जाए। और अगर आगे व्हाइटनिंग करानी भी हो, तो साफ़ सतह पर नतीजा कहीं ज़्यादा एक-सा आता है — टार्टर की परत के ऊपर ब्लीच करने से रंग चकत्तेदार निकलता है।</p>
+
+<h2>व्हाइटनिंग के तरीक़े</h2>
+<h3>क्लिनिक में व्हाइटनिंग</h3>
+<p>तेज़ जेल, नियंत्रित हालात में, मसूड़ों को ढककर लगाया जाता है। करीब एक घंटा, और फ़र्क़ उसी दिन दिखता है। सबसे तेज़ रास्ता, और इसमें जेल इतना तेज़ होता है कि निगरानी सचमुच ज़रूरी है।</p>
+<h3>घर पर पहनने वाली ट्रे</h3>
+<p>आपके दांतों की नाप से बनी ट्रे, जिनमें कम ताक़त वाला जेल भरकर रोज़ तय समय के लिए दो-तीन हफ़्ते पहना जाता है। धीमा, झनझनाहट के लिहाज़ से नरम, और आमतौर पर सस्ता।</p>
+<h3>व्हाइटनिंग टूथपेस्ट</h3>
+<p>हल्का घिसने वाला, इसलिए ऊपरी दाग़ कुछ हटा देता है। दांत का अपना रंग नहीं बदलता। नतीजा बनाए रखने के लिए ठीक है; नतीजा लाने के लिए बेकार।</p>
+
+<h2>व्हाइटनिंग से क्या नहीं होगा</h2>
+<ul>
+  <li><strong>कैप, विनियर और फिलिंग पर असर नहीं होता।</strong> उनका रंग वही रहता है। अगर सामने के दांत पर सफ़ेद फिलिंग है और आसपास व्हाइटनिंग करा ली, तो वह अचानक अलग दिखने लगेगी — इसीलिए हम क्रम सोच-समझकर तय करते हैं।</li>
+  <li><strong>पुराने रूट कैनाल से आए भूरेपन को यह ठीक नहीं करती।</strong> उसके लिए अलग तरीका चाहिए, आमतौर पर अंदर से ब्लीचिंग या विनियर।</li>
+  <li><strong>यह हमेशा के लिए नहीं है।</strong> चाय, कॉफ़ी और तम्बाकू के हिसाब से एक से तीन साल मानकर चलिए।</li>
+</ul>
+
+<h2>झनझनाहट</h2>
+<p>आम बात है, और आमतौर पर कुछ दिनों की। ज़्यादातर लोगों को कुछ दिन ठंडा लगने पर तेज़ झनझनाहट महसूस होती है, जो बैठ जाती है। अगर आपके दांत पहले से संवेदनशील हैं तो बताइए — हम आमतौर पर आपके लिए घर वाला धीमा तरीका चुनेंगे, जो काफ़ी नरम पड़ता है।</p>
+
+<h2>बाज़ार में मिलने वाली किट के बारे में</h2>
+<p>ऑनलाइन बिकने वाली स्ट्रिप और किट की गुणवत्ता में ज़मीन-आसमान का फ़र्क़ होता है, और ख़तरा व्हाइटनिंग से नहीं है — ख़तरा उस जेल से है जो ढीली ट्रे में मसूड़ों से चिपका रहता है और रासायनिक जलन कर देता है, जिसका इलाज फिर हमें करना पड़ता है। अगर बात ख़र्च की है तो हमें बताइए, हम घर वाले विकल्प पर खुलकर बात करेंगे।</p>
+""",
+  "faq": [
+   ("क्या दांत सफ़ेद कराना सुरक्षित है?",
+    "डॉक्टर की निगरानी में कराया जाए तो हाँ। जेल मसूड़ों को ढककर लगाया जाता है और उसकी ताक़त आपके दांतों के हिसाब से तय होती है। जो दिक्कतें हम देखते हैं वे लगभग पूरी तरह बाज़ार से ख़रीदी गई किट से आती हैं, जिनकी ट्रे ठीक से फ़िट नहीं होती और जेल मसूड़ों पर लग जाता है।"),
+   ("दांतों की सफ़ेदी कितने दिन रहती है?",
+    "आमतौर पर एक से तीन साल। यह चाय, कॉफ़ी और तम्बाकू पर बहुत निर्भर करता है। हर छह महीने में सफ़ाई और दाग़ लगाने वाली चीज़ें कम कर देने से यह काफ़ी बढ़ जाती है।"),
+  ],
+ },
+},
+
+# ─────────────────────────────────────────────────────────────────────
+{
+ "slug": "dental-implants-and-diabetes",
+ "cat": "Implants",
+ "date": "2026-08-19",
+ "img": "diabetes",
+ "en": {
+  "title": "Are Dental Implants Safe if You Have Diabetes? | Dental Zone, Prayagraj",
+  "h1": "Are dental implants safe if you have diabetes?",
+  "meta": "Diabetes is not a bar to dental implants — but control is. What your HbA1c means for implant success, from an implantologist in Allahabad.",
+  "lede": "Patients often assume diabetes rules them out entirely. It does not. What matters is not whether you have it, but how well controlled it is.",
+  "body": """
+<h2>The short answer</h2>
+<p><strong>If your diabetes is well controlled, implant success rates are close to those of people without diabetes.</strong> If it is poorly controlled, the risks rise meaningfully. The diagnosis is not the deciding factor — the control is.</p>
+<p>This is one of the most common reasons people never ask about implants, and it costs them years of managing with a gap or a loose denture unnecessarily.</p>
+
+<h2>Why control matters so much</h2>
+<p>An implant works by fusing with the jawbone over several months. That process depends on healing, and persistently high blood glucose interferes with healing in three specific ways: it slows new bone formation, it impairs the white cells that fight infection, and it reduces blood supply to small vessels.</p>
+<p>Each of those matters most in the first few months, which is exactly the window when the implant is integrating.</p>
+
+<h2>What we look at</h2>
+<p>We will ask for a recent <strong>HbA1c</strong> — the three-month average of your blood glucose, which is far more useful to us than a single fasting reading taken on a good morning.</p>
+<ul>
+  <li><strong>Well controlled:</strong> generally treated much like any other patient, with normal healing expectations.</li>
+  <li><strong>Moderately controlled:</strong> usually workable, often with a longer healing period before the crown is fitted, and closer follow-up.</li>
+  <li><strong>Poorly controlled:</strong> we would advise working with your physician to improve control first. This is not a refusal — it is avoiding an implant that fails and money that is wasted.</li>
+</ul>
+
+<h2>Gum disease first</h2>
+<p>Diabetes and gum disease worsen each other, and many patients with long-standing diabetes have some degree of it. Any active gum disease must be treated before an implant goes in, or the same process attacks the tissue around the implant — a condition called peri-implantitis, which is the most common reason implants are lost late.</p>
+
+<h2>Practical things that help</h2>
+<ul>
+  <li><strong>Morning appointments</strong>, after your normal breakfast and medication, so your glucose is stable.</li>
+  <li><strong>Tell us every medication you take</strong>, including anything for blood pressure or cholesterol.</li>
+  <li><strong>Expect a longer healing window.</strong> We would rather wait an extra month before loading the implant than rush it.</li>
+  <li><strong>Keep your follow-ups.</strong> With diabetes we like to see you more often in the first year, not because something is wrong but because catching a problem early is straightforward and catching it late often is not.</li>
+</ul>
+
+<h2>If you also smoke or chew tobacco</h2>
+<p>Say so. Tobacco and diabetes together raise implant failure risk far more than either alone, because both impair exactly the same healing process. We will still treat you, and we will be honest with you about the odds.</p>
+""",
+  "faq": [
+   ("What HbA1c is acceptable for a dental implant?",
+    "There is no single universal cut-off, and it is a judgement made with your physician rather than a number applied mechanically. Broadly, the better controlled you are the closer your success rate is to a non-diabetic patient. We will ask for a recent reading and discuss it with you honestly."),
+   ("Will my implant fail because I have diabetes?",
+    "Not necessarily. Well-controlled diabetes carries a success rate close to that of patients without diabetes. Poor control, especially combined with smoking or untreated gum disease, is where the risk rises significantly."),
+  ],
+ },
+ "hi": {
+  "title": "शुगर है तो क्या डेंटल इम्प्लांट सुरक्षित है? | डेंटल ज़ोन, प्रयागराज",
+  "h1": "शुगर है तो क्या डेंटल इम्प्लांट सुरक्षित है?",
+  "meta": "शुगर होने भर से इम्प्लांट नहीं रुकता — कंट्रोल से फ़र्क़ पड़ता है। आपका HbA1c इम्प्लांट की सफलता के लिए क्या मायने रखता है, इलाहाबाद के इम्प्लांटोलॉजिस्ट से।",
+  "lede": "मरीज़ अक्सर मान लेते हैं कि शुगर है तो इम्प्लांट हो ही नहीं सकता। ऐसा नहीं है। मायने यह नहीं रखता कि शुगर है या नहीं, मायने यह रखता है कि कितनी क़ाबू में है।",
+  "body": """
+<h2>छोटा जवाब</h2>
+<p><strong>अगर आपकी शुगर अच्छी तरह क़ाबू में है, तो इम्प्लांट की सफलता दर लगभग उतनी ही होती है जितनी बिना शुगर वालों की।</strong> अगर क़ाबू में नहीं है, तो ख़तरा साफ़ तौर पर बढ़ जाता है। फ़ैसला बीमारी से नहीं, उसके नियंत्रण से होता है।</p>
+<p>यही सबसे आम वजह है जिसके चलते लोग इम्प्लांट के बारे में पूछते ही नहीं, और बेवजह सालों तक खाली जगह या ढीले नक़ली दांत के साथ काम चलाते रहते हैं।</p>
+
+<h2>कंट्रोल इतना क्यों मायने रखता है</h2>
+<p>इम्प्लांट कई महीनों में जबड़े की हड्डी से जुड़कर काम करता है। यह प्रक्रिया भरने पर टिकी है, और लगातार बढ़ी हुई शुगर भरने में तीन तरह से रुकावट डालती है: नई हड्डी बनना धीमा कर देती है, इन्फेक्शन से लड़ने वाली सफ़ेद कोशिकाओं को कमज़ोर करती है, और छोटी नसों में खून का बहाव घटा देती है।</p>
+<p>ये तीनों सबसे ज़्यादा शुरुआती कुछ महीनों में मायने रखते हैं — यानी ठीक उसी समय जब इम्प्लांट हड्डी से जुड़ रहा होता है।</p>
+
+<h2>हम क्या देखते हैं</h2>
+<p>हम आपसे हाल की <strong>HbA1c</strong> रिपोर्ट माँगेंगे — यानी तीन महीने का औसत, जो हमारे लिए किसी एक अच्छी सुबह की फ़ास्टिंग रिपोर्ट से कहीं ज़्यादा काम की होती है।</p>
+<ul>
+  <li><strong>अच्छा कंट्रोल:</strong> आमतौर पर बाकी मरीज़ों जैसा ही इलाज, सामान्य भरने की उम्मीद के साथ।</li>
+  <li><strong>ठीक-ठाक कंट्रोल:</strong> आमतौर पर हो जाता है, अक्सर कैप लगाने से पहले भरने का समय बढ़ाकर और ज़्यादा नज़र रखते हुए।</li>
+  <li><strong>ख़राब कंट्रोल:</strong> हम सलाह देंगे कि पहले अपने फ़िज़िशियन के साथ शुगर सुधार लीजिए। यह मना करना नहीं है — यह उस इम्प्लांट से बचना है जो फेल हो जाए और पैसा बेकार जाए।</li>
+</ul>
+
+<h2>पहले मसूड़ों का इलाज</h2>
+<p>शुगर और मसूड़ों की बीमारी एक-दूसरे को बिगाड़ते हैं, और पुरानी शुगर वाले कई मरीज़ों में यह किसी न किसी हद तक होती है। इम्प्लांट लगाने से पहले चालू मसूड़ों की बीमारी का इलाज ज़रूरी है, वरना वही प्रक्रिया इम्प्लांट के आसपास के ऊतक पर हमला करती है — इसे पेरी-इम्प्लांटाइटिस कहते हैं, और देर से इम्प्लांट ख़राब होने की सबसे आम वजह यही है।</p>
+
+<h2>कुछ काम की बातें</h2>
+<ul>
+  <li><strong>सुबह का अपॉइंटमेंट</strong> लीजिए, नाश्ता और दवा लेने के बाद, ताकि शुगर स्थिर रहे।</li>
+  <li><strong>अपनी सारी दवाएँ बताइए</strong>, बीपी और कोलेस्ट्रॉल वाली भी।</li>
+  <li><strong>भरने में ज़्यादा समय मानकर चलिए।</strong> हम इम्प्लांट पर जल्दी भार डालने से बेहतर एक महीना और इंतज़ार करना मानते हैं।</li>
+  <li><strong>फ़ॉलो-अप मत छोड़िए।</strong> शुगर के मरीज़ों को हम पहले साल में ज़्यादा बार बुलाते हैं — इसलिए नहीं कि कुछ ग़लत है, बल्कि इसलिए कि दिक्कत जल्दी पकड़ में आ जाए तो आसान रहती है, देर से पकड़ में आए तो अक्सर नहीं।</li>
+</ul>
+
+<h2>अगर आप तम्बाकू भी लेते हैं</h2>
+<p>बता दीजिए। तम्बाकू और शुगर मिलकर इम्प्लांट फेल होने का ख़तरा अकेले किसी एक से कहीं ज़्यादा बढ़ा देते हैं, क्योंकि दोनों ठीक उसी भरने की प्रक्रिया को कमज़ोर करते हैं। हम फिर भी इलाज करेंगे, और सम्भावनाओं के बारे में आपसे साफ़-साफ़ बात करेंगे।</p>
+""",
+  "faq": [
+   ("इम्प्लांट के लिए कितना HbA1c ठीक माना जाता है?",
+    "कोई एक तय सीमा नहीं होती, और यह फ़ैसला आपके फ़िज़िशियन के साथ मिलकर लिया जाता है, किसी नंबर को यंत्रवत लागू करके नहीं। मोटे तौर पर, कंट्रोल जितना बेहतर होगा, सफलता दर बिना शुगर वाले मरीज़ के उतनी ही क़रीब होगी। हम हाल की रिपोर्ट माँगेंगे और आपसे खुलकर बात करेंगे।"),
+   ("क्या शुगर की वजह से मेरा इम्प्लांट फेल हो जाएगा?",
+    "ज़रूरी नहीं। अच्छी तरह क़ाबू में रखी गई शुगर में सफलता दर लगभग बिना शुगर वाले मरीज़ों जितनी ही रहती है। ख़तरा तब बढ़ता है जब कंट्रोल ख़राब हो, ख़ासकर तम्बाकू या बिना इलाज मसूड़ों की बीमारी के साथ।"),
+  ],
+ },
+},
+
 ]
