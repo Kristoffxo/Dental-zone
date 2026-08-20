@@ -161,7 +161,7 @@ def head(lang, title, meta, canon, alt, img, extra=""):
 <link rel="alternate" hreflang="hi-IN" href="{alt['hi']}">
 <link rel="alternate" hreflang="x-default" href="{alt['en']}">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="geo.region" content="IN-UP"><meta name="geo.placename" content="Prayagraj, Prayagraj">
+<meta name="geo.region" content="IN-UP"><meta name="geo.placename" content="Prayagraj">
 <meta property="og:type" content="article"><meta property="og:site_name" content="Dental Zone">
 <meta property="og:locale" content="{'en_IN' if lang=='en' else 'hi_IN'}">
 <meta property="og:url" content="{canon}"><meta property="og:title" content="{title}">
